@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://me-qr.kz/tatyana/structure/icon11.png" />
-  <title>Татьяна Онтюрклер — Практик осознанности, психолог</title>
+  <title data-i18n-title="page_title">Татьяна Онтюрклер — Практик осознанности, психолог</title>
   <meta name="description" content="Приходи ко мне, когда возникает ощущение, что жизнь требует внутренних перемен, теряется ясность." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ontat.ru/" />
@@ -18,575 +18,86 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *,*::before,*::after { box-sizing:border-box; }
+    body { margin:0; font-family:'Montserrat',Arial,sans-serif; background:#fff; color:#111; line-height:1.6; }
+    .site-header { position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid #e5e5e5; }
+    .site-header .header-inner { max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:0 24px; gap:24px; }
+    .site-header .header-logo { display:flex; align-items:center; height:64px; }
+    .site-header .header-logo img { height:44px; width:auto; display:block; }
+    .site-header .header-nav { display:flex; align-items:center; gap:4px; flex-wrap:wrap; }
+    .site-header .nav-link { font-size:13px; font-weight:500; font-family:'Montserrat',sans-serif; color:#444; padding:6px 12px; border-radius:6px; text-decoration:none; transition:background 0.15s,color 0.15s; }
+    .site-header .nav-link:hover { background:#f3f4f6; color:#111; }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #fff;
-      color: #111;
-      padding-bottom: 80px;
-    }
+    .lang-dropdown { position:relative; display:inline-block; margin-left:8px; }
+    .lang-dropdown .lang-btn { font-size:13px; font-weight:600; font-family:'Montserrat',sans-serif; color:#444; padding:6px 12px; border-radius:6px; border:1px solid #ddd; background:#fff; cursor:pointer; display:flex; align-items:center; gap:6px; }
+    .lang-dropdown .lang-btn:hover { background:#f3f4f6; }
+    .lang-dropdown .lang-menu { display:none; position:absolute; right:0; top:calc(100% + 4px); background:#fff; border:1px solid #e5e5e5; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.08); min-width:80px; z-index:100; overflow:hidden; }
+    .lang-dropdown.open .lang-menu { display:block; }
+    .lang-dropdown .lang-menu a { display:block; font-size:13px; font-weight:500; font-family:'Montserrat',sans-serif; color:#444; padding:8px 12px; text-decoration:none; }
+    .lang-dropdown .lang-menu a:hover { background:#f3f4f6; }
+    .lang-dropdown .lang-menu a.active { background:#111; color:#fff; }
+    @media(max-width:640px){ .site-header .header-nav { display:none; } }
 
-    /* HEADER NAV */
-    .site-header {
-      background: #fff;
-      border-bottom: 2px dashed #bbb;
-      padding: 0 32px;
-    }
-    .site-header .header-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-      gap: 24px;
-    }
-    .site-header .header-logo {
-      display: flex;
-      align-items: center;
-      height: 64px;
-    }
-    .site-header .header-logo img {
-      height: 44px;
-      width: auto;
-      display: block;
-    }
-    .site-header .header-nav {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      flex-wrap: wrap;
-    }
-    .site-header .nav-link {
-      font-size: 13px;
-      font-weight: 500;
-      font-family: 'Montserrat', sans-serif;
-      color: #444;
-      padding: 6px 12px;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.15s, color 0.15s;
-    }
-    .site-header .nav-link:hover { background: #f3f4f6; color: #111; }
+    .page-block { max-width:1200px; margin:0 auto; padding:48px 24px; border-bottom:1px solid #e5e5e5; }
+    .page-block:last-child { border-bottom:none; }
+    .block-inner { max-width:1100px; margin:0 auto; }
+    .block-num { font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; background:#111; color:#fff; display:inline-block; padding:2px 8px; border-radius:3px; margin-bottom:16px; }
+    .field-heading { font-size:clamp(22px,5vw,36px); font-weight:800; line-height:1.2; margin-bottom:16px; display:block; }
+    .field-sub { font-size:clamp(15px,3vw,20px); font-weight:500; color:#444; line-height:1.5; margin-bottom:12px; display:block; }
+    .field-body { font-size:15px; line-height:1.75; color:#333; display:block; margin-bottom:10px; }
 
-    /* LANG DROPDOWN */
-    .lang-dropdown {
-      position: relative;
-      display: inline-block;
-      margin-left: 8px;
-    }
-    .lang-dropdown .lang-btn {
-      font-size: 13px;
-      font-weight: 600;
-      font-family: 'Montserrat', sans-serif;
-      color: #444;
-      padding: 6px 12px;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-      background: #fff;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .lang-dropdown .lang-btn:hover { background: #f3f4f6; }
-    .lang-dropdown .lang-menu {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: calc(100% + 4px);
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      min-width: 80px;
-      z-index: 100;
-      overflow: hidden;
-    }
-    .lang-dropdown.open .lang-menu { display: block; }
-    .lang-dropdown .lang-menu a {
-      display: block;
-      font-size: 13px;
-      font-weight: 500;
-      font-family: 'Montserrat', sans-serif;
-      color: #444;
-      padding: 8px 12px;
-      text-decoration: none;
-    }
-    .lang-dropdown .lang-menu a:hover { background: #f3f4f6; }
-    .lang-dropdown .lang-menu a.active { background: #111; color: #fff; }
-    @media (max-width: 640px) {
-      .lang-dropdown { margin-left: 0; margin-top: 8px; }
-      .lang-dropdown .lang-menu { right: auto; left: 0; }
-    }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 24px; background:#111; color:#fff; font-size:14px; font-weight:600; border-radius:6px; text-decoration:none; cursor:pointer; border:none; margin-top:16px; }
+    .btn-outline { background:#fff; color:#111; border:2px solid #111; }
+    .btn-note { display:block; font-size:12px; color:#777; margin-top:6px; }
+    .btn-fixed { align-self:flex-start; max-width:280px; width:100%; }
 
-    .site-header .burger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 6px;
-      border: none;
-      background: none;
-    }
-    .site-header .burger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #111;
-      border-radius: 2px;
-      transition: all 0.2s;
-    }
-    .site-header .mobile-menu {
-      display: none;
-      flex-direction: column;
-      background: #fff;
-      border-top: 1px solid #e5e5e5;
-      padding: 12px 0;
-    }
-    .site-header .mobile-menu a {
-      font-size: 14px;
-      font-weight: 500;
-      color: #333;
-      padding: 10px 24px;
-      text-decoration: none;
-    }
-    .site-header .mobile-menu a:hover { background: #f3f4f6; }
-    .site-header.menu-open .mobile-menu { display: flex; }
-    @media (max-width: 640px) {
-      .site-header .header-nav { display: none; }
-      .site-header .burger { display: flex; }
-      .site-header { padding: 0 16px; }
-    }
+    .image-placeholder { background:#f2f2f2; border:2px dashed #bbb; border-radius:8px; display:flex; align-items:center; justify-content:center; text-align:center; font-size:13px; font-style:italic; color:#888; padding:20px; min-height:160px; margin-top:16px; }
+    .image-placeholder.hero-img { min-height:240px; }
 
-    /* PAGE STRUCTURE */
-    .page-block {
-      border-bottom: 3px solid #e5e5e5;
-      padding: 60px 24px;
-    }
-    .page-block:nth-child(even) { background: #fafafa; }
-    .page-block:last-child { border-bottom: none; }
-    .block-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
+    .hero-row { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin-top:16px; }
+    .hero-text { display:flex; flex-direction:column; }
+    .hero-img { min-height:320px; aspect-ratio:3/2; margin-top:0; }
+    @media(max-width:640px){ .hero-row { grid-template-columns:1fr; } .hero-img { order:-1; min-height:240px; } }
 
-    .block-num {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 8px;
-    }
-    .block-type {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      background: #111;
-      color: #fff;
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 3px;
-      margin-bottom: 16px;
-    }
+    .items-list { display:flex; flex-direction:column; gap:16px; margin-top:16px; }
+    .item-card { border:1px solid #e5e5e5; border-radius:8px; padding:16px 20px; }
+    .item-card.with-icon { display:flex; gap:16px; align-items:flex-start; }
+    .item-icon { width:48px; height:48px; background:#ececec; border:1px dashed #bbb; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#777; text-transform:uppercase; flex-shrink:0; }
+    .with-icon .item-content { flex:1; }
 
-    .field-heading {
-      font-size: clamp(22px, 5vw, 36px);
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      display: block;
-    }
-    .field-sub {
-      font-size: clamp(15px, 3vw, 20px);
-      font-weight: 500;
-      color: #444;
-      line-height: 1.5;
-      margin-bottom: 12px;
-      display: block;
-    }
-    .field-body {
-      font-size: 15px;
-      line-height: 1.75;
-      color: #333;
-      display: block;
-      margin-bottom: 10px;
-    }
-    .field-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #666;
-      display: block;
-      margin-bottom: 4px;
-    }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:16px; }
+    .service-card { border:1px solid #e5e5e5; border-radius:8px; padding:20px; }
 
-    /* ITEMS LIST */
-    .items-list { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
-    .item-card {
-      border: 1px solid #e5e5e5;
-      border-radius: 8px;
-      padding: 16px 20px;
-      position: relative;
-    }
-    .item-card:has(.item-num) {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
+    .expert-row { display:grid; grid-template-columns:280px 1fr; gap:32px; align-items:flex-start; margin-top:16px; }
+    .expert-img { min-height:360px; aspect-ratio:3/4; margin-top:0; }
+    .expert-text { display:flex; flex-direction:column; }
+    @media(max-width:640px){ .expert-row { grid-template-columns:1fr; } }
 
-    .item-num {
-      font-size: 52px;
-      font-weight: 900;
-      color: #ececec;
-      line-height: 1;
-      min-width: 64px;
-      text-align: center;
-      flex-shrink: 0;
-      user-select: none;
-    }
-    .item-content { display: flex; flex-direction: column; flex: 1; }
-    .item-card .field-heading { font-size: 18px; margin-bottom: 8px; }
-    .item-card .field-body { margin-bottom: 0; }
+    .certs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:16px; }
+    .cert-thumb { aspect-ratio:4/3; background:#f2f2f2; border:2px dashed #bbb; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600; color:#777; padding:12px; }
 
-    /* QUOTE DIVIDER */
-    .quote-divider {
-      padding: 40px 40px;
-      text-align: center;
-      border-top: 1px solid #ececec;
-      border-bottom: 1px solid #ececec;
-      background: #f9f9f9;
-    }
-    .quote-divider .quote-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #aaa;
-      margin-bottom: 12px;
-    }
-    .quote-divider .quote-text {
-      font-size: 20px;
-      font-weight: 600;
-      color: #222;
-      line-height: 1.5;
-      max-width: 640px;
-      margin: 0 auto;
-    }
+    .retreat-banner { width:100%; min-height:240px; aspect-ratio:21/9; background:#ececec; border:2px dashed #bbb; border-radius:8px; display:flex; align-items:center; justify-content:center; text-align:center; font-size:13px; font-style:italic; color:#777; margin-bottom:20px; }
 
-    /* CTA */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 24px;
-      background: #111;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: 6px;
-      text-decoration: none;
-      cursor: pointer;
-      border: none;
-      margin-top: 16px;
-    }
-    .btn-sm {
-      padding: 10px 20px;
-      font-size: 13px;
-    }
-    .btn-outline {
-      background: #fff;
-      color: #111;
-      border: 2px solid #111;
-    }
-    .btn-note {
-      display: block;
-      font-size: 12px;
-      color: #777;
-      margin-top: 6px;
-    }
-    .btn-fixed {
-      align-self: flex-start;
-      max-width: 280px;
-      width: 100%;
-    }
-    .cta-box {
-      border: 2px solid #111;
-      border-radius: 8px;
-      padding: 24px;
-      margin-top: 16px;
-      text-align: center;
-    }
+    .review-avatar { width:64px; height:64px; border-radius:50%; background:#f2f2f2; border:2px solid #bbb; color:#777; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; text-transform:uppercase; margin-bottom:12px; flex-shrink:0; }
 
-    /* DIVIDER */
-    hr.section-div {
-      border: none;
-      border-top: 1px dashed #ccc;
-      margin: 20px 0;
-    }
+    .gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:16px; }
+    .gallery-thumb { aspect-ratio:1/1; background:#ececec; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600; color:#777; }
+    @media(max-width:768px){ .gallery-grid { grid-template-columns:repeat(3,1fr); } }
+    @media(max-width:480px){ .gallery-grid { grid-template-columns:repeat(2,1fr); } }
 
-    /* NOTES */
-    .note {
-      font-size: 12px;
-      color: #999;
-      font-style: italic;
-      margin-top: 8px;
-    }
-    .image-placeholder {
-      border: 2px dashed #bbb;
-      background: #f7f7f7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 12px;
-      font-style: italic;
-      min-height: 160px;
-      margin-top: 16px;
-    }
-    .image-placeholder.hero-img {
-      min-height: 240px;
-    }
-
-    /* FOOTER */
-    .footer-contacts {
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 24px 40px;
-      margin-top:12px;
-    }
-    .footer-icons {
-      display: flex;
-      justify-content: space-around;
-      gap: 24px 40px;
-      margin-top: 12px;
-    }
-    .footer-icon {
-      width: 32px;
-      height: 32px;
-      border: 1px dashed #999;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      font-weight: 700;
-      color: #777;
-      text-transform: uppercase;
-    }
-
-    /* ANIMATED CTA BACKGROUND */
-    .contacts-animated {
-      position: relative;
-      overflow: hidden;
-      color: #fff;
-    }
-    .contacts-animated .animated-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background: #111;
-    }
-    .contacts-animated .block-inner {
-      position: relative;
-      z-index: 1;
-    }
+    .contacts-animated { position:relative; overflow:hidden; color:#fff; }
+    .contacts-animated .animated-bg { position:absolute; inset:0; z-index:0; pointer-events:none; background:#111; }
+    .contacts-animated .block-inner { position:relative; z-index:1; }
     .contacts-animated .field-heading,
     .contacts-animated .field-sub,
+    .contacts-animated .field-body,
     .contacts-animated .btn,
-    .contacts-animated .btn-note {
-      color: #fff;
-    }
+    .contacts-animated .btn-note { color:#fff; }
 
-    /* EXPERT LAYOUT */
-    .expert-row {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 32px;
-      align-items: flex-start;
-      margin-top: 16px;
-    }
-    .expert-img {
-      min-height: 360px;
-      aspect-ratio: 3 / 4;
-      margin-top: 0;
-    }
-    .expert-text {
-      display: flex;
-      flex-direction: column;
-    }
-    @media (max-width: 640px) {
-      .expert-row {
-        grid-template-columns: 1fr;
-      }
-      .expert-img {
-        order: -1;
-        min-height: 300px;
-        aspect-ratio: 3 / 4;
-        max-width: 280px;
-        margin: 0 auto;
-      }
-    }
-    /* RETREAT BANNER */
-    .retreat-banner {
-      width: 100%;
-      min-height: 260px;
-      aspect-ratio: 21 / 9;
-      background: #e8e8e8;
-      border: 2px dashed #bbb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 13px;
-      font-style: italic;
-      color: #777;
-      margin-bottom: 24px;
-    }
-    @media (max-width: 640px) {
-      .retreat-banner { min-height: 200px; aspect-ratio: 16 / 9; }
-    }
-
-    /* CERTIFICATES GRID */
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 16px;
-    }
-    .cert-thumb {
-      aspect-ratio: 4 / 3;
-      background: #f2f2f2;
-      border: 2px dashed #bbb;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      font-weight: 600;
-      color: #777;
-      text-align: center;
-      padding: 12px;
-    }
-    @media (max-width: 640px) {
-      .certs-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ICON SQUARE INSIDE ITEM */
-    .item-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      background: #f2f2f2;
-      border: 1px dashed #bbb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      font-weight: 700;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      flex-shrink: 0;
-    }
-    .item-card.with-icon {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-    .with-icon .item-content { flex: 1; }
-
-    /* REVIEW AVATAR */
-    .review-avatar {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      background: #f2f2f2;
-      border: 1px dashed #555;
-      color: #555;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      text-align: center;
-      margin-bottom: 12px;
-      flex-shrink: 0;
-    }
-    .review-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-    }
-
-    /* HERO LAYOUT */
-    .hero-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-top: 16px;
-    }
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-    }
-    .hero-img {
-      min-height: 320px;
-      aspect-ratio: 3 / 2;
-      margin-top: 0;
-    }
-    @media (max-width: 640px) {
-      .hero-row {
-        grid-template-columns: 1fr;
-      }
-      .hero-img {
-        order: -1;
-        min-height: 240px;
-        aspect-ratio: 3 / 2;
-      }
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 16px;
-    }
-    .gallery-grid .gallery-thumb {
-      aspect-ratio: 1 / 1;
-      background: #ececec;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-      color: #888;
-      text-align: center;
-      padding: 12px;
-    }
-
-    @media (max-width: 900px) {
-      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 600px) {
-      .topbar { padding: 10px 14px; }
-      .page-block { padding: 48px 18px; }
-      .items-list { gap: 14px; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    }
+    .footer-logo { margin-bottom:12px; }
+    .footer-icons { display:flex; justify-content:space-around; gap:24px 40px; margin-top:12px; }
+    .footer-icon { width:32px; height:32px; border:1px dashed #999; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#777; text-transform:uppercase; }
+    .footer-contacts { display:flex; flex-wrap:wrap; justify-content:space-around; gap:24px 40px; margin-top:12px; }
   </style>
 </head>
 <body>
@@ -596,15 +107,15 @@
   <div class="header-inner">
     <div class="header-logo"><img src="https://me-qr.kz/tatyana/structure/logo11.webp" alt="Татьяна Онтюрклер"></div>
     <nav class="header-nav">
-      <a class="nav-link" href="#services">Услуги</a>
-      <a class="nav-link" href="#expert">Об эксперте</a>
-      <a class="nav-link" href="#retreat">Ретрит</a>
-      <a class="nav-link" href="#cases">Отзывы</a>
-      <a class="nav-link" href="#gallery">Фото</a>
-      <a class="nav-link" href="#faq">FAQ</a>
-      <a class="nav-link" href="#contacts">Контакты</a>
+      <a class="nav-link" href="#services" data-i18n="nav_services">Услуги</a>
+      <a class="nav-link" href="#expert" data-i18n="nav_expert">Об эксперте</a>
+      <a class="nav-link" href="#retreat" data-i18n="nav_retreat">Ретрит</a>
+      <a class="nav-link" href="#cases" data-i18n="nav_cases">Отзывы</a>
+      <a class="nav-link" href="#gallery" data-i18n="nav_gallery">Фото</a>
+      <a class="nav-link" href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a class="nav-link" href="#contacts" data-i18n="nav_contacts">Контакты</a>
       <div class="lang-dropdown" id="langDropdown">
-        <button class="lang-btn" type="button">RU ▾</button>
+        <button class="lang-btn" type="button" data-i18n="lang_current">RU ▾</button>
         <div class="lang-menu">
           <a href="#" class="active" data-lang="ru">RU</a>
           <a href="#" data-lang="en">EN</a>
@@ -612,22 +123,6 @@
         </div>
       </div>
     </nav>
-    <button class="burger" onclick="document.getElementById('site-header').classList.toggle('menu-open')" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu">
-    <a href="#hero">Блок 01 — Главный экран</a>
-    <a href="#problem">Блок 02 — Боль / Проблема</a>
-    <a href="#services">Блок 03 — Услуги</a>
-    <a href="#expert">Блок 04 — Об эксперте</a>
-    <a href="#certs">Блок 05 — Сертификаты и образование</a>
-    <a href="#audience">Блок 06 — Кому помогает</a>
-    <a href="#retreat">Блок 07 — Ретрит в Караденизе</a>
-    <a href="#cases">Блок 08 — Кейсы / Отзывы</a>
-    <a href="#faq">Блок 09 — FAQ</a>
-    <a href="#gallery">Блок 10 — Фотогалерея</a>
-    <a href="#contacts">Блок 11 — Контакты / CTA</a>
   </div>
 </header>
 
@@ -636,11 +131,11 @@
   <div class="block-num">Блок 01</div>
   <div class="hero-row">
     <div class="hero-text">
-      <span class="field-body">Психолог · Практик осознанности · Автор трансформационных программ</span>
-      <span class="field-heading">Вернуться к себе<br>и обрести внутреннюю опору</span>
-      <span class="field-sub">Сопровождаю людей в периоды перемен: помогаю услышать себя, выйти из повторяющихся сценариев и найти направление дальнейшего пути.</span>
-      <a href="#contacts" class="btn btn-fixed">Записаться на консультацию</a>
-      <span class="btn-note">Первая встреча — знакомство и диагностика запроса</span>
+      <span class="field-body" data-i18n="hero_tag">Психолог · Практик осознанности · Автор трансформационных программ</span>
+      <span class="field-heading" data-i18n="hero_heading">Вернуться к себе&lt;br&gt;и обрести внутреннюю опору</span>
+      <span class="field-sub" data-i18n="hero_sub">Сопровождаю людей в периоды перемен: помогаю услышать себя, выйти из повторяющихся сценариев и найти направление дальнейшего пути.</span>
+      <a href="#contacts" class="btn btn-fixed" data-i18n="hero_cta">Записаться на консультацию</a>
+      <span class="btn-note" data-i18n="hero_note">Первая встреча — знакомство и диагностика запроса</span>
     </div>
     <div class="image-placeholder hero-img">Место для фото Татьяны на фоне природы/пространства. <br>Рекомендуемый размер: 1200×800 px (3:2).</div>
   </div>
@@ -649,36 +144,36 @@
 <!-- BLOCK 02: PROBLEM -->
 <div class="page-block" data-block="problem" id="problem">
   <div class="block-num">Блок 02</div>
-  <span class="field-heading">Узнаёте себя?</span>
-  <span class="field-sub">Часто мы идём по жизни, не понимая, почему снова и снова возникают одни и те же трудности.</span>
+  <span class="field-heading" data-i18n="prob_heading">Узнаёте себя?</span>
+  <span class="field-sub" data-i18n="prob_intro">Часто мы идём по жизни, не понимая, почему снова и снова возникают одни и те же трудности.</span>
 
   <div class="items-list">
     <div class="item-card with-icon">
       <div class="item-icon">Ico1</div>
       <div class="item-content">
-        <span class="field-heading">Потеря внутренней опоры</span>
-        <span class="field-body">Жизнь словно качели: то взлёт, то падение. Нет устойчивости, нет точки опоры внутри себя. Хочется спокойствия и уверенности.</span>
+        <span class="field-heading" data-i18n="prob1_title">Потеря внутренней опоры</span>
+        <span class="field-body" data-i18n="prob1_text">Жизнь словно качели: то взлёт, то падение. Нет устойчивости, нет точки опоры внутри себя. Хочется спокойствия и уверенности.</span>
       </div>
     </div>
     <div class="item-card with-icon">
       <div class="item-icon">Ico2</div>
       <div class="item-content">
-        <span class="field-heading">Запутанность и поиск смысла</span>
-        <span class="field-body">Не понятно, куда двигаться. Перед важным выбором — работа, отношения, переезд, смена профессии. Страх ошибиться парализует.</span>
+        <span class="field-heading" data-i18n="prob2_title">Запутанность и поиск смысла</span>
+        <span class="field-body" data-i18n="prob2_text">Не понятно, куда двигаться. Перед важным выбором — работа, отношения, переезд, смена профессии. Страх ошибиться парализует.</span>
       </div>
     </div>
     <div class="item-card with-icon">
       <div class="item-icon">Ico3</div>
       <div class="item-content">
-        <span class="field-heading">Повторяющиеся жизненные сценарии</span>
-        <span class="field-body">Один и тот же сценарий в отношениях, на работе, в финансах. Кажется, будто жизнь ходит по кругу, а ты не можешь его разорвать.</span>
+        <span class="field-heading" data-i18n="prob3_title">Повторяющиеся жизненные сценарии</span>
+        <span class="field-body" data-i18n="prob3_text">Один и тот же сценарий в отношениях, на работе, в финансах. Кажется, будто жизнь ходит по кругу, а ты не можешь его разорвать.</span>
       </div>
     </div>
     <div class="item-card with-icon">
       <div class="item-icon">Ico4</div>
       <div class="item-content">
-        <span class="field-heading">Необходимость перемен</span>
-        <span class="field-body">Пришло время что-то менять, но не хватает сил, инструментов и понимания, с чего начать. Нужна поддержка и проводник.</span>
+        <span class="field-heading" data-i18n="prob4_title">Необходимость перемен</span>
+        <span class="field-body" data-i18n="prob4_text">Пришло время что-то менять, но не хватает сил, инструментов и понимания, с чего начать. Нужна поддержка и проводник.</span>
       </div>
     </div>
   </div>
@@ -687,267 +182,193 @@
 <!-- BLOCK 03: SOLUTION / SERVICES -->
 <div class="page-block" data-block="services" id="services">
   <div class="block-num">Блок 03</div>
-  <span class="field-heading">С чем я работаю</span>
-  <span class="field-sub">Индивидуально и в группах — до результата. Каждая встреча — это шаг к ясности и внутренней свободе.</span>
+  <span class="field-heading" data-i18n="sol_heading">С чем я работаю</span>
+  <span class="field-sub" data-i18n="sol_intro">Индивидуально и в группах — до результата. Каждая встреча — это шаг к ясности и внутренней свободе.</span>
 
-  <div class="items-list">
-    <div class="item-card">
-      <div class="item-num">01</div>
-      <div class="item-content">
-        <span class="field-heading">Индивидуальные консультации</span>
-        <span class="field-body">Личная работа в формате диалога и практики. Разбираем запрос, ищем причины происходящего, восстанавливаем внутреннюю опору.</span>
-      </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="field-heading" data-i18n="serv1_title">Индивидуальные консультации</span>
+      <span class="field-body" data-i18n="serv1_text">Личная работа в формате диалога и практики. Разбираем запрос, ищем причины происходящего, восстанавливаем внутреннюю опору.</span>
+      <a href="#contacts" class="btn btn-sm" data-i18n="serv1_cta">Записаться на консультацию</a>
     </div>
-    <div class="item-card">
-      <div class="item-num">02</div>
-      <div class="item-content">
-        <span class="field-heading">Трансформационные игры</span>
-        <span class="field-body">Групповой инструмент, который через живое взаимодействие выводит на осознание ограничивающих установок и открывает новые ресурсы.</span>
-      </div>
+    <div class="service-card">
+      <span class="field-heading" data-i18n="serv2_title">Трансформационные игры</span>
+      <span class="field-body" data-i18n="serv2_text">Групповой инструмент, который через живое взаимодействие выводит на осознание ограничивающих установок и открывает новые ресурсы.</span>
+      <a href="#contacts" class="btn btn-sm btn-outline" data-i18n="serv2_cta">Смотреть форматы работы</a>
     </div>
-    <div class="item-card">
-      <div class="item-num">03</div>
-      <div class="item-content">
-        <span class="field-heading">Практики осознанности</span>
-        <span class="field-body">Практические техники для замедления и возвращения к себе. Снижение тревожности, восстановление внутренней опоры и ясности.</span>
-      </div>
+    <div class="service-card">
+      <span class="field-heading" data-i18n="serv3_title">Практики осознанности и нумерологический разбор</span>
+      <span class="field-body" data-i18n="serv3_text">Практические техники для замедления и возвращения к себе. Нумерологический анализ — как дополнительный инструмент самопознания.</span>
+      <a href="#contacts" class="btn btn-sm" data-i18n="serv3_cta">Попробовать практику</a>
     </div>
-    <div class="item-card">
-      <div class="item-num">04</div>
-      <div class="item-content">
-        <span class="field-heading">Нумерологический разбор</span>
-        <span class="field-body">Анализ личного кода рождения как дополнительный инструмент самопознания. Помогает увидеть сильные стороны, задачи души и периоды жизни.</span>
-      </div>
-    </div>
-    <div class="item-card">
-      <div class="item-num">05</div>
-      <div class="item-content">
-        <span class="field-heading">Выездные ретриты</span>
-        <span class="field-body">Погружение в пространство природы, тишины и групповой поддержки. Восстановление ресурса, встреча с собой настоящим.</span>
-      </div>
+    <div class="service-card">
+      <span class="field-heading" data-i18n="serv4_title">Выездные ретриты и программы</span>
+      <span class="field-body" data-i18n="serv4_text">Погружение в пространство природы, тишины и групповой поддержки. Восстановление ресурса, встреча с собой настоящим.</span>
+      <a href="#retreat" class="btn btn-sm btn-outline" data-i18n="serv4_cta">Узнать даты ретрита</a>
     </div>
   </div>
-  <a href="#services" class="btn btn-outline">Смотреть форматы работы</a>
-  <span class="btn-note">Подберём подходящий формат под ваш запрос</span>
-</div>
-
-<!-- QUOTE: MISSION -->
-<div class="quote-divider">
-  <div class="quote-label">Миссия</div>
-  <div class="quote-text">Создавать пространство, в котором человек может остановиться, услышать себя, обрести ясность и сделать шаг к глубокой внутренней трансформации.</div>
 </div>
 
 <!-- BLOCK 04: EXPERT -->
 <div class="page-block" data-block="expert" id="expert">
   <div class="block-num">Блок 04</div>
-  <span class="field-heading">Татьяна Онтюрклер</span>
-  <span class="field-sub">Психолог · Практик осознанности · Автор трансформационных программ</span>
+  <span class="field-heading" data-i18n="exp_heading">Татьяна Онтюрклер</span>
+
   <div class="expert-row">
     <div class="image-placeholder expert-img">Место для портретного фото Татьяны. <br>Рекомендуемый размер: 600×800 px (3:4).</div>
     <div class="expert-text">
-      <span class="field-body">Ко мне приходят в моменты, когда теряется ясность, повторяются одни и те же жизненные сценарии или возникает ощущение, что жизнь требует внутренних перемен. Вместе мы ищем причины происходящего, восстанавливаем внутреннюю опору и находим направление дальнейшего пути. В работе я использую психологические методы, практики осознанности и нумерологический анализ как дополнительный инструмент самопознания. Помимо индивидуальной работы, я создаю выездные программы и ретриты, где участники могут восстановить внутренний ресурс и встретиться с собой настоящими.</span>
+      <span class="field-sub" data-i18n="exp_role">Психолог · Практик осознанности · Автор трансформационных программ</span>
+      <span class="field-body" data-i18n="exp_bio">Ко мне приходят в моменты, когда теряется ясность, повторяются одни и те же жизненные сценарии или возникает ощущение, что жизнь требует внутренних перемен. Вместе мы ищем причины происходящего, восстанавливаем внутреннюю опору и находим направление дальнейшего пути. В работе я использую психологические методы, практики осознанности и нумерологический анализ как дополнительный инструмент самопознания. Помимо индивидуальной работы, я создаю выездные программы и ретриты, где участники могут восстановить внутренний ресурс и встретиться с собой настоящими.</span>
     </div>
   </div>
-
-  <hr class="section-div" />
-  <div class="items-list" style="flex-direction: row; flex-wrap: wrap; gap: 12px;">
-    <div class="item-card" style="flex: 1; min-width: 140px; text-align: center;">
-      <span class="field-heading">10+</span>
-      <span class="field-body">лет практики</span>
-    </div>
-    <div class="item-card" style="flex: 1; min-width: 140px; text-align: center;">
-      <span class="field-heading">4</span>
-      <span class="field-body">направления работы</span>
-    </div>
-    <div class="item-card" style="flex: 1; min-width: 140px; text-align: center;">
-      <span class="field-heading">3</span>
-      <span class="field-body">языка консультаций</span>
-    </div>
-  </div>
-  <a href="#contacts" class="btn">Записаться на консультацию</a>
-  <span class="btn-note">Первый шаг — 60-минутная диагностика</span>
 </div>
 
-<!-- QUOTE: STRATEGY -->
-<div class="quote-divider">
-  <div class="quote-label">Стратегия</div>
-  <div class="quote-text">Я не останавливаюсь на решении сиюминутных проблем. Пока человек идёт по пути — я рядом до результата.</div>
-</div>
-
-<!-- BLOCK 07: CERTIFICATES -->
-<div class="page-block" data-block="certs" id="certs">
+<!-- BLOCK 05: MISSION -->
+<div class="page-block" data-block="mission" id="mission">
   <div class="block-num">Блок 05</div>
-  <span class="field-heading">Сертификаты и образование</span>
-  <span class="field-sub">Профессиональный путь и подтверждённые компетенции</span>
-  <span class="field-body">Здесь разместим фото сертификатов. Рекомендуемый размер: 800×600 px (4:3) или 600×800 px (портрет). При клике — увеличение (lightbox).</span>
+  <span class="field-heading" data-i18n="mis_heading"></span>
+  <span class="field-body" data-i18n="mis_mission">Создавать пространство, в котором человек может остановиться, услышать себя, обрести ясность и сделать шаг к глубокой внутренней трансформации.</span>
+  <span class="field-body" data-i18n="mis_strategy">Я не останавливаюсь на решении сиюминутных проблем. Пока человек идёт по пути — я рядом до результата.</span>
+</div>
+
+<!-- BLOCK 06: AUDIENCE -->
+<div class="page-block" data-block="audience" id="audience">
+  <div class="block-num">Блок 06</div>
+  <span class="field-heading" data-i18n="aud_heading">Кому помогает Татьяна Онтюрклер</span>
+  <span class="field-sub" data-i18n="aud_sub">Программы и консультации созданы для трёх ключевых аудиторий — каждая со своим уникальным запросом.</span>
+
+  <div class="items-list">
+    <div class="item-card with-icon" style="border-left:3px solid #9830D5;">
+      <div class="item-icon">Ico1</div>
+      <div class="item-content">
+        <span class="field-heading" data-i18n="aud1_title">Люди в кризисе и поиске себя</span>
+        <span class="field-body" data-i18n="aud1_text">Те, кто переживает жизненные трудности, потерю ориентиров и поиск смысла. Люди, которые чувствуют, что живут не своей жизнью под влиянием страхов и ограничивающих убеждений.</span>
+        <span class="field-body" style="color:#9830D5;font-weight:600;" data-i18n="aud1_goal">Найти внутреннюю опору · Вернуть смысл</span>
+      </div>
+    </div>
+    <div class="item-card with-icon" style="border-left:3px solid #111;">
+      <div class="item-icon">Ico2</div>
+      <div class="item-content">
+        <span class="field-heading" data-i18n="aud2_title">Ищущие осознанность и трансформацию</span>
+        <span class="field-body" data-i18n="aud2_text">Те, кто хочет глубже понять свою природу, раскрыть внутренний потенциал и осознать свои истинные ценности. Для них важно не просто решить проблему, а выйти на новый уровень развития.</span>
+        <span class="field-body" style="color:#9830D5;font-weight:600;" data-i18n="aud2_goal">Раскрытие потенциала · Духовный рост</span>
+      </div>
+    </div>
+    <div class="item-card with-icon" style="border-left:3px solid #9830D5;">
+      <div class="item-icon">Ico3</div>
+      <div class="item-content">
+        <span class="field-heading" data-i18n="aud3_title">Уставшие от внешнего шума</span>
+        <span class="field-body" data-i18n="aud3_text">Люди, нуждающиеся в отдыхе и замедлении. Участники выездных программ и ретритов, которые хотят восстановить внутренний ресурс и встретиться с собой настоящими.</span>
+        <span class="field-body" style="color:#9830D5;font-weight:600;" data-i18n="aud3_goal">Восстановление ресурса · Замедление</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 07: RETREAT -->
+<div class="page-block" data-block="retreat" id="retreat">
+  <div class="block-num">Блок 07</div>
+  <div class="retreat-banner">Место для широкого фото локации Карадениз. <br>Рекомендуемый размер: 1400×600 px (21:9). <br>Можно сделать слайдером или фоном всего блока.</div>
+  <span class="field-heading" data-i18n="retreat_heading">Выездная программа-ретрит на Карадениз</span>
+  <span class="field-sub" data-i18n="retreat_sub">Черноморский регион · погружение в природу, тишину и глубинную работу с собой</span>
+  <span class="field-body" data-i18n="retreat_text">Ретрит — это время, когда можно отложить привычные роли и обязанности. В кругу единомышленников, в красивом месте у моря, мы работаем с запросами, практикуем осознанность, восстанавливаем внутренний ресурс и возвращаемся к себе настоящим. Количество мест ограничено — запись по предоплате.</span>
+  <a href="#contacts" class="btn" data-i18n="retreat_cta">Узнать даты и условия</a>
+</div>
+
+<!-- BLOCK 08: CERTIFICATES -->
+<div class="page-block" data-block="certs" id="certs">
+  <div class="block-num">Блок 08</div>
+  <span class="field-heading" data-i18n="certs_heading">Сертификаты и образование</span>
+  <span class="field-sub" data-i18n="certs_sub">Профессиональный путь и подтверждённые компетенции</span>
   <div class="certs-grid">
     <div class="cert-thumb">Сертификат 1</div>
     <div class="cert-thumb">Сертификат 2</div>
     <div class="cert-thumb">Сертификат 3</div>
   </div>
+  <span class="field-body" data-i18n="certs_note">Здесь разместим фото сертификатов. Пока заглушка — уточню у Татьяны перечень.</span>
 </div>
 
-<!-- BLOCK 05: AUDIENCE -->
-<div class="page-block" data-block="audience" id="audience">
-  <div class="block-num">Блок 06</div>
-  <span class="field-heading">Кому помогает Татьяна Онтюрклер</span>
-  <span class="field-sub">Программы и консультации созданы для трёх ключевых аудиторий — каждая со своим уникальным запросом.</span>
-
-  <div class="items-list">
-    <div class="item-card with-icon" style="border-left: 3px solid #9830D5;">
-      <div class="item-icon">Ico1</div>
-      <div class="item-content">
-        <span class="field-heading">Люди в кризисе и поиске себя</span>
-        <span class="field-body">Те, кто переживает жизненные трудности, потерю ориентиров и поиск смысла. Чувствуют, что живут не своей жизнью под влиянием страхов и ограничивающих убеждений.</span>
-        <span class="note">Запрос: Найти внутреннюю опору · Вернуть смысл</span>
-      </div>
-    </div>
-    <div class="item-card with-icon" style="border-left: 3px solid #111;">
-      <div class="item-icon">Ico2</div>
-      <div class="item-content">
-        <span class="field-heading">Ищущие осознанность и трансформацию</span>
-        <span class="field-body">Те, кто хочет глубже понять свою природу, раскрыть внутренний потенциал и осознать свои истинные ценности. Важно не просто решить проблему, а выйти на новый уровень развития.</span>
-        <span class="note">Запрос: Раскрытие потенциала · Духовный рост</span>
-      </div>
-    </div>
-    <div class="item-card with-icon" style="border-left: 3px solid #9830D5;">
-      <div class="item-icon">Ico3</div>
-      <div class="item-content">
-        <span class="field-heading">Уставшие от внешнего шума</span>
-        <span class="field-body">Люди, нуждающиеся в отдыхе и замедлении. Участники выездных программ и ретритов, которые хотят восстановить внутренний ресурс и встретиться с собой настоящими.</span>
-        <span class="note">Запрос: Восстановление ресурса · Замедление</span>
-      </div>
-    </div>
-  </div>
-  <a href="#contacts" class="btn btn-outline">Хочу разобраться в себе</a>
-  <span class="btn-note">Бесплатная 15-минутная консультация перед записью</span>
-</div>
-
-<!-- BLOCK 06: RETREAT -->
-<div class="page-block" data-block="retreat" id="retreat">
-  <div class="block-num">Блок 07</div>
-  <div class="retreat-banner">
-    Место для фото локации Карадениз (море, природа, пространство ретрита). <br>
-    Рекомендуемый размер: 1400×600 px (21:9). <br>
-    Можно сделать слайдером или фоном всего блока.
-  </div>
-
-  <span class="field-heading">Выездной ретрит в Караденизе</span>
-  <span class="field-sub">Черноморский регион · погружение в природу, тишину и глубинную работу с собой</span>
-  <span class="field-body">Ретрит — это время, когда можно отложить привычные роли и обязанности. В кругу единомышленников, в красивом месте у моря, мы работаем с запросами, практикуем осознанность, восстанавливаем внутренний ресурс и возвращаемся к себе настоящим. Количество мест ограничено — запись по предоплате.</span>
-
-  <a href="#contacts" class="btn">Узнать даты и условия</a>
-  <span class="btn-note">Количество мест ограничено — запись по предоплате</span>
-</div>
-
-<!-- BLOCK 08: CASES / REVIEWS -->
+<!-- BLOCK 09: CASES -->
 <div class="page-block" data-block="cases" id="cases">
-  <div class="block-num">Блок 08</div>
-  <span class="field-heading">Отзывы клиентов</span>
-  <span class="field-sub">Что говорят люди, которые прошли путь вместе со мной</span>
-
-  <div class="items-list">
-    <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading">Марина, 34 года, маркетолог</span>
-      <span class="field-body">«Я пришла к Татьяне после развода с ощущением, что жизнь разбита. Мы работали около трёх месяцев. Постепенно я перестала винить себя, научилась слышать свои потребности и, самое главное, сделала первый шаг к новой профессии. Сейчас я понимаю, что кризис был не концом, а началом другой жизни.»</span>
-    </div>
-    <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading">Алексей, 41 год, IT-директор</span>
-      <span class="field-body">«Долго не мог понять, почему на работе всё получается, а в личной жизни — сплошное разочарование. На консультациях с Татьяной увидел, что выбираю одну и ту же модель поведения в отношениях. Это было непросто, но прозрение изменило многое. Сейчас встречаюсь с женщиной, с которой впервые чувствую себя настоящим.»</span>
-    </div>
-    <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading">Елена, 29 лет, фрилансер</span>
-      <span class="field-body">«У меня была постоянная тревожность и бессонница. Таблетки не хотелось. Татьяна предложила практики осознанности и мы разобрали, откуда растут мои страхи. Через два месяца я стала засыпать спокойно, а утром просыпаться с ощущением, что день — не угроза, а возможность.»</span>
-    </div>
-    <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading">Ирина, 52 года, врач</span>
-      <span class="field-body">«После сорока я почувствовала, что живу на автопилоте: работа, дом, усталость. Ретрит на Карадениз стал поворотной точкой. Тишина, море, групповая поддержка — и вдруг я вспомнила, что такое радость. Вернувшись, ушла с должности, которая меня истощала, и начала частную практику.»</span>
-    </div>
-    <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading">Дмитрий, 37 лет, предприниматель</span>
-      <span class="field-body">«К Татьяне привёл запутанный семейный конфликт. Думал, проблема в жене, но оказалось — во мне. Нумерологический разбор помог увидеть мои устойчивые паттерны, а психологическая работа дала инструменты, чтобы их менять. Семья не идеальна, но мы снова разговариваем друг с другом.»</span>
-    </div>
-    <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading">Ольга, 45 лет, HR-директор</span>
-      <span class="field-body">«Я много лет «держалась», пока однажды не рухнула эмоционально. Практики осознанности и индивидуальные сессии помогли мне перестать стыдиться слабости и начать заботиться о себе. Сейчас я честно говорю «нет», когда нужно, и это изменило и работу, и отношения с детьми.»</span>
-    </div>
-  </div>
-  <a href="#contacts" class="btn btn-outline">Рассказать свою историю</a>
-  <span class="btn-note">Все истории публикуются с согласия и анонимно по желанию</span>
-</div>
-
-<!-- BLOCK 09: FAQ -->
-<div class="page-block" data-block="faq" id="faq">
   <div class="block-num">Блок 09</div>
-  <span class="field-heading">Частые вопросы</span>
+  <span class="field-heading" data-i18n="cases_heading">Истории изменений</span>
+  <span class="field-sub" data-i18n="cases_sub">Как меняется жизнь, когда человек возвращается к себе</span>
 
   <div class="items-list">
     <div class="item-card">
-      <span class="field-heading">Как проходит индивидуальная консультация?</span>
-      <span class="field-body">Встреча проходит онлайн или офлайн. Мы разбираем ваш запрос, я задаю наводящие вопросы, предлагаю практики и инструменты. Длительность — от 60 минут.</span>
+      <div class="review-avatar">Фото</div>
+      <span class="field-heading" data-i18n="case1_title">Вышла из повторяющегося сценария в отношениях</span>
+      <span class="field-body" data-i18n="case1_text">После серии консультаций клиентка увидела, что выбирает партнёров по знакомому шаблону. Разобрали корень, восстановили внутреннюю опору — и через полгода отношения стали выстраиваться иначе.</span>
     </div>
     <div class="item-card">
-      <span class="field-heading">Что такое трансформационная игра?</span>
-      <span class="field-body">Это групповой формат работы, где через метафоры и живое взаимодействие участники выходят на осознание своих установок и находят новые решения.</span>
+      <div class="review-avatar">Фото</div>
+      <span class="field-heading" data-i18n="case2_title">Нашла направление после профессионального выгорания</span>
+      <span class="field-body" data-i18n="case2_text">Женщина 35 лет пришла с ощущением опустошения. Вместе прошли через кризис и вышли к пониманию, чем она действительно хочет заниматься. Ушла со скучной работы и запустила собственный проект.</span>
     </div>
     <div class="item-card">
-      <span class="field-heading">Как записаться на ретрит?</span>
-      <span class="field-body">Напишите или позвоните — я вышлю программу, стоимость и условия участия. Количество мест ограничено, запись по предоплате.</span>
-    </div>
-    <div class="item-card">
-      <span class="field-heading">Работаете ли вы онлайн?</span>
-      <span class="field-body">Да, большинство индивидуальных консультаций проходят онлайн. Ретриты и групповые программы — офлайн.</span>
-    </div>
-    <div class="item-card">
-      <span class="field-heading">Что такое нумерологический разбор?</span>
-      <span class="field-body">Это дополнительный инструмент самопознания. По дате рождения мы смотрим на ваши сильные стороны, задачи и периоды жизни. Не гадание, а работа с архетипами и циклами.</span>
+      <div class="review-avatar">Фото</div>
+      <span class="field-heading" data-i18n="case3_title">Восстановил ресурс на ретрите у моря</span>
+      <span class="field-body" data-i18n="case3_text">Участник приехал в состоянии хронической усталости. После ретрита на Карадениз вернулся с ощущением ясности, сил и понимания, что ему нужно менять в жизни.</span>
     </div>
   </div>
-  <a href="#contacts" class="btn">Задать свой вопрос</a>
-  <span class="btn-note">Отвечу лично в течение рабочего дня</span>
+  <a href="#contacts" class="btn btn-outline" data-i18n="cases_cta">Рассказать свою историю</a>
 </div>
 
-<!-- BLOCK 10: GALLERY -->
-<div class="page-block" data-block="gallery" id="gallery">
+<!-- BLOCK 10: FAQ -->
+<div class="page-block" data-block="faq" id="faq">
   <div class="block-num">Блок 10</div>
-  <span class="field-heading">Фотографии</span>
-  <span class="field-sub">Моменты из работы, встреч и ретритов</span>
+  <span class="field-heading" data-i18n="faq_heading">Частые вопросы</span>
+
+  <div class="items-list">
+    <div class="item-card">
+      <span class="field-heading" data-i18n="faq1_q">Как проходит индивидуальная консультация?</span>
+      <span class="field-body" data-i18n="faq1_a">Встреча проходит онлайн или офлайн. Мы разбираем ваш запрос, я задаю наводящие вопросы, предлагаю практики и инструменты. Длительность — от 60 минут.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading" data-i18n="faq2_q">Что такое трансформационная игра?</span>
+      <span class="field-body" data-i18n="faq2_a">Это групповой формат работы, где через метафоры и живое взаимодействие участники выходят на осознание своих установок и находят новые решения.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading" data-i18n="faq3_q">Как записаться на ретрит?</span>
+      <span class="field-body" data-i18n="faq3_a">Напишите или позвоните — я вышлю программу, стоимость и условия участия. Количество мест ограничено, запись по предоплате.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading" data-i18n="faq4_q">Работаете ли вы онлайн?</span>
+      <span class="field-body" data-i18n="faq4_a">Да, большинство индивидуальных консультаций проходят онлайн. Ретриты и групповые программы — офлайн.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading" data-i18n="faq5_q">Что такое нумерологический разбор?</span>
+      <span class="field-body" data-i18n="faq5_a">Это дополнительный инструмент самопознания. По дате рождения мы смотрим на ваши сильные стороны, задачи и периоды жизни. Не гадание, а работа с архетипами и циклами.</span>
+    </div>
+  </div>
+  <a href="#contacts" class="btn" data-i18n="faq_cta">Задать свой вопрос</a>
+  <span class="btn-note" data-i18n="faq_note">Отвечу лично в течение рабочего дня</span>
+</div>
+
+<!-- BLOCK 11: GALLERY -->
+<div class="page-block" data-block="gallery" id="gallery">
+  <div class="block-num">Блок 11</div>
+  <span class="field-heading" data-i18n="gallery_heading">Фотографии</span>
+  <span class="field-sub" data-i18n="gallery_sub">Моменты из работы, встреч и ретритов</span>
   <div class="gallery-grid">
-    <div class="gallery-thumb">Фото 1</div>
-    <div class="gallery-thumb">Фото 2</div>
-    <div class="gallery-thumb">Фото 3</div>
-    <div class="gallery-thumb">Фото 4</div>
-    <div class="gallery-thumb">Фото 5</div>
-    <div class="gallery-thumb">Фото 6</div>
-    <div class="gallery-thumb">Фото 7</div>
-    <div class="gallery-thumb">Фото 8</div>
-    <div class="gallery-thumb">Фото 9</div>
-    <div class="gallery-thumb">Фото 10</div>
-    <div class="gallery-thumb">Фото 11</div>
-    <div class="gallery-thumb">Фото 12</div>
+    <div class="gallery-thumb">Фото 1</div><div class="gallery-thumb">Фото 2</div><div class="gallery-thumb">Фото 3</div><div class="gallery-thumb">Фото 4</div><div class="gallery-thumb">Фото 5</div><div class="gallery-thumb">Фото 6</div><div class="gallery-thumb">Фото 7</div><div class="gallery-thumb">Фото 8</div><div class="gallery-thumb">Фото 9</div><div class="gallery-thumb">Фото 10</div><div class="gallery-thumb">Фото 11</div><div class="gallery-thumb">Фото 12</div>
   </div>
 </div>
 
-<!-- BLOCK 11: CONTACTS / CTA -->
-<div class="page-block" data-block="contacts" id="contacts">
-  <div class="block-num">Блок 11</div>
-  <span class="field-heading">Готовы начать путь к себе?</span>
-  <span class="field-sub">Напишите или позвоните — разберём вашу ситуацию и выберем формат работы.</span>
-  <div class="image-placeholder">Место для мягкого фонового изображения природы/пространства (опционально). <br>Рекомендуемый размер: 1400×900 px. <br>Можно использовать как фон блока с градиентной маской для читаемости текста, либо оставить чистый фон.</div>
-  <a href="#contacts" class="btn">Записаться на консультацию</a>
-  <span class="btn-note">Отвечу в WhatsApp или Telegram в течение дня</span>
+<!-- BLOCK 12: CONTACTS / CTA -->
+<div class="page-block contacts-animated" data-block="contacts" id="contacts">
+  <canvas class="animated-bg" id="contacts-canvas"></canvas>
+  <div class="block-num">Блок 12</div>
+  {T('ct_heading','span','field-heading')}
+  {T('ct_sub','span','field-sub')}
+  <a href="#contacts" class="btn" data-i18n="ct_cta">{html.escape(ru['ct_cta'])}</a>
+  <span class="btn-note" data-i18n="ct_note">Отвечу в WhatsApp или Telegram в течение дня</span>
 </div>
 
 <!-- FOOTER -->
-<div class="page-block" data-block="footer" style="background:#f3f3f3; border-top: 2px dashed #bbb; text-align: center;">
+<div class="page-block" data-block="footer" style="background:#f3f3f3; border-top:2px dashed #bbb; text-align:center;">
   <div class="footer-logo">
-    <img src="https://me-qr.kz/tatyana/page/brandbook/logo10.png" alt="Татьяна Онтюрклер" style="height: 48px; width: auto;">
+    <img src="https://me-qr.kz/tatyana/structure/logo11.webp" alt="Татьяна Онтюрклер" style="height:48px; width:auto;">
   </div>
   <div class="footer-icons">
     <span class="footer-icon">Tel</span>
@@ -961,57 +382,122 @@
     <span class="field-body">taty-yana@mail.ru</span>
     <span class="field-body">@stvenna</span>
   </div>  
-  <div style="margin-top: 20px;">
+  <div style="margin-top:20px;">
     <button class="btn btn-outline" onclick="alert('Здесь будет счётчик посещений сайта')">Статистика</button>
   </div>
 </div>
 
+<script src="structure_data.json" id="i18n-data" type="application/json"></script>
 <script>
+(function(){{
   // Wrap block content in block-inner
-  document.querySelectorAll('.page-block').forEach(block => {
+  document.querySelectorAll('.page-block').forEach(block => {{
     const inner = document.createElement('div');
     inner.className = 'block-inner';
-    while (block.firstChild) inner.appendChild(block.firstChild);
+    while(block.firstChild) inner.appendChild(block.firstChild);
     block.appendChild(inner);
-  });
-  // Smooth scroll
-  document.querySelectorAll('.nav-link, .mobile-menu a').forEach(a => {
-    a.addEventListener('click', e => {
-      const href = a.getAttribute('href');
-      if (!href || !href.startsWith('#')) return;
-      e.preventDefault();
-      const target = href.slice(1);
-      const el = document.querySelector('[data-block="' + target + '"]');
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      document.getElementById('site-header').classList.remove('menu-open');
-    });
-  });
+  }});
+
+  // Load i18n data
+  let i18nData = {{}};
+  try {{
+    const raw = document.getElementById('i18n-data').textContent;
+    i18nData = JSON.parse(raw);
+  }} catch(e) {{ console.error('i18n load error', e); }}
+
+  function applyLang(lang) {{
+    if (!i18nData[lang]) return;
+    const dict = i18nData[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {{
+      const key = el.dataset.i18n;
+      if (!dict[key]) return;
+      if (el.tagName === 'A' || el.tagName === 'BUTTON') {{
+        el.textContent = dict[key];
+      }} else {{
+        el.innerHTML = dict[key];
+      }}
+    }});
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {{
+      const key = el.dataset.i18nTitle;
+      if (dict[key]) el.textContent = dict[key];
+    }});
+  }}
 
   // Language dropdown
   const langDropdown = document.getElementById('langDropdown');
-  if (langDropdown) {
+  if (langDropdown) {{
     const langBtn = langDropdown.querySelector('.lang-btn');
     const langLinks = langDropdown.querySelectorAll('.lang-menu a');
-    langBtn.addEventListener('click', e => {
+    langBtn.addEventListener('click', e => {{
       e.stopPropagation();
       langDropdown.classList.toggle('open');
-    });
-    langLinks.forEach(link => {
-      link.addEventListener('click', e => {
+    }});
+    langLinks.forEach(link => {{
+      link.addEventListener('click', e => {{
         e.preventDefault();
         const lang = link.dataset.lang;
         langBtn.textContent = lang.toUpperCase() + ' ▾';
         langLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
         langDropdown.classList.remove('open');
-        // Placeholder: here will be the actual language switch logic
-        console.log('Language switched to:', lang);
-      });
-    });
-    document.addEventListener('click', e => {
+        applyLang(lang);
+      }});
+    }});
+    document.addEventListener('click', e => {{
       if (!langDropdown.contains(e.target)) langDropdown.classList.remove('open');
-    });
-  }
+    }});
+  }}
+
+  // Smooth scroll
+  document.querySelectorAll('.nav-link, .mobile-menu a').forEach(a => {{
+    a.addEventListener('click', e => {{
+      const href = a.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      e.preventDefault();
+      const target = href.slice(1);
+      const el = document.querySelector('[data-block="' + target + '"]');
+      if (el) el.scrollIntoView({{ behavior:'smooth', block:'start' }});
+      document.getElementById('site-header').classList.remove('menu-open');
+    }});
+  }});
+
+  // Animated wave background for contacts block
+  const canvas = document.getElementById('contacts-canvas');
+  if (canvas) {{
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    function resize() {{
+      const parent = canvas.parentElement;
+      width = parent.offsetWidth;
+      height = parent.offsetHeight;
+      canvas.width = width;
+      canvas.height = height;
+    }}
+    window.addEventListener('resize', resize);
+    resize();
+    let t = 0;
+    function draw() {{
+      t += 0.005;
+      ctx.fillStyle = '#111';
+      ctx.fillRect(0,0,width,height);
+      for (let i=0; i<4; i++) {{
+        ctx.beginPath();
+        ctx.moveTo(0,height);
+        for (let x=0; x<=width; x+=10) {{
+          const y = height*(0.55+0.12*i) + Math.sin(x*0.003+t+i)*30 + Math.sin(x*0.007+t*1.3+i*2)*15;
+          ctx.lineTo(x,y);
+        }}
+        ctx.lineTo(width,height);
+        ctx.closePath();
+        ctx.fillStyle = `rgba(255,255,255,${{0.06+i*0.03}})`;
+        ctx.fill();
+      }}
+      requestAnimationFrame(draw);
+    }}
+    draw();
+  }}
+}})();
 </script>
 
 </body>
