@@ -32,6 +32,9 @@
       background: #fff;
       border-bottom: 2px dashed #bbb;
       padding: 0 32px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     .site-header .header-inner {
       max-width: 1080px;
@@ -46,6 +49,7 @@
       display: flex;
       align-items: center;
       height: 64px;
+      cursor: pointer;
     }
     .site-header .header-logo img {
       height: 44px;
@@ -594,7 +598,7 @@
 <!-- HEADER -->
 <header class="site-header" id="site-header">
   <div class="header-inner">
-    <div class="header-logo"><img src="https://me-qr.kz/tatyana/structure/logo11.webp" alt="Татьяна Онтюрклер"></div>
+    <div class="header-logo" onclick="window.scrollTo({top:0, behavior:'smooth'});"><img src="https://me-qr.kz/tatyana/structure/logo11.webp" alt="Татьяна Онтюрклер"></div>
     <nav class="header-nav">
       <a class="nav-link" href="#services" data-i18n="nav_services">Услуги</a>
       <a class="nav-link" href="#expert" data-i18n="nav_expert">Об эксперте</a>
