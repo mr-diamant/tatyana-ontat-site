@@ -27,19 +27,6 @@
     .site-header .header-nav { display:flex; align-items:center; gap:4px; flex-wrap:wrap; }
     .site-header .nav-link { font-size:13px; font-weight:500; font-family:'Montserrat',sans-serif; color:#444; padding:6px 12px; border-radius:6px; text-decoration:none; transition:background 0.15s,color 0.15s; }
     .site-header .nav-link:hover { background:#f3f4f6; color:#111; }
-    .site-header .burger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:6px; border:none; background:none; }
-    .site-header .burger span { display:block; width:22px; height:2px; background:#111; border-radius:2px; transition:all 0.2s; }
-    .site-header .mobile-menu { display:none; flex-direction:column; background:#fff; border-top:1px solid #e5e5e5; padding:12px 0; }
-    .site-header .mobile-menu a { font-size:14px; font-weight:500; color:#333; padding:10px 24px; text-decoration:none; }
-    .site-header .mobile-menu a:hover { background:#f3f4f6; }
-    .site-header.menu-open .mobile-menu { display:flex; }
-    @media(max-width:640px){
-      .site-header .header-nav { display:none; }
-      .site-header .header-inner { position:relative; }
-      .site-header .burger { display:flex; }
-      .site-header { padding:0 16px; }
-      .site-header .mobile-lang { display:flex; align-items:center; padding:10px 24px; border-top:1px solid #e5e5e5; }
-    }
 
     .lang-dropdown { position:relative; display:inline-block; margin-left:8px; }
     .lang-dropdown .lang-btn { font-size:13px; font-weight:600; font-family:'Montserrat',sans-serif; color:#444; padding:6px 12px; border-radius:6px; border:1px solid #ddd; background:#fff; cursor:pointer; display:flex; align-items:center; gap:6px; }
@@ -49,7 +36,7 @@
     .lang-dropdown .lang-menu a { display:block; font-size:13px; font-weight:500; font-family:'Montserrat',sans-serif; color:#444; padding:8px 12px; text-decoration:none; }
     .lang-dropdown .lang-menu a:hover { background:#f3f4f6; }
     .lang-dropdown .lang-menu a.active { background:#111; color:#fff; }
-    @media(max-width:640px){ .lang-dropdown { margin-left:0; } .lang-dropdown .lang-menu { right:auto; left:0; } }
+    @media(max-width:640px){ .site-header .header-nav { display:none; } }
 
     .page-block { max-width:1200px; margin:0 auto; padding:48px 24px; border-bottom:1px solid #e5e5e5; }
     .page-block:last-child { border-bottom:none; }
@@ -84,7 +71,7 @@
     .expert-row { display:grid; grid-template-columns:280px 1fr; gap:32px; align-items:flex-start; margin-top:16px; }
     .expert-img { min-height:360px; aspect-ratio:3/4; margin-top:0; }
     .expert-text { display:flex; flex-direction:column; }
-    @media(max-width:640px){ .expert-row { grid-template-columns:1fr; } .expert-img { width:100%; aspect-ratio:auto; } }
+    @media(max-width:640px){ .expert-row { grid-template-columns:1fr; } }
 
     .certs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:16px; }
     .cert-thumb { aspect-ratio:4/3; background:#f2f2f2; border:2px dashed #bbb; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:600; color:#777; padding:12px; }
@@ -108,10 +95,9 @@
     .contacts-animated .btn-note { color:#fff; }
 
     .footer-logo { margin-bottom:12px; }
-    .footer-icons { display:none; }
-    .footer-contacts { display:flex; flex-wrap:wrap; justify-content:space-around; gap:24px 40px; margin-top:12px; }
-    .footer-contact-item { display:flex; align-items:center; gap:10px; }
+    .footer-icons { display:flex; justify-content:space-around; gap:24px 40px; margin-top:12px; }
     .footer-icon { width:32px; height:32px; border:1px dashed #999; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:700; color:#777; text-transform:uppercase; }
+    .footer-contacts { display:flex; flex-wrap:wrap; justify-content:space-around; gap:24px 40px; margin-top:12px; }
   </style>
 </head>
 <body>
@@ -137,28 +123,6 @@
         </div>
       </div>
     </nav>
-    <button class="burger" onclick="document.getElementById('site-header').classList.toggle('menu-open')" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu">
-    <a class="nav-link" href="#services" data-i18n="nav_services">Услуги</a>
-    <a class="nav-link" href="#expert" data-i18n="nav_expert">Об эксперте</a>
-    <a class="nav-link" href="#retreat" data-i18n="nav_retreat">Ретрит</a>
-    <a class="nav-link" href="#cases" data-i18n="nav_cases">Отзывы</a>
-    <a class="nav-link" href="#gallery" data-i18n="nav_gallery">Фото</a>
-    <a class="nav-link" href="#faq" data-i18n="nav_faq">FAQ</a>
-    <a class="nav-link" href="#contacts" data-i18n="nav_contacts">Контакты</a>
-    <div class="mobile-lang">
-      <div class="lang-dropdown" id="langDropdownMobile">
-        <button class="lang-btn" type="button" data-i18n="lang_current">RU ▾</button>
-        <div class="lang-menu">
-          <a href="#" class="active" data-lang="ru">RU</a>
-          <a href="#" data-lang="en">EN</a>
-          <a href="#" data-lang="tr">TR</a>
-        </div>
-      </div>
-    </div>
   </div>
 </header>
 
@@ -406,23 +370,17 @@
   <div class="footer-logo">
     <img src="https://me-qr.kz/tatyana/structure/logo11.webp" alt="Татьяна Онтюрклер" style="height:48px; width:auto;">
   </div>
+  <div class="footer-icons">
+    <span class="footer-icon">Tel</span>
+    <span class="footer-icon">IG</span>
+    <span class="footer-icon">Mail</span>
+    <span class="footer-icon">TG</span>
+  </div>
   <div class="footer-contacts">
-    <div class="footer-contact-item">
-      <span class="footer-icon">Tel</span>
-      <span class="field-body">+46 72 870 69 41</span>
-    </div>
-    <div class="footer-contact-item">
-      <span class="footer-icon">IG</span>
-      <span class="field-body">@tatyana_ontyurkler</span>
-    </div>
-    <div class="footer-contact-item">
-      <span class="footer-icon">Mail</span>
-      <span class="field-body">taty-yana@mail.ru</span>
-    </div>
-    <div class="footer-contact-item">
-      <span class="footer-icon">TG</span>
-      <span class="field-body">@stvenna</span>
-    </div>
+    <span class="field-body">+46 72 870 69 41</span>
+    <span class="field-body">@tatyana_ontyurkler</span>
+    <span class="field-body">taty-yana@mail.ru</span>
+    <span class="field-body">@stvenna</span>
   </div>  
   <div style="margin-top:20px;">
     <button class="btn btn-outline" onclick="alert('Здесь будет счётчик посещений сайта')">Статистика</button>
@@ -464,9 +422,8 @@
     }});
   }}
 
-  function setupLangDropdown(dropdownId) {{
-    const langDropdown = document.getElementById(dropdownId);
-    if (!langDropdown) return;
+  const langDropdown = document.getElementById('langDropdown');
+  if (langDropdown) {{
     const langBtn = langDropdown.querySelector('.lang-btn');
     const langLinks = langDropdown.querySelectorAll('.lang-menu a');
     langBtn.addEventListener('click', e => {{
@@ -477,14 +434,10 @@
       link.addEventListener('click', e => {{
         e.preventDefault();
         const lang = link.dataset.lang;
-        // Sync all lang buttons and active states
-        document.querySelectorAll('.lang-dropdown').forEach(dd => {{
-          const btn = dd.querySelector('.lang-btn');
-          const links = dd.querySelectorAll('.lang-menu a');
-          if (btn) btn.textContent = (lang === 'ru' ? 'RU' : lang === 'en' ? 'EN' : 'TR') + ' ▾';
-          links.forEach(l => l.classList.toggle('active', l.dataset.lang === lang));
-          dd.classList.remove('open');
-        }});
+        langBtn.textContent = (lang === 'ru' ? 'RU' : lang === 'en' ? 'EN' : 'TR') + ' ▾';
+        langLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        langDropdown.classList.remove('open');
         applyLang(lang);
       }});
     }});
@@ -492,8 +445,6 @@
       if (!langDropdown.contains(e.target)) langDropdown.classList.remove('open');
     }});
   }}
-  setupLangDropdown('langDropdown');
-  setupLangDropdown('langDropdownMobile');
 
   document.querySelectorAll('.nav-link, .mobile-menu a').forEach(a => {{
     a.addEventListener('click', e => {{
