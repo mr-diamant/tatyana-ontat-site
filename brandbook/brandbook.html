@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinGuide Expert — Брендбук</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://finguide.kz/page/brandbook/icon.png" />
+  <link rel="apple-touch-icon" href="https://finguide.kz/page/brandbook/icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://finguide.kz/page/brandbook/brandbook.html" />
+  <meta property="og:title" content="FinGuide Expert — Брендбук 2026" />
+  <meta property="og:description" content="Руководство по фирменному стилю FinGuide Expert. Айнур Рысмаганбетова — профессиональный бухгалтер, финансовый коуч и налоговый эксперт с 20-летним стажем." />
+  <meta property="og:image" content="https://finguide.kz/page/brandbook/logo.jpg" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="FinGuide Expert" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://finguide.kz/page/brandbook/logo.jpg" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+    :root {
+      --green: #43795e;
+      --green-dark: #2d5240;
+      --green-light: #5a9478;
+      --gold: #c9a84c;
+      --gold-light: #e8c96a;
+      --gold-dark: #a07830;
+      --white: #ffffff;
+      --off-white: #f8f6f1;
+      --gray: #6b6b6b;
+      --light-gray: #e8e4dc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; background: #fff; color: #1a1a1a; }
+
+    /* LANG SWITCHER */
+    .lang-switcher {
+      position: fixed;
+      top: 16px;
+      right: 20px;
+      z-index: 2000;
+      display: flex;
+      gap: 4px;
+    }
+    .lang-btn {
+      padding: 7px 14px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(26,46,36,0.85);
+      color: rgba(255,255,255,0.6);
+      backdrop-filter: blur(8px);
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--gold);
+      color: #1a1a1a;
+      border-color: var(--gold);
+    }
+
+    /* COVER */
+    .cover {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a2e24 0%, #2d5240 50%, #43795e 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; padding: 60px 40px;
+    }
+    .cover::before {
+      content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+      top: -100px; right: -100px;
+    }
+    .cover::after {
+      content: ''; position: absolute; width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+      bottom: -80px; left: -80px;
+    }
+    .cover-tag { font-size: 11px; font-weight: 600; letter-spacing: 4px; color: var(--gold-light); text-transform: uppercase; margin-bottom: 50px; opacity: 0.9; }
+    .cover-title { font-size: 14px; letter-spacing: 8px; text-transform: uppercase; color: rgba(255,255,255,0.6); text-align: center; }
+    .cover-year { position: absolute; bottom: 40px; right: 60px; font-size: 11px; letter-spacing: 3px; color: rgba(255,255,255,0.3); }
+    .cover-line { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 30px auto; }
+
+    /* SECTIONS */
+    .section { padding: 100px 60px; max-width: 1100px; margin: 0 auto; }
+    .section-full { padding: 100px 60px; }
+    .section-tag { font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .section-title { font-size: 42px; font-weight: 700; color: var(--green-dark); line-height: 1.2; margin-bottom: 50px; }
+    .divider { height: 1px; background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, transparent 100%); margin: 0 60px; opacity: 0.4; }
+
+    /* NAME */
+    .name-section { background: var(--off-white); }
+    .name-anatomy { display: flex; gap: 0; margin-bottom: 60px; align-items: stretch; }
+    .name-part { flex: 1; padding: 50px 40px; position: relative; }
+    .name-part.fin { background: var(--green); color: white; }
+    .name-part.guide { background: var(--green-dark); color: white; }
+    .name-part.expert { background: linear-gradient(135deg, #c9a84c, #e8c96a); color: #1a1a1a; }
+    .name-part-word { font-size: 52px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; display: block; }
+    .name-part-origin { font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; opacity: 0.6; margin-bottom: 20px; display: block; }
+    .name-part-desc { font-size: 14px; line-height: 1.7; opacity: 0.9; }
+    .name-meaning { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .meaning-card { padding: 35px; border: 1px solid var(--light-gray); background: white; position: relative; }
+    .meaning-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(180deg, var(--gold), var(--gold-light)); }
+    .meaning-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 14px; }
+    .meaning-card p { font-size: 15px; color: #444; line-height: 1.8; }
+
+    /* LOGO */
+    .logo-showcase { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 500px; }
+    .logo-display { background: var(--off-white); display: flex; align-items: center; justify-content: center; padding: 80px; }
+    .logo-display img { max-width: 320px; width: 100%; }
+    .logo-info { padding: 70px; background: white; display: flex; flex-direction: column; justify-content: center; }
+    .logo-element { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--light-gray); }
+    .logo-element:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .logo-element h4 { font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 12px; }
+    .logo-element p { font-size: 14px; color: #555; line-height: 1.8; }
+    .logo-versions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+
+    /* COLORS */
+    .colors-section { background: #1a2e24; color: white; }
+    .colors-section .section-title { color: white; }
+    .color-palette { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 60px; }
+    .color-swatch { border-radius: 4px; overflow: hidden; }
+    .color-block { height: 160px; }
+    .color-meta { padding: 20px; background: rgba(255,255,255,0.05); }
+    .color-name { font-size: 13px; font-weight: 700; color: white; margin-bottom: 6px; }
+    .color-hex { font-size: 12px; font-family: 'Courier New', monospace; color: rgba(255,255,255,0.5); letter-spacing: 1px; }
+    .color-role { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase; }
+    .color-meaning { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .color-meaning-item { padding: 30px; border: 1px solid rgba(255,255,255,0.1); }
+    .color-dot { width: 40px; height: 40px; border-radius: 50%; margin-bottom: 16px; }
+    .color-meaning-item h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 10px; }
+    .color-meaning-item p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+    /* EXPERT */
+    .expert-section { background: var(--off-white); }
+    .expert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .expert-name { font-size: 32px; font-weight: 700; color: var(--green-dark); line-height: 1.3; margin-bottom: 8px; }
+    .expert-title { font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 30px; }
+    .expert-bio { font-size: 15px; color: #555; line-height: 1.9; margin-bottom: 40px; }
+    .certs-list { list-style: none; }
+    .certs-list li { padding: 14px 0; border-bottom: 1px solid var(--light-gray); font-size: 14px; color: #444; display: flex; align-items: center; gap: 14px; }
+    .certs-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-light)); flex-shrink: 0; }
+    .cert-tag { display: inline-block; padding: 4px 12px; background: var(--green); color: white; font-size: 11px; font-weight: 700; letter-spacing: 1px; border-radius: 2px; }
+    .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .stat-box { padding: 35px 30px; background: white; text-align: center; border-bottom: 3px solid var(--gold); }
+    .stat-number { font-size: 48px; font-weight: 700; color: var(--green); line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #888; }
+
+    /* MISSION */
+    .mission-section { text-align: center; padding: 120px 60px; background: linear-gradient(135deg, #43795e 0%, #2d5240 100%); color: white; }
+    .mission-quote { font-size: 36px; font-weight: 600; line-height: 1.5; color: white; max-width: 800px; margin: 0 auto 40px; }
+    .mission-quote span { background: linear-gradient(90deg, var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .mission-sub { font-size: 14px; color: rgba(255,255,255,0.6); letter-spacing: 2px; text-transform: uppercase; }
+
+    /* PAGE INDICATOR */
+    .page-indicator { text-align: right; font-size: 10px; letter-spacing: 3px; color: rgba(0,0,0,0.2); padding: 20px 60px; text-transform: uppercase; }
+    .page-indicator.light { color: rgba(255,255,255,0.2); }
+
+    /* ADAPTIVE CLASSES */
+    .mock-wrap { max-width: 1100px; margin: 0 auto 4px; padding: 0 60px; }
+    .mock-wrap-last { max-width: 1100px; margin: 0 auto; padding: 0 60px; }
+    .mock-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    .icon-main-grid { display: grid; grid-template-columns: auto 1fr; gap: 80px; align-items: center; }
+    .icon-previews { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+    .icon-desc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+    .mockups-section-inner { max-width: 1100px; margin: 0 auto; padding: 0 60px; }
+    .logo-versions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+    .font-weights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+
+    /* MOBILE NAV */
+    .mob-nav { display: none; }
+
+    @media (max-width: 768px) {
+      .mob-nav {
+        display: block; position: sticky; top: 0; z-index: 1000;
+        background: #1a2e24; box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      }
+      .mob-nav-bar { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
+      .mob-nav-btn { background: none; border: none; cursor: pointer; padding: 4px; display: flex; flex-direction: column; gap: 5px; }
+      .mob-nav-btn span { display: block; width: 22px; height: 2px; background: white; transition: all 0.25s; transform-origin: center; }
+      .mob-nav-btn.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      .mob-nav-btn.open span:nth-child(2) { opacity: 0; }
+      .mob-nav-btn.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+      .mob-nav-menu { display: none; flex-direction: column; border-top: 1px solid rgba(255,255,255,0.1); }
+      .mob-nav-menu.open { display: flex; }
+      .mob-nav-menu a { padding: 14px 20px; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.07); display: flex; align-items: center; gap: 12px; }
+      .mob-nav-menu a .nav-num { font-size: 10px; color: var(--gold-light); font-weight: 700; min-width: 28px; }
+      .mob-lang { display: flex; gap: 6px; padding: 12px 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+      .mob-lang-btn { padding: 7px 18px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); background: transparent; color: rgba(255,255,255,0.6); }
+      .mob-lang-btn.active { background: var(--gold); color: #1a1a1a; border-color: var(--gold); }
+
+      /* hide desktop lang switcher on mobile */
+      .lang-switcher { display: none; }
+
+      .name-anatomy { flex-direction: column; }
+      .name-meaning { grid-template-columns: 1fr; }
+      .logo-showcase { grid-template-columns: 1fr; }
+      .color-palette { grid-template-columns: 1fr 1fr; }
+      .color-meaning { grid-template-columns: 1fr; }
+      .expert-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .section { padding: 60px 20px; }
+      .section-full { padding: 60px 20px; }
+      .mock-wrap { padding: 0 16px; }
+      .mock-wrap-last { padding: 0 16px; }
+      .mock-grid-2 { grid-template-columns: 1fr; }
+      .icon-main-grid { grid-template-columns: 1fr; gap: 40px; }
+      .icon-previews { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .icon-desc-grid { grid-template-columns: 1fr; }
+      .mockups-section-inner { padding: 0 16px; }
+      .logo-versions-grid { grid-template-columns: 1fr; }
+      .font-weights-grid { grid-template-columns: 1fr 1fr !important; }
+      .typo-rules-grid { grid-template-columns: 1fr !important; }
+      .dont-grid { grid-template-columns: 1fr !important; }
+      .contacts-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .cover { padding: 50px 20px; }
+      .section-title { font-size: 30px; }
+      .name-part-word { font-size: 36px; }
+      .mission-quote { font-size: 24px; }
+      .expert-name { font-size: 24px; }
+      .stat-number { font-size: 36px; }
+      .logo-display { padding: 40px 30px; }
+      .logo-info { padding: 40px 30px; }
+      .font-name-big { font-size: 48px !important; letter-spacing: -1px !important; }
+      .page-indicator { padding: 16px 16px; letter-spacing: 1px; font-size: 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .mockups-section-inner.page-indicator { margin-top: 16px; }
+      .audience-grid { grid-template-columns: 1fr !important; }
+      .digital-grid { grid-template-columns: 1fr !important; }
+      .domain-showcase { padding: 32px 24px !important; }
+      .domain-title { font-size: 36px !important; }
+    }
+    @media (max-width: 480px) {
+      .color-palette { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .icon-previews { flex-direction: column; }
+      .font-weights-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LANG SWITCHER (desktop) -->
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('ru')">RU</button>
+    <button class="lang-btn" onclick="setLang('kz')">KZ</button>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <nav class="mob-nav" id="mob-nav">
+    <div class="mob-nav-bar">
+      <img src="https://finguide.kz/page/brandbook/menu_logo.png" alt="FinGuide Expert" style="height: 28px; width: auto;" />
+      <button class="mob-nav-btn" id="mob-nav-btn" onclick="toggleNav()" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mob-nav-menu" id="mob-nav-menu">
+      <a href="#section-name" onclick="closeNav()"><span class="nav-num">01</span><span data-i18n="nav_name">Название</span></a>
+      <a href="#section-logo" onclick="closeNav()"><span class="nav-num">02</span><span data-i18n="nav_logo">Логотип</span></a>
+      <a href="#section-icon" onclick="closeNav()"><span class="nav-num">03</span><span data-i18n="nav_icon">Иконка</span></a>
+      <a href="#section-typography" onclick="closeNav()"><span class="nav-num">04</span><span data-i18n="nav_typo">Типографика</span></a>
+      <a href="#section-colors" onclick="closeNav()"><span class="nav-num">05</span><span data-i18n="nav_colors">Цвета</span></a>
+      <a href="#section-expert" onclick="closeNav()"><span class="nav-num">06</span><span data-i18n="nav_expert">Лицо бренда</span></a>
+      <a href="#section-audience" onclick="closeNav()"><span class="nav-num">07</span><span data-i18n="nav_audience">Аудитория</span></a>
+      <a href="#section-mockups" onclick="closeNav()"><span class="nav-num">08</span><span data-i18n="nav_mockups">Применение</span></a>
+      <a href="#section-dont" onclick="closeNav()"><span class="nav-num">09</span><span data-i18n="nav_dont">Запрещено</span></a>
+      <a href="#section-digital" onclick="closeNav()"><span class="nav-num">10</span><span data-i18n="nav_digital">Домен</span></a>
+      <a href="#section-contacts" onclick="closeNav()"><span class="nav-num">—</span><span data-i18n="nav_contacts">Контакты</span></a>
+      <div class="mob-lang">
+        <button class="mob-lang-btn active" id="mob-btn-ru" onclick="setLang('ru')">RU</button>
+        <button class="mob-lang-btn" id="mob-btn-kz" onclick="setLang('kz')">KZ</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-tag" data-i18n="cover_tag">Брендбук · 2026</div>
+    <div style="background: white; padding: 30px 40px; border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,0.25); margin-bottom: 60px;">
+      <img src="https://finguide.kz/page/brandbook/logo_t.webp" alt="FinGuide Expert" style="width: 280px; display: block;" />
+    </div>
+    <div class="cover-line"></div>
+    <div class="cover-title" data-i18n="cover_title">Руководство по фирменному стилю</div>
+    <div class="cover-year" data-i18n="cover_year">г. Актобе · 2026</div>
+  </div>
+
+  <!-- MISSION -->
+  <div class="mission-section">
+    <div class="mission-quote" data-i18n="mission_quote">
+      Финансовая грамотность — это не цифры.<br/>Это <span>свобода</span> принимать правильные решения.
+    </div>
+    <div class="mission-sub" data-i18n="mission_sub">Наша миссия</div>
+    <div style="width: 40px; height: 1px; background: rgba(255,255,255,0.2); margin: 40px auto;"></div>
+    <div style="font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px;" data-i18n="strategy_label">Наша стратегия</div>
+    <div style="font-size: clamp(18px, 3vw, 26px); font-weight: 500; line-height: 1.6; color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto;" data-i18n="strategy_text">Мы не останавливаемся на полпути. Пока у клиента есть задача — мы рядом.<br/>До результата, до уверенности, до финансовой свободы.</div>
+  </div>
+
+  <!-- NAME SECTION -->
+  <div class="name-section section-full" id="section-name">
+    <div class="section">
+      <div class="section-tag" data-i18n="s01_tag">01 — Название</div>
+      <div class="section-title" data-i18n="s01_title">Что означает FinGuide Expert</div>
+
+      <div class="name-anatomy">
+        <div class="name-part fin">
+          <span class="name-part-word">FIN</span>
+          <span class="name-part-origin" data-i18n="fin_origin">от англ. Finance</span>
+          <p class="name-part-desc" data-i18n="fin_desc">Финансы — ядро экспертизы. Всё, что касается денег, налогов, учёта и финансовой независимости.</p>
+        </div>
+        <div class="name-part guide">
+          <span class="name-part-word">GUIDE</span>
+          <span class="name-part-origin" data-i18n="guide_origin">от англ. Guide — проводник</span>
+          <p class="name-part-desc" data-i18n="guide_desc">Не просто консультант, а проводник. Тот, кто ведёт туда, куда сам клиент не смог бы дойти в одиночку.</p>
+        </div>
+        <div class="name-part expert">
+          <span class="name-part-word">EXPERT</span>
+          <span class="name-part-origin" data-i18n="expert_origin">от лат. Expertus — опытный</span>
+          <p class="name-part-desc" data-i18n="expert_desc">Более 20 лет практики, международные сертификаты, подтверждённый профессионализм.</p>
+        </div>
+      </div>
+
+      <div class="name-meaning">
+        <div class="meaning-card">
+          <h4 data-i18n="mc1_title">Выбор названия</h4>
+          <p data-i18n="mc1_text">Название выбрано осознанно: финансовая грамотность — главная тема работы. Трансформационная игра по финграмотности, коучинг, налоговый консалтинг — всё это объединяется в одном слове <strong>FinGuide</strong>.</p>
+        </div>
+        <div class="meaning-card">
+          <h4 data-i18n="mc2_title">Позиционирование</h4>
+          <p data-i18n="mc2_text">FinGuide Expert — это не бухгалтерская фирма и не просто курсы. Это личный финансовый навигатор для тех, кто хочет управлять деньгами осознанно и грамотно.</p>
+        </div>
+        <div class="meaning-card">
+          <h4 data-i18n="mc3_title">Запоминаемость</h4>
+          <p data-i18n="mc3_text">Короткое, международное, легко произносится на казахском, русском и английском языках. Работает как в цифровом пространстве, так и офлайн.</p>
+        </div>
+        <div class="meaning-card">
+          <h4 data-i18n="mc4_title">Масштабируемость</h4>
+          <p data-i18n="mc4_text">Название не ограничивает географию и не привязано к конкретному городу. Растёт вместе с автором — от Актобе до любой точки Казахстана и СНГ.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- LOGO SECTION -->
+  <div class="section-full" id="section-logo">
+    <div class="section">
+      <div class="section-tag" data-i18n="s02_tag">02 — Логотип</div>
+      <div class="section-title" data-i18n="s02_title">Логотип и его символика</div>
+    </div>
+
+    <div class="logo-showcase">
+      <div class="logo-display">
+        <img src="https://finguide.kz/page/brandbook/logo_t.webp" alt="FinGuide Expert Logo" />
+      </div>
+      <div class="logo-info">
+        <div class="logo-element">
+          <h4 data-i18n="le1_title">Глобус · Символ охвата</h4>
+          <p data-i18n="le1_text">Сфера с горизонтальными линиями — это глобус, символ широкого охвата знаний, глобального финансового мышления и системного подхода к деньгам.</p>
+        </div>
+        <div class="logo-element">
+          <h4 data-i18n="le2_title">Горизонтальные линии · Уровни</h4>
+          <p data-i18n="le2_text">Параллельные линии символизируют структурированность, уровни финансовой грамотности и путь клиента — от базового понимания к мастерству.</p>
+        </div>
+        <div class="logo-element">
+          <h4 data-i18n="le3_title">Золотой градиент · Ценность</h4>
+          <p data-i18n="le3_text">Золото — универсальный символ ценности, богатства и качества. Переливающийся градиент передаёт динамику роста и премиальность услуг.</p>
+        </div>
+        <div class="logo-element">
+          <h4 data-i18n="le4_title">Зелёный шрифт · Рост</h4>
+          <p data-i18n="le4_text">Зелёный цвет (#43795E) — цвет роста, стабильности и доверия. Сочетание с золотом создаёт баланс между надёжностью и процветанием.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Versions -->
+    <div style="margin-top: 60px;">
+      <div style="max-width: 1100px; margin: 0 auto; padding: 0 60px;">
+        <div style="font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 30px;" data-i18n="logo_versions">Версии логотипа</div>
+      </div>
+      <div class="logo-versions-grid">
+        <div style="display: flex; flex-direction: column;">
+          <div style="background: #f8f6f1; padding: 50px; display: flex; align-items: center; justify-content: center; min-height: 200px;">
+            <img src="https://finguide.kz/page/brandbook/logo_t.webp" alt="Основная" style="max-width: 220px; width: 100%;" />
+          </div>
+          <div style="background: #f0ebe0; padding: 24px 30px;">
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 8px;" data-i18n="lv1_label">01 — Основная</div>
+            <p style="font-size: 13px; color: #555; line-height: 1.7;" data-i18n="lv1_text">На светлом и нейтральном фоне. Документы, сайт, презентации, соцсети.</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="background: #000; padding: 50px; display: flex; align-items: center; justify-content: center; min-height: 200px;">
+            <img src="https://finguide.kz/page/brandbook/logo_b.jpg" alt="На чёрном" style="max-width: 220px; width: 100%;" />
+          </div>
+          <div style="background: #1a1a1a; padding: 24px 30px;">
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 8px;" data-i18n="lv2_label">02 — На тёмном фоне</div>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7;" data-i18n="lv2_text">Белый монохром на чёрном. Баннеры, тёмные обложки, рекламные материалы.</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="background: #fff; padding: 50px; display: flex; align-items: center; justify-content: center; min-height: 200px; border: 1px solid #e8e4dc;">
+            <img src="https://finguide.kz/page/brandbook/logo_w.jpg" alt="Монохром" style="max-width: 220px; width: 100%;" />
+          </div>
+          <div style="background: #e8e4dc; padding: 24px 30px;">
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 8px;" data-i18n="lv3_label">03 — Монохром</div>
+            <p style="font-size: 13px; color: #555; line-height: 1.7;" data-i18n="lv3_text">Чёрный монохром. Печать на светлых носителях, штампы, вышивка, гравировка.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ICON SECTION -->
+  <div id="section-icon" style="background: var(--off-white); padding: 80px 60px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div class="section-tag" data-i18n="s021_tag">02.1 — Иконка</div>
+      <div class="section-title" style="margin-bottom: 40px;" data-i18n="s021_title">Графический символ</div>
+      <div class="icon-main-grid">
+        <div class="icon-previews">
+          <div style="width: 180px; height: 180px; background: white; border: 1px solid var(--light-gray); border-radius: 4px; display: flex; align-items: center; justify-content: center;">
+            <img src="https://finguide.kz/page/brandbook/icon.png" style="width: 120px; height: 120px; object-fit: contain;" alt="Иконка" />
+          </div>
+        </div>
+        <div>
+          <p style="font-size: 16px; color: #444; line-height: 1.9; margin-bottom: 40px;" data-i18n="icon_desc">Иконка — самостоятельный графический символ бренда. Золотой глобус с горизонтальными линиями на прозрачном фоне. Используется там, где полное название нецелесообразно или не помещается.</p>
+          <div class="icon-desc-grid">
+            <div style="padding: 24px; background: white; border-left: 3px solid var(--gold);">
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px;" data-i18n="icon_d1_title">Цифровые носители</div>
+              <p style="font-size: 13px; color: #555; line-height: 1.7;" data-i18n="icon_d1_text">Favicon сайта, аватар в Instagram / Telegram / WhatsApp, иконка мобильного приложения, аватар почты.</p>
+            </div>
+            <div style="padding: 24px; background: white; border-left: 3px solid var(--gold);">
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px;" data-i18n="icon_d2_title">Печать и упаковка</div>
+              <p style="font-size: 13px; color: #555; line-height: 1.7;" data-i18n="icon_d2_text">Штамп, наклейка, тиснение на обложке, водяной знак в документах, элемент оформления сертификатов.</p>
+            </div>
+            <div style="padding: 24px; background: white; border-left: 3px solid var(--gold);">
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px;" data-i18n="icon_d3_title">Декоративный элемент</div>
+              <p style="font-size: 13px; color: #555; line-height: 1.7;" data-i18n="icon_d3_text">Паттерн на фоне презентаций, декор угла страницы, разделитель между блоками.</p>
+            </div>
+            <div style="padding: 24px; background: white; border-left: 3px solid var(--gold);">
+              <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px;" data-i18n="icon_d4_title">Требования</div>
+              <p style="font-size: 13px; color: #555; line-height: 1.7;" data-i18n="icon_d4_text">Минимальный размер — 32×32 px. Не деформировать, не перекрашивать. Охранная зона — 20% от диаметра.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOWNLOADS -->
+  <div style="background: #f0ebe0; padding: 50px 60px;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div>
+          <div style="font-size: 10px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px;" data-i18n="dl_tag">Исходные файлы</div>
+          <div style="font-size: 18px; font-weight: 700; color: var(--green-dark);" data-i18n="dl_title">Логотип в формате PSD (Adobe Photoshop)</div>
+          <div style="font-size: 13px; color: #777; margin-top: 6px;" data-i18n="dl_desc">Векторные слои, все версии логотипа, редактируемый исходник</div>
+        </div>
+        <a href="https://finguide.kz/page/brandbook/LOGO.psd" download style="display: inline-flex; align-items: center; gap: 12px; padding: 16px 30px; background: var(--green); color: white; text-decoration: none; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span data-i18n="dl_btn">Скачать PSD</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- TYPOGRAPHY -->
+  <div class="section-full" id="section-typography">
+    <div class="section" style="padding-bottom: 0;">
+      <div class="section-tag" data-i18n="s04_tag">04 — Типографика</div>
+      <div class="section-title" data-i18n="s04_title">Фирменный шрифт</div>
+    </div>
+    <div style="background: var(--off-white); padding: 60px; margin-bottom: 2px;">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="display: flex; align-items: baseline; gap: 20px; margin-bottom: 10px; flex-wrap: wrap;">
+          <span class="font-name-big" style="font-size: 90px; font-weight: 800; color: var(--green-dark); line-height: 1; letter-spacing: -3px;">Montserrat</span>
+        </div>
+        <div style="font-size: 13px; letter-spacing: 4px; text-transform: uppercase; color: #aaa; margin-bottom: 50px;" data-i18n="font_sub">Google Fonts · Бесплатный · Кириллица · Казахский · Латиница</div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;" class="font-weights-grid">
+          <div style="background: white; padding: 30px 24px;">
+            <div style="font-size: 36px; font-weight: 300; color: var(--green-dark); margin-bottom: 8px; line-height: 1;">Aa</div>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark);">Light 300</div>
+            <div style="font-size: 12px; color: #888; margin-top: 6px;" data-i18n="fw1">Подзаголовки, вспомогательный текст</div>
+          </div>
+          <div style="background: white; padding: 30px 24px;">
+            <div style="font-size: 36px; font-weight: 400; color: var(--green-dark); margin-bottom: 8px; line-height: 1;">Aa</div>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark);">Regular 400</div>
+            <div style="font-size: 12px; color: #888; margin-top: 6px;" data-i18n="fw2">Основной текст, описания</div>
+          </div>
+          <div style="background: white; padding: 30px 24px;">
+            <div style="font-size: 36px; font-weight: 600; color: var(--green-dark); margin-bottom: 8px; line-height: 1;">Aa</div>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark);">SemiBold 600</div>
+            <div style="font-size: 12px; color: #888; margin-top: 6px;" data-i18n="fw3">Акценты, подписи</div>
+          </div>
+          <div style="background: white; padding: 30px 24px;">
+            <div style="font-size: 36px; font-weight: 800; color: var(--green-dark); margin-bottom: 8px; line-height: 1;">Aa</div>
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark);">ExtraBold 800</div>
+            <div style="font-size: 12px; color: #888; margin-top: 6px;" data-i18n="fw4">Заголовки, логотип</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background: #1a2e24; padding: 50px 60px;">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 30px;" data-i18n="typo_rules_title">Правила использования</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px;" class="typo-rules-grid">
+          <div style="background: rgba(255,255,255,0.05); padding: 28px; border-left: 3px solid var(--gold);">
+            <div style="font-size: 13px; font-weight: 700; color: white; margin-bottom: 10px;" data-i18n="tr1_title">✓ Только Montserrat</div>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7;" data-i18n="tr1_text">Во всех материалах бренда используется исключительно Montserrat. Это единственный допустимый шрифт.</p>
+          </div>
+          <div style="background: rgba(255,255,255,0.05); padding: 28px; border-left: 3px solid var(--gold);">
+            <div style="font-size: 13px; font-weight: 700; color: white; margin-bottom: 10px;" data-i18n="tr2_title">✓ Кириллица, казахский, латиница</div>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7;" data-i18n="tr2_text">Montserrat поддерживает все три письменности. Все специфические казахские буквы отображаются корректно.</p>
+          </div>
+          <div style="background: rgba(255,0,0,0.08); padding: 28px; border-left: 3px solid #c0392b;">
+            <div style="font-size: 13px; font-weight: 700; color: #e74c3c; margin-bottom: 10px;" data-i18n="tr3_title">✗ Не использовать другие шрифты</div>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7;" data-i18n="tr3_text">Запрещено использовать Times New Roman, Arial, Comic Sans и любые другие шрифты в официальных материалах бренда.</p>
+          </div>
+          <div style="background: rgba(255,0,0,0.08); padding: 28px; border-left: 3px solid #c0392b;">
+            <div style="font-size: 13px; font-weight: 700; color: #e74c3c; margin-bottom: 10px;" data-i18n="tr4_title">✗ Не искажать</div>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7;" data-i18n="tr4_text">Не растягивать, не сжимать, не наклонять текст вручную. Используйте только встроенные начертания Montserrat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- COLORS -->
+  <div class="colors-section section-full" id="section-colors">
+    <div class="section">
+      <div class="section-tag" style="color: var(--gold-light);" data-i18n="s03_tag">03 — Цвета</div>
+      <div class="section-title" data-i18n="s03_title">Фирменная палитра</div>
+      <div class="color-palette">
+        <div class="color-swatch">
+          <div class="color-block" style="background: #43795e;"></div>
+          <div class="color-meta">
+            <div class="color-name">Forest Green</div>
+            <div class="color-hex">#43795E</div>
+            <div class="color-role" data-i18n="c1_role">Основной</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-block" style="background: linear-gradient(135deg, #c9a84c, #e8c96a, #a07830);"></div>
+          <div class="color-meta">
+            <div class="color-name">Gold Gradient</div>
+            <div class="color-hex">#C9A84C → #E8C96A</div>
+            <div class="color-role" data-i18n="c2_role">Акцентный</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-block" style="background: #2d5240;"></div>
+          <div class="color-meta">
+            <div class="color-name">Deep Forest</div>
+            <div class="color-hex">#2D5240</div>
+            <div class="color-role" data-i18n="c3_role">Тёмный вариант</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-block" style="background: #f8f6f1;"></div>
+          <div class="color-meta">
+            <div class="color-name">Warm White</div>
+            <div class="color-hex">#F8F6F1</div>
+            <div class="color-role" data-i18n="c4_role">Фоновый</div>
+          </div>
+        </div>
+      </div>
+      <div class="color-meaning">
+        <div class="color-meaning-item">
+          <div class="color-dot" style="background: #43795e;"></div>
+          <h4 data-i18n="cm1_title">Зелёный — доверие и рост</h4>
+          <p data-i18n="cm1_text">Профессиональный зелёный передаёт стабильность, надёжность и уверенность. Ассоциируется с ростом капитала и финансовым здоровьем.</p>
+        </div>
+        <div class="color-meaning-item">
+          <div class="color-dot" style="background: linear-gradient(135deg, #c9a84c, #e8c96a);"></div>
+          <h4 data-i18n="cm2_title">Золото — ценность и экспертиза</h4>
+          <p data-i18n="cm2_text">Золото — символ богатства, достижений и высокого стандарта. Переливающийся градиент подчёркивает динамику и движение к финансовой цели.</p>
+        </div>
+      </div>
+    </div>
+    <div class="page-indicator light" data-i18n="page_indicator">FinGuide Expert · Брендбук 2026</div>
+  </div>
+
+  <!-- EXPERT -->
+  <div class="expert-section section-full" id="section-expert">
+    <div class="section">
+      <div class="section-tag" data-i18n="s06_tag">06 — Эксперт</div>
+      <div class="section-title" data-i18n="s06_title">Лицо бренда</div>
+      <div class="expert-grid">
+        <div style="position: relative;">
+          <div style="aspect-ratio: 3/4; overflow: hidden; background: var(--light-gray);">
+            <img src="https://finguide.kz/page/brandbook/ainur.jpg" alt="Айнур Рысмаганбетова" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" />
+          </div>
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 24px; background: linear-gradient(transparent, rgba(26,46,36,0.85));">
+            <div style="font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light);">Айнур Рысмаганбетова</div>
+          </div>
+        </div>
+        <div>
+          <div class="expert-name" data-i18n="expert_name">Рысмаганбетова<br/>Айнур Сериковна</div>
+          <div class="expert-title" data-i18n="expert_role">Профессиональный бухгалтер · Финансовый коуч · Налоговый эксперт</div>
+          <p class="expert-bio" data-i18n="expert_bio">Более 20 лет практики в области бухгалтерского учёта, налогообложения и финансового консалтинга. Автор трансформационной игры по финансовой грамотности. Помогает предпринимателям и частным лицам наладить осознанные отношения с деньгами.</p>
+          <ul class="certs-list" style="margin-bottom: 40px;">
+            <li><span class="cert-tag">CAP</span> Certified Accounting Practitioner</li>
+            <li><span class="cert-tag">CIPA</span> Certified International Professional Accountant</li>
+            <li><span class="cert-tag">ICU</span> <span data-i18n="cert_icu">Профессиональный коуч — Международная Ассоциация ICU</span></li>
+            <li><span class="cert-tag">ПБ</span> <span data-i18n="cert_pb">Сертификат Профессионального Бухгалтера</span></li>
+          </ul>
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-number">20+</div>
+              <div class="stat-label" data-i18n="stat1">лет в профессии</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">4</div>
+              <div class="stat-label" data-i18n="stat2">международных сертификата</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">3</div>
+              <div class="stat-label" data-i18n="stat3">направления экспертизы</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-number">1</div>
+              <div class="stat-label" data-i18n="stat4">трансформационная игра</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-indicator" data-i18n="page_indicator">FinGuide Expert · Брендбук 2026</div>
+  </div>
+
+  <!-- TARGET AUDIENCE -->
+  <div class="section-full" id="section-audience" style="background: #fff; padding: 100px 60px;">
+    <div class="section" style="max-width: 1100px; margin: 0 auto;">
+      <div class="section-tag" data-i18n="s00_tag">07 — Целевая аудитория</div>
+      <h2 class="section-title" data-i18n="s00_title">Кому помогает FinGuide Expert</h2>
+      <p style="font-size: 16px; color: var(--gray); max-width: 680px; line-height: 1.7; margin-bottom: 60px;" data-i18n="s00_desc">Бренд создан для трёх чётко определённых аудиторий — каждая со своей задачей и точкой входа.</p>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;" class="audience-grid">
+        <!-- Segment 1 -->
+        <div style="border: 1px solid var(--light-gray); border-radius: 4px; padding: 40px 32px; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--green), var(--green-light));"></div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--green); margin-bottom: 20px;" data-i18n="aud1_num">01</div>
+          <div style="font-size: 22px; font-weight: 800; color: #1a1a1a; margin-bottom: 16px; line-height: 1.3;" data-i18n="aud1_title">Начинающие и работающие бухгалтеры</div>
+          <div style="width: 32px; height: 2px; background: var(--gold); margin-bottom: 20px;"></div>
+          <p style="font-size: 14px; line-height: 1.75; color: var(--gray);" data-i18n="aud1_text">Девушки, обучающиеся на бухгалтера или уже работающие в профессии. Хотят повысить квалификацию, стать увереннее в налогах и стать настоящим экспертом — не просто исполнителем.</p>
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--light-gray);">
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gray); margin-bottom: 10px;" data-i18n="aud_goal">Запрос</div>
+            <div style="font-size: 13px; font-weight: 600; color: #1a1a1a;" data-i18n="aud1_goal">Рост экспертности · Профессиональное признание</div>
+          </div>
+        </div>
+        <!-- Segment 2 -->
+        <div style="border: 1px solid var(--light-gray); border-radius: 4px; padding: 40px 32px; position: relative; overflow: hidden; background: var(--green);">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));"></div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px;" data-i18n="aud2_num">02</div>
+          <div style="font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 16px; line-height: 1.3;" data-i18n="aud2_title">Состоявшиеся бизнесмены</div>
+          <div style="width: 32px; height: 2px; background: var(--gold); margin-bottom: 20px;"></div>
+          <p style="font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.75);" data-i18n="aud2_text">Владельцы бизнеса, у которых уже есть дело, но финансы ведутся хаотично. Хотят навести порядок в учёте, оптимизировать налоги и получить чёткое понимание финансового состояния компании.</p>
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15);">
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 10px;" data-i18n="aud_goal">Запрос</div>
+            <div style="font-size: 13px; font-weight: 600; color: var(--gold-light);" data-i18n="aud2_goal">Порядок в финансах · Налоговая оптимизация</div>
+          </div>
+        </div>
+        <!-- Segment 3 -->
+        <div style="border: 1px solid var(--light-gray); border-radius: 4px; padding: 40px 32px; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));"></div>
+          <div style="font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 20px;" data-i18n="aud3_num">03</div>
+          <div style="font-size: 22px; font-weight: 800; color: #1a1a1a; margin-bottom: 16px; line-height: 1.3;" data-i18n="aud3_title">Молодые предприниматели и стартаперы</div>
+          <div style="width: 32px; height: 2px; background: var(--gold); margin-bottom: 20px;"></div>
+          <p style="font-size: 14px; line-height: 1.75; color: var(--gray);" data-i18n="aud3_text">Начинающие предприниматели, которые только открывают своё дело. Хотят с самого старта выстроить финансовую грамотность: ИП, налоги, учёт — чтобы бизнес рос без болезненных ошибок.</p>
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--light-gray);">
+            <div style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gray); margin-bottom: 10px;" data-i18n="aud_goal">Запрос</div>
+            <div style="font-size: 13px; font-weight: 600; color: #1a1a1a;" data-i18n="aud3_goal">Финграмотность с нуля · Правильный старт</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOCKUPS -->
+  <div id="section-mockups" class="section-full" style="background: #1a2e24; padding-top: 100px; padding-bottom: 100px;">
+    <div class="section" style="padding-top: 0; padding-bottom: 0;">
+      <div class="section-tag" style="color: var(--gold-light);" data-i18n="s07_tag">07 — Применение</div>
+      <div class="section-title" style="color: white;" data-i18n="s07_title">Логотип в жизни</div>
+    </div>
+    <div class="mock-wrap">
+      <div style="position: relative; width: 100%; aspect-ratio: 1382/906; overflow: hidden; background: #111;">
+        <img src="https://finguide.kz/page/brandbook/moc1.png" alt="Вывеска" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 30px; background: linear-gradient(transparent, rgba(0,0,0,0.6));">
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light);" data-i18n="moc1">Наружная вывеска</span>
+        </div>
+      </div>
+    </div>
+    <div class="mock-wrap">
+      <div class="mock-grid-2">
+        <div style="position: relative; width: 100%; aspect-ratio: 1382/906; overflow: hidden; background: #111;">
+          <img src="https://finguide.kz/page/brandbook/moc2.png" alt="Футболка" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 22px; background: linear-gradient(transparent, rgba(0,0,0,0.6));">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light);" data-i18n="moc2">Мерч · Одежда</span>
+          </div>
+        </div>
+        <div style="position: relative; width: 100%; aspect-ratio: 1382/906; overflow: hidden; background: #111;">
+          <img src="https://finguide.kz/page/brandbook/moc3.png" alt="Визитки" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 22px; background: linear-gradient(transparent, rgba(0,0,0,0.6));">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light);" data-i18n="moc3">Визитные карточки</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mock-wrap-last">
+      <div class="mock-grid-2">
+        <div style="position: relative; width: 100%; aspect-ratio: 1382/906; overflow: hidden; background: #111;">
+          <img src="https://finguide.kz/page/brandbook/moc4.png" alt="Бланк" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 22px; background: linear-gradient(transparent, rgba(0,0,0,0.6));">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light);" data-i18n="moc4">Фирменный бланк</span>
+          </div>
+        </div>
+        <div style="position: relative; width: 100%; aspect-ratio: 1382/906; overflow: hidden; background: #111;">
+          <img src="https://finguide.kz/page/brandbook/moc5.png" alt="Тиснение" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 22px; background: linear-gradient(transparent, rgba(0,0,0,0.6));">
+            <span style="font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light);" data-i18n="moc5">Золотое тиснение</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-indicator light mockups-section-inner" data-i18n="page_indicator">FinGuide Expert · Брендбук 2026</div>
+  </div>
+
+  <!-- DON'T DO THIS -->
+  <div id="section-dont" class="section-full" style="background: var(--off-white);">
+    <div class="section" style="padding-bottom: 0;">
+      <div class="section-tag" data-i18n="s08_tag">08 — Запрещённые использования</div>
+      <div class="section-title" data-i18n="s08_title">Как нельзя использовать логотип</div>
+      <p style="font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 60px; max-width: 700px;" data-i18n="s08_desc">Логотип — лицо бренда. Любое искажение разрушает узнаваемость и профессиональный образ. Ниже примеры того, что категорически запрещено.</p>
+    </div>
+    <div style="max-width: 1100px; margin: 0 auto; padding: 0 60px 80px;" class="mock-wrap-last">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;" class="dont-grid">
+        <div style="background: white; border: 1px solid var(--light-gray); overflow: hidden;">
+          <div style="padding: 40px; display: flex; align-items: center; justify-content: center; min-height: 160px; background: #fafafa;">
+            <img src="https://finguide.kz/page/brandbook/logo_t.webp" style="width: 180px; transform: scaleX(1.6); opacity: 0.9;" alt="" />
+          </div>
+          <div style="padding: 20px; border-top: 3px solid #e74c3c;">
+            <div style="font-size: 11px; font-weight: 700; color: #e74c3c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="d1_title">✗ Растягивать</div>
+            <p style="font-size: 12px; color: #777; line-height: 1.6;" data-i18n="d1_text">Запрещено изменять пропорции логотипа. Используйте только масштабирование с сохранением сторон.</p>
+          </div>
+        </div>
+        <div style="background: white; border: 1px solid var(--light-gray); overflow: hidden;">
+          <div style="padding: 40px; display: flex; align-items: center; justify-content: center; min-height: 160px; background: #fafafa;">
+            <img src="https://finguide.kz/page/brandbook/logo_t.webp" style="width: 150px; filter: hue-rotate(200deg) saturate(1.5);" alt="" />
+          </div>
+          <div style="padding: 20px; border-top: 3px solid #e74c3c;">
+            <div style="font-size: 11px; font-weight: 700; color: #e74c3c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="d2_title">✗ Перекрашивать</div>
+            <p style="font-size: 12px; color: #777; line-height: 1.6;" data-i18n="d2_text">Запрещено изменять фирменные цвета логотипа. Используйте только утверждённую палитру.</p>
+          </div>
+        </div>
+        <div style="background: white; border: 1px solid var(--light-gray); overflow: hidden;">
+          <div style="padding: 40px; display: flex; align-items: center; justify-content: center; min-height: 160px; background: #fafafa;">
+            <img src="https://finguide.kz/page/brandbook/logo_t.webp" style="width: 150px; transform: rotate(-15deg);" alt="" />
+          </div>
+          <div style="padding: 20px; border-top: 3px solid #e74c3c;">
+            <div style="font-size: 11px; font-weight: 700; color: #e74c3c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="d3_title">✗ Наклонять</div>
+            <p style="font-size: 12px; color: #777; line-height: 1.6;" data-i18n="d3_text">Логотип всегда размещается строго горизонтально. Наклон и вращение запрещены.</p>
+          </div>
+        </div>
+        <div style="background: white; border: 1px solid var(--light-gray); overflow: hidden;">
+          <div style="padding: 40px; display: flex; align-items: center; justify-content: center; min-height: 160px; background: linear-gradient(135deg, #ff6b6b, #ffa500, #ffeb3b);">
+            <img src="https://finguide.kz/page/brandbook/logo_t.webp" style="width: 150px;" alt="" />
+          </div>
+          <div style="padding: 20px; border-top: 3px solid #e74c3c;">
+            <div style="font-size: 11px; font-weight: 700; color: #e74c3c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="d4_title">✗ Пёстрый фон</div>
+            <p style="font-size: 12px; color: #777; line-height: 1.6;" data-i18n="d4_text">Запрещено размещать логотип на ярких, пёстрых или слишком контрастных фонах.</p>
+          </div>
+        </div>
+        <div style="background: white; border: 1px solid var(--light-gray); overflow: hidden;">
+          <div style="padding: 40px; display: flex; align-items: center; justify-content: center; min-height: 160px; background: #fafafa;">
+            <img src="https://finguide.kz/page/brandbook/logo_t.webp" style="width: 150px; filter: drop-shadow(4px 6px 8px rgba(0,0,0,0.5));" alt="" />
+          </div>
+          <div style="padding: 20px; border-top: 3px solid #e74c3c;">
+            <div style="font-size: 11px; font-weight: 700; color: #e74c3c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="d5_title">✗ Добавлять тени</div>
+            <p style="font-size: 12px; color: #777; line-height: 1.6;" data-i18n="d5_text">Запрещено добавлять тени, свечение и любые эффекты к логотипу.</p>
+          </div>
+        </div>
+        <div style="background: white; border: 1px solid var(--light-gray); overflow: hidden;">
+          <div style="padding: 40px; display: flex; align-items: center; justify-content: center; min-height: 160px; background: #fafafa;">
+            <div style="position: relative; display: inline-block;">
+              <img src="https://finguide.kz/page/brandbook/logo_t.webp" style="width: 130px; opacity: 0.5;" alt="" />
+              <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 11px; font-weight: 700; color: #e74c3c; white-space: nowrap; letter-spacing: 1px; background: rgba(255,255,255,0.85); padding: 4px 10px;" data-i18n="d6_overlay">ДРУГОЙ ТЕКСТ</div>
+            </div>
+          </div>
+          <div style="padding: 20px; border-top: 3px solid #e74c3c;">
+            <div style="font-size: 11px; font-weight: 700; color: #e74c3c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;" data-i18n="d6_title">✗ Добавлять элементы</div>
+            <p style="font-size: 12px; color: #777; line-height: 1.6;" data-i18n="d6_text">Запрещено накладывать поверх логотипа текст, рамки или посторонние графические элементы.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIGITAL PRESENCE -->
+  <div id="section-digital" class="section-full" style="background: var(--off-white); padding: 100px 60px;">
+    <div class="section" style="max-width: 1100px; margin: 0 auto;">
+      <div class="section-tag" data-i18n="s09_tag">09 — Цифровое присутствие</div>
+      <h2 class="section-title" data-i18n="s09_title">Рекомендуемый домен</h2>
+      <p style="font-size: 16px; color: var(--gray); max-width: 680px; line-height: 1.7; margin-bottom: 60px;" data-i18n="s09_desc">Единый адрес бренда в интернете. Используйте его во всех материалах — онлайн и офлайн.</p>
+
+      <!-- Domain showcase -->
+      <div class="domain-showcase" style="background: linear-gradient(135deg, #1a2e24 0%, #2d5240 100%); border-radius: 8px; padding: 60px; margin-bottom: 48px; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%); top: -150px; right: -80px;"></div>
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px; position: relative;" data-i18n="s09_rec">Рекомендуется к регистрации</div>
+        <div class="domain-title" style="font-size: clamp(36px, 6vw, 72px); font-weight: 900; color: #fff; letter-spacing: -1px; position: relative;">finguide<span style="color: var(--gold);">.kz</span></div>
+        <div style="font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 16px; position: relative;" data-i18n="s09_avail">Домен в национальной зоне Казахстана · Подчёркивает местную экспертизу</div>
+      </div>
+
+      <!-- Recommendations grid -->
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 48px;" class="digital-grid">
+        <div style="background: #fff; border-radius: 4px; padding: 32px; border-left: 3px solid var(--green);">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 16px;" data-i18n="s09_r1_tag">✓ Сайт и email</div>
+          <p style="font-size: 14px; line-height: 1.7; color: #1a1a1a;" data-i18n="s09_r1_text">Основной сайт размещать на <strong>finguide.kz</strong>. Email использовать в формате <strong>ainur@finguide.kz</strong> — выглядит профессионально и укрепляет доверие.</p>
+        </div>
+        <div style="background: #fff; border-radius: 4px; padding: 32px; border-left: 3px solid var(--green);">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--green); margin-bottom: 16px;" data-i18n="s09_r2_tag">✓ Соцсети</div>
+          <p style="font-size: 14px; line-height: 1.7; color: #1a1a1a;" data-i18n="s09_r2_text">Указывать домен <strong>finguide.kz</strong> в описании профилей Instagram, Telegram, WhatsApp. Единая точка входа для аудитории из любого канала.</p>
+        </div>
+        <div style="background: #fff; border-radius: 4px; padding: 32px; border-left: 3px solid var(--gold);">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 16px;" data-i18n="s09_r3_tag">✓ Печатные материалы</div>
+          <p style="font-size: 14px; line-height: 1.7; color: #1a1a1a;" data-i18n="s09_r3_text">Визитные карточки, флаеры, сертификаты, баннеры — везде указывать <strong>finguide.kz</strong>. Без лишних символов: никаких http://, www. или слеша в конце.</p>
+        </div>
+        <div style="background: #fff; border-radius: 4px; padding: 32px; border-left: 3px solid var(--gold);">
+          <div style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 16px;" data-i18n="s09_r4_tag">✓ Единообразие</div>
+          <p style="font-size: 14px; line-height: 1.7; color: #1a1a1a;" data-i18n="s09_r4_text">Один домен — один адрес во всех каналах. Это формирует узнаваемость бренда и упрощает навигацию для клиентов. Не использовать сторонние сервисы (Taplink, Linktree) как основной адрес.</p>
+        </div>
+      </div>
+
+      <div style="background: #fff; border-radius: 4px; padding: 24px 32px; border: 1px solid var(--light-gray); display: flex; align-items: center; gap: 20px;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--off-white); display: flex; align-items: center; justify-content: center; shrink: 0; flex-shrink: 0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--green)" stroke-width="2"/><path d="M12 8v4l3 3" stroke="var(--green)" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <p style="font-size: 13px; color: var(--gray); line-height: 1.6;" data-i18n="s09_note">Домен finguide.kz рекомендуется к регистрации как можно скорее — до начала активного продвижения бренда. Это застрахует от ситуации, когда желаемый адрес окажется занят.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACTS -->
+  <div id="section-contacts" style="background: linear-gradient(135deg, #1a2e24 0%, #2d5240 60%, #43795e 100%); padding: 100px 60px; text-align: center; position: relative; overflow: hidden;">
+    <div style="position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.1) 0%, transparent 70%); top: -150px; right: -100px;"></div>
+    <div style="max-width: 700px; margin: 0 auto; position: relative; z-index: 1;">
+      <img src="https://finguide.kz/page/brandbook/logo_t.webp" style="width: 200px; background: white; padding: 20px 28px; border-radius: 4px; margin-bottom: 50px;" alt="FinGuide Expert" />
+      <div style="width: 50px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 40px;"></div>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-bottom: 50px;" class="contacts-grid">
+        <div>
+          <div style="font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px;" data-i18n="ct_phone">Телефон</div>
+          <a href="tel:+77712251020" style="font-size: 15px; font-weight: 600; color: white; text-decoration: none;">+7 (771) 225-1020</a>
+        </div>
+        <div>
+          <div style="font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px;">Instagram</div>
+          <a href="https://instagram.com/ainur_rys" target="_blank" style="font-size: 15px; font-weight: 600; color: white; text-decoration: none;">@ainur_rys</a>
+        </div>
+        <div>
+          <div style="font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px;">Telegram</div>
+          <a href="https://t.me/Rys_ainur" target="_blank" style="font-size: 15px; font-weight: 600; color: white; text-decoration: none;">@Rys_ainur</a>
+        </div>
+        <div>
+          <div style="font-size: 10px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px;" data-i18n="ct_address">Адрес</div>
+          <div style="font-size: 14px; font-weight: 600; color: white;" data-i18n="ct_city">г. Актобе,<br/>Республика Казахстан</div>
+        </div>
+      </div>
+      <div style="width: 50px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 30px;"></div>
+      <div style="font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.3);" data-i18n="page_indicator">FinGuide Expert · Брендбук 2026</div>
+      <div style="font-size: 10px; letter-spacing: 2px; color: rgba(255,255,255,0.2); margin-top: 10px; font-weight: 300;">Разработал Чернигин В.</div>
+    </div>
+  </div>
+
+  <script>
+    // ===== NAV =====
+    function toggleNav() {
+      document.getElementById('mob-nav-btn').classList.toggle('open');
+      document.getElementById('mob-nav-menu').classList.toggle('open');
+    }
+    function closeNav() {
+      document.getElementById('mob-nav-btn').classList.remove('open');
+      document.getElementById('mob-nav-menu').classList.remove('open');
+    }
+
+    // ===== I18N =====
+    const T = {
+      ru: {
+        cover_tag: 'Брендбук · 2026',
+        cover_title: 'Руководство по фирменному стилю',
+        cover_year: 'г. Актобе · 2026',
+        mission_quote: 'Финансовая грамотность — это не цифры.<br/>Это <span>свобода</span> принимать правильные решения.',
+        mission_sub: 'Наша миссия',
+        strategy_label: 'Наша стратегия',
+        strategy_text: 'Мы не останавливаемся на полпути. Пока у клиента есть задача — мы рядом.<br/>До результата, до уверенности, до финансовой свободы.',
+        s01_tag: '01 — Название',
+        s01_title: 'Что означает FinGuide Expert',
+        fin_origin: 'от англ. Finance',
+        fin_desc: 'Финансы — ядро экспертизы. Всё, что касается денег, налогов, учёта и финансовой независимости.',
+        guide_origin: 'от англ. Guide — проводник',
+        guide_desc: 'Не просто консультант, а проводник. Тот, кто ведёт туда, куда сам клиент не смог бы дойти в одиночку.',
+        expert_origin: 'от лат. Expertus — опытный',
+        expert_desc: 'Более 20 лет практики, международные сертификаты, подтверждённый профессионализм.',
+        mc1_title: 'Выбор названия',
+        mc1_text: 'Название выбрано осознанно: финансовая грамотность — главная тема работы. Трансформационная игра по финграмотности, коучинг, налоговый консалтинг — всё это объединяется в одном слове <strong>FinGuide</strong>.',
+        mc2_title: 'Позиционирование',
+        mc2_text: 'FinGuide Expert — это не бухгалтерская фирма и не просто курсы. Это личный финансовый навигатор для тех, кто хочет управлять деньгами осознанно и грамотно.',
+        mc3_title: 'Запоминаемость',
+        mc3_text: 'Короткое, международное, легко произносится на казахском, русском и английском языках. Работает как в цифровом пространстве, так и офлайн.',
+        mc4_title: 'Масштабируемость',
+        mc4_text: 'Название не ограничивает географию и не привязано к конкретному городу. Растёт вместе с автором — от Актобе до любой точки Казахстана и СНГ.',
+        s02_tag: '02 — Логотип',
+        s02_title: 'Логотип и его символика',
+        le1_title: 'Глобус · Символ охвата',
+        le1_text: 'Сфера с горизонтальными линиями — это глобус, символ широкого охвата знаний, глобального финансового мышления и системного подхода к деньгам.',
+        le2_title: 'Горизонтальные линии · Уровни',
+        le2_text: 'Параллельные линии символизируют структурированность, уровни финансовой грамотности и путь клиента — от базового понимания к мастерству.',
+        le3_title: 'Золотой градиент · Ценность',
+        le3_text: 'Золото — универсальный символ ценности, богатства и качества. Переливающийся градиент передаёт динамику роста и премиальность услуг.',
+        le4_title: 'Зелёный шрифт · Рост',
+        le4_text: 'Зелёный цвет (#43795E) — цвет роста, стабильности и доверия. Сочетание с золотом создаёт баланс между надёжностью и процветанием.',
+        logo_versions: 'Версии логотипа',
+        lv1_label: '01 — Основная',
+        lv1_text: 'На светлом и нейтральном фоне. Документы, сайт, презентации, соцсети.',
+        lv2_label: '02 — На тёмном фоне',
+        lv2_text: 'Белый монохром на чёрном. Баннеры, тёмные обложки, рекламные материалы.',
+        lv3_label: '03 — Монохром',
+        lv3_text: 'Чёрный монохром. Печать на светлых носителях, штампы, вышивка, гравировка.',
+        s021_tag: '03 — Иконка',
+        s021_title: 'Графический символ',
+        icon_desc: 'Иконка — самостоятельный графический символ бренда. Золотой глобус с горизонтальными линиями на прозрачном фоне. Используется там, где полное название нецелесообразно или не помещается.',
+        icon_d1_title: 'Цифровые носители',
+        icon_d1_text: 'Favicon сайта, аватар в Instagram / Telegram / WhatsApp, иконка мобильного приложения, аватар почты.',
+        icon_d2_title: 'Печать и упаковка',
+        icon_d2_text: 'Штамп, наклейка, тиснение на обложке, водяной знак в документах, элемент оформления сертификатов.',
+        icon_d3_title: 'Декоративный элемент',
+        icon_d3_text: 'Паттерн на фоне презентаций, декор угла страницы, разделитель между блоками.',
+        icon_d4_title: 'Требования',
+        icon_d4_text: 'Минимальный размер — 32×32 px. Не деформировать, не перекрашивать. Охранная зона — 20% от диаметра.',
+        dl_tag: 'Исходные файлы',
+        dl_title: 'Логотип в формате PSD (Adobe Photoshop)',
+        dl_desc: 'Векторные слои, все версии логотипа, редактируемый исходник',
+        dl_btn: 'Скачать PSD',
+        s04_tag: '04 — Типографика',
+        s04_title: 'Фирменный шрифт',
+        font_sub: 'Google Fonts · Бесплатный · Кириллица · Казахский · Латиница',
+        fw1: 'Подзаголовки, вспомогательный текст',
+        fw2: 'Основной текст, описания',
+        fw3: 'Акценты, подписи',
+        fw4: 'Заголовки, логотип',
+        typo_rules_title: 'Правила использования',
+        tr1_title: '✓ Только Montserrat',
+        tr1_text: 'Во всех материалах бренда используется исключительно Montserrat. Это единственный допустимый шрифт.',
+        tr2_title: '✓ Кириллица, казахский, латиница',
+        tr2_text: 'Montserrat поддерживает все три письменности. Все специфические казахские буквы отображаются корректно.',
+        tr3_title: '✗ Не использовать другие шрифты',
+        tr3_text: 'Запрещено использовать Times New Roman, Arial, Comic Sans и любые другие шрифты в официальных материалах бренда.',
+        tr4_title: '✗ Не искажать',
+        tr4_text: 'Не растягивать, не сжимать, не наклонять текст вручную. Используйте только встроенные начертания Montserrat.',
+        s03_tag: '05 — Цвета',
+        s03_title: 'Фирменная палитра',
+        c1_role: 'Основной',
+        c2_role: 'Акцентный',
+        c3_role: 'Тёмный вариант',
+        c4_role: 'Фоновый',
+        cm1_title: 'Зелёный — доверие и рост',
+        cm1_text: 'Профессиональный зелёный передаёт стабильность, надёжность и уверенность. Ассоциируется с ростом капитала и финансовым здоровьем.',
+        cm2_title: 'Золото — ценность и экспертиза',
+        cm2_text: 'Золото — символ богатства, достижений и высокого стандарта. Переливающийся градиент подчёркивает динамику и движение к финансовой цели.',
+        s06_tag: '06 — Эксперт',
+        s06_title: 'Лицо бренда',
+        expert_name: 'Рысмаганбетова<br/>Айнур Сериковна',
+        expert_role: 'Профессиональный бухгалтер · Финансовый коуч · Налоговый эксперт',
+        expert_bio: 'Более 20 лет практики в области бухгалтерского учёта, налогообложения и финансового консалтинга. Автор трансформационной игры по финансовой грамотности. Помогает предпринимателям и частным лицам наладить осознанные отношения с деньгами.',
+        cert_icu: 'Профессиональный коуч — Международная Ассоциация ICU',
+        cert_pb: 'Сертификат Профессионального Бухгалтера',
+        stat1: 'лет в профессии',
+        stat2: 'международных сертификата',
+        stat3: 'направления экспертизы',
+        stat4: 'трансформационная игра',
+        s07_tag: '08 — Применение',
+        s07_title: 'Логотип в жизни',
+        moc1: 'Наружная вывеска',
+        moc2: 'Мерч · Одежда',
+        moc3: 'Визитные карточки',
+        moc4: 'Фирменный бланк',
+        moc5: 'Золотое тиснение',
+        s08_tag: '09 — Запрещённые использования',
+        s08_title: 'Как нельзя использовать логотип',
+        s08_desc: 'Логотип — лицо бренда. Любое искажение разрушает узнаваемость и профессиональный образ. Ниже примеры того, что категорически запрещено.',
+        d1_title: '✗ Растягивать',
+        d1_text: 'Запрещено изменять пропорции логотипа. Используйте только масштабирование с сохранением сторон.',
+        d2_title: '✗ Перекрашивать',
+        d2_text: 'Запрещено изменять фирменные цвета логотипа. Используйте только утверждённую палитру.',
+        d3_title: '✗ Наклонять',
+        d3_text: 'Логотип всегда размещается строго горизонтально. Наклон и вращение запрещены.',
+        d4_title: '✗ Пёстрый фон',
+        d4_text: 'Запрещено размещать логотип на ярких, пёстрых или слишком контрастных фонах.',
+        d5_title: '✗ Добавлять тени',
+        d5_text: 'Запрещено добавлять тени, свечение и любые эффекты к логотипу.',
+        d6_overlay: 'ДРУГОЙ ТЕКСТ',
+        d6_title: '✗ Добавлять элементы',
+        d6_text: 'Запрещено накладывать поверх логотипа текст, рамки или посторонние графические элементы.',
+        ct_phone: 'Телефон',
+        ct_address: 'Адрес',
+        ct_city: 'г. Актобе,<br/>Республика Казахстан',
+        page_indicator: 'FinGuide Expert · Брендбук 2026',
+        nav_audience: 'Аудитория',
+        nav_name: 'Название',
+        nav_logo: 'Логотип',
+        nav_icon: 'Иконка',
+        nav_typo: 'Типографика',
+        nav_colors: 'Цвета',
+        nav_expert: 'Лицо бренда',
+        nav_mockups: 'Применение',
+        nav_dont: 'Запрещено',
+        nav_digital: 'Домен',
+        nav_contacts: 'Контакты',
+        s00_tag: '07 — Целевая аудитория',
+        s00_title: 'Кому помогает FinGuide Expert',
+        s00_desc: 'Бренд создан для трёх чётко определённых аудиторий — каждая со своей задачей и точкой входа.',
+        aud1_num: '01', aud2_num: '02', aud3_num: '03',
+        aud_goal: 'Запрос',
+        aud1_title: 'Начинающие и работающие бухгалтеры',
+        aud1_text: 'Девушки, обучающиеся на бухгалтера или уже работающие в профессии. Хотят повысить квалификацию, стать увереннее в налогах и стать настоящим экспертом — не просто исполнителем.',
+        aud1_goal: 'Рост экспертности · Профессиональное признание',
+        aud2_title: 'Состоявшиеся бизнесмены',
+        aud2_text: 'Владельцы бизнеса, у которых уже есть дело, но финансы ведутся хаотично. Хотят навести порядок в учёте, оптимизировать налоги и получить чёткое понимание финансового состояния компании.',
+        aud2_goal: 'Порядок в финансах · Налоговая оптимизация',
+        aud3_title: 'Молодые предприниматели и стартаперы',
+        aud3_text: 'Начинающие предприниматели, которые только открывают своё дело. Хотят с самого старта выстроить финансовую грамотность: ИП, налоги, учёт — чтобы бизнес рос без болезненных ошибок.',
+        aud3_goal: 'Финграмотность с нуля · Правильный старт',
+        s09_tag: '10 — Цифровое присутствие',
+        s09_title: 'Рекомендуемый домен',
+        s09_desc: 'Единый адрес бренда в интернете. Используйте его во всех материалах — онлайн и офлайн.',
+        s09_rec: 'Рекомендуется к регистрации',
+        s09_avail: 'Домен в национальной зоне Казахстана · Подчёркивает местную экспертизу',
+        s09_r1_tag: '✓ Сайт и email',
+        s09_r1_text: 'Основной сайт размещать на <strong>finguide.kz</strong>. Email использовать в формате <strong>ainur@finguide.kz</strong> — выглядит профессионально и укрепляет доверие.',
+        s09_r2_tag: '✓ Соцсети',
+        s09_r2_text: 'Указывать домен <strong>finguide.kz</strong> в описании профилей Instagram, Telegram, WhatsApp. Единая точка входа для аудитории из любого канала.',
+        s09_r3_tag: '✓ Печатные материалы',
+        s09_r3_text: 'Визитные карточки, флаеры, сертификаты, баннеры — везде указывать <strong>finguide.kz</strong>. Без лишних символов: никаких http://, www. или слеша в конце.',
+        s09_r4_tag: '✓ Единообразие',
+        s09_r4_text: 'Один домен — один адрес во всех каналах. Это формирует узнаваемость бренда и упрощает навигацию для клиентов. Не использовать сторонние сервисы (Taplink, Linktree) как основной адрес.',
+        s09_note: 'Домен finguide.kz рекомендуется к регистрации как можно скорее — до начала активного продвижения бренда. Это застрахует от ситуации, когда желаемый адрес окажется занят.',
+      },
+      kz: {
+        cover_tag: 'Брендбук · 2026',
+        cover_title: 'Корпоративтік стиль бойынша нұсқаулық',
+        cover_year: 'Ақтөбе қ. · 2026',
+        mission_quote: 'Қаржылық сауаттылық — бұл сандар емес.<br/>Бұл дұрыс шешім қабылдаудың <span>бостандығы</span>.',
+        mission_sub: 'Біздің миссия',
+        strategy_label: 'Біздің стратегия',
+        strategy_text: 'Біз жолдың жартысында тоқтамаймыз. Клиенттің міндеті бар — біз қасымыз.<br/>Нәтижеге дейін, сенімділікке дейін, қаржылық бостандыққа дейін.',
+        s01_tag: '01 — Атауы',
+        s01_title: 'FinGuide Expert нені білдіреді',
+        fin_origin: 'ағылш. Finance сөзінен',
+        fin_desc: 'Қаржы — тәжірибенің өзегі. Ақша, салық, есеп және қаржылық тәуелсіздікке қатысты барлық мәселе.',
+        guide_origin: 'ағылш. Guide — бағытшы сөзінен',
+        guide_desc: 'Жай кеңесші емес, бағытшы. Клиент өздігінен жете алмайтын жерге жетелейтін адам.',
+        expert_origin: 'лат. Expertus — тәжірибелі сөзінен',
+        expert_desc: '20 жылдан астам тәжірибе, халықаралық сертификаттар, расталған кәсібилік.',
+        mc1_title: 'Атау таңдауы',
+        mc1_text: 'Атау саналы таңдалды: қаржылық сауаттылық — жұмыстың негізгі тақырыбы. Қаржылық сауаттылық бойынша трансформациялық ойын, коучинг, салықтық консалтинг — мұның бәрі <strong>FinGuide</strong> сөзінде біріктірілген.',
+        mc2_title: 'Позициялау',
+        mc2_text: 'FinGuide Expert — бұл бухгалтерлік фирма емес және жай курстар емес. Бұл ақшаны саналы және сауатты басқарғысы келетіндерге арналған жеке қаржылық навигатор.',
+        mc3_title: 'Есте қалушылық',
+        mc3_text: 'Қысқа, халықаралық, қазақ, орыс және ағылшын тілдерінде оңай айтылады. Цифрлық кеңістікте де, офлайнда да жұмыс істейді.',
+        mc4_title: 'Масштабтауға бейімділік',
+        mc4_text: 'Атау географияны шектемейді және нақты қалаға байланыстырылмаған. Авторымен бірге өседі — Ақтөбеден Қазақстан мен ТМД-ның кез келген нүктесіне дейін.',
+        s02_tag: '02 — Логотип',
+        s02_title: 'Логотип және оның символикасы',
+        le1_title: 'Глобус · Қамту символы',
+        le1_text: 'Көлденең сызықтары бар сфера — бұл глобус, білімнің кең ауқымының, жаһандық қаржылық ойлаудың және ақшаға жүйелік көзқарастың символы.',
+        le2_title: 'Көлденең сызықтар · Деңгейлер',
+        le2_text: 'Параллель сызықтар жүйелілікті, қаржылық сауаттылық деңгейлерін және клиенттің жолын — бастапқы түсінуден шеберлікке дейін — символдайды.',
+        le3_title: 'Алтын градиент · Құндылық',
+        le3_text: 'Алтын — құндылықтың, байлықтың және сапаның жаһандық символы. Ағымдағы градиент өсу динамикасын және қызметтердің премиум деңгейін жеткізеді.',
+        le4_title: 'Жасыл қаріп · Өсім',
+        le4_text: '#43795E жасыл түс — өсімнің, тұрақтылықтың және сенімнің түсі. Алтынмен үйлесімі сенімділік пен гүлденудің арасындағы тепе-теңдік жасайды.',
+        logo_versions: 'Логотип нұсқалары',
+        lv1_label: '01 — Негізгі',
+        lv1_text: 'Жарық және бейтарап фонда. Құжаттар, сайт, презентациялар, әлеуметтік желілер.',
+        lv2_label: '02 — Қараңғы фонда',
+        lv2_text: 'Қара фондағы ақ монохром. Баннерлер, қараңғы мұқабалар, жарнамалық материалдар.',
+        lv3_label: '03 — Монохром',
+        lv3_text: 'Қара монохром. Жарық тасымалдаушыларға басып шығару, мөрлер, кесте, гравюра.',
+        s021_tag: '03 — Белгіше',
+        s021_title: 'Графикалық символ',
+        icon_desc: 'Белгіше — брендтің дербес графикалық символы. Мөлдір фондағы көлденең сызықтары бар алтын глобус. Толық атауды пайдалану мақсатқа сай емес немесе сыймайтын жерде қолданылады.',
+        icon_d1_title: 'Цифрлық тасымалдаушылар',
+        icon_d1_text: 'Сайттың favicon-ы, Instagram / Telegram / WhatsApp аватары, мобильді қолданба белгішесі, пошта аватары.',
+        icon_d2_title: 'Басып шығару және қаптама',
+        icon_d2_text: 'Мөр, жапсырма, мұқаба тиснениесі, құжаттардағы су таңбасы, сертификаттарды безендіру элементі.',
+        icon_d3_title: 'Сәндік элемент',
+        icon_d3_text: 'Презентациялар фонының үлгісі, беттің бұрыш безендіруі, блоктар арасындағы бөлгіш.',
+        icon_d4_title: 'Талаптар',
+        icon_d4_text: 'Ең кіші өлшемі — 32×32 px. Деформациялауға, қайта бояуға болмайды. Қорғаныш аймағы — диаметрдің 20%-ы.',
+        dl_tag: 'Бастапқы файлдар',
+        dl_title: 'PSD форматындағы логотип (Adobe Photoshop)',
+        dl_desc: 'Векторлық қабаттар, логотиптің барлық нұсқалары, өңделетін бастапқы файл',
+        dl_btn: 'PSD жүктеу',
+        s04_tag: '04 — Типография',
+        s04_title: 'Фирмалық қаріп',
+        font_sub: 'Google Fonts · Тегін · Кириллица · Қазақша · Латиница',
+        fw1: 'Қосалқы тақырыптар, қосымша мәтін',
+        fw2: 'Негізгі мәтін, сипаттамалар',
+        fw3: 'Акценттер, қол қоюлар',
+        fw4: 'Тақырыптар, логотип',
+        typo_rules_title: 'Пайдалану ережелері',
+        tr1_title: '✓ Тек Montserrat',
+        tr1_text: 'Брендтің барлық материалдарында тек Montserrat қаріпі қолданылады. Бұл жалғыз рұқсат етілген қаріп.',
+        tr2_title: '✓ Кириллица, қазақша, латиница',
+        tr2_text: 'Montserrat үш жазу жүйесін де қолдайды. Барлық қазақтың арнайы әріптері дұрыс көрсетіледі.',
+        tr3_title: '✗ Басқа қаріптерді пайдаланбаңыз',
+        tr3_text: 'Times New Roman, Arial, Comic Sans және кез келген басқа қаріптерді брендтің ресми материалдарында пайдалануға тыйым салынады.',
+        tr4_title: '✗ Бұрмаламаңыз',
+        tr4_text: 'Мәтінді созбаңыз, қыспаңыз, қолмен еңкейтпеңіз. Тек Montserrat-тың кіріктірілген нұсқаларын пайдаланыңыз.',
+        s03_tag: '05 — Түстер',
+        s03_title: 'Фирмалық палитра',
+        c1_role: 'Негізгі',
+        c2_role: 'Акцент',
+        c3_role: 'Қою нұсқа',
+        c4_role: 'Фондық',
+        cm1_title: 'Жасыл — сенім және өсім',
+        cm1_text: 'Кәсіби жасыл тұрақтылықты, сенімділікті және сенімділікті жеткізеді. Капиталдың өсуімен және қаржылық денсаулықпен байланысты.',
+        cm2_title: 'Алтын — құндылық және тәжірибе',
+        cm2_text: 'Алтын — байлықтың, жетістіктердің және жоғары стандарттың символы. Ағымдағы градиент динамиканы және қаржылық мақсатқа қозғалысты атап өтеді.',
+        s06_tag: '06 — Сарапшы',
+        s06_title: 'Брендтің беті',
+        expert_name: 'Рысмаганбетова<br/>Айнұр Серіккызы',
+        expert_role: 'Кәсіби бухгалтер · Қаржылық коуч · Салық сарапшысы',
+        expert_bio: '20 жылдан астам бухгалтерлік есеп, салық салу және қаржылық консалтинг саласындағы тәжірибе. Қаржылық сауаттылық бойынша трансформациялық ойынның авторы. Кәсіпкерлер мен жеке тұлғаларға ақшамен саналы қарым-қатынас орнатуға көмектеседі.',
+        cert_icu: 'Кәсіби коуч — ICU Халықаралық Қауымдастығы',
+        cert_pb: 'Кәсіби Бухгалтер сертификаты',
+        stat1: 'жыл тәжірибе',
+        stat2: 'халықаралық сертификат',
+        stat3: 'тәжірибе бағыты',
+        stat4: 'трансформациялық ойын',
+        s07_tag: '08 — Қолдану',
+        s07_title: 'Логотип өмірде',
+        moc1: 'Сыртқы тақта',
+        moc2: 'Мерч · Киім',
+        moc3: 'Іскерлік карточкалар',
+        moc4: 'Фирмалық бланк',
+        moc5: 'Алтын тиснение',
+        s08_tag: '09 — Тыйым салынған қолданулар',
+        s08_title: 'Логотипті қалай пайдалануға болмайды',
+        s08_desc: 'Логотип — брендтің беті. Кез келген бұрмалау тану қабілетін және кәсіби бейнені жояды. Төменде категориялық тыйым салынғандардың мысалдары берілген.',
+        d1_title: '✗ Созбаңыз',
+        d1_text: 'Логотиптің пропорцияларын өзгертуге тыйым салынады. Тек қатынасты сақтай отырып масштабтауды пайдаланыңыз.',
+        d2_title: '✗ Қайта бояуға болмайды',
+        d2_text: 'Логотиптің фирмалық түстерін өзгертуге тыйым салынады. Тек бекітілген палитраны пайдаланыңыз.',
+        d3_title: '✗ Еңкейтпеңіз',
+        d3_text: 'Логотип әрқашан қатаң көлденеңінен орналастырылады. Еңкейту және айналдыру тыйым салынады.',
+        d4_title: '✗ Ала-құла фон',
+        d4_text: 'Логотипті жарқын, ала-құла немесе тым контрастты фондарда орналастыруға тыйым салынады.',
+        d5_title: '✗ Көлеңке қоспаңыз',
+        d5_text: 'Логотипке көлеңке, жылтырату және кез келген эффектілер қосуға тыйым салынады.',
+        d6_overlay: 'БАСҚА МӘТІН',
+        d6_title: '✗ Элементтер қоспаңыз',
+        d6_text: 'Логотиптің үстіне мәтін, рамкалар немесе бөгде графикалық элементтер салуға тыйым салынады.',
+        ct_phone: 'Телефон',
+        ct_address: 'Мекенжай',
+        ct_city: 'Ақтөбе қ.,<br/>Қазақстан Республикасы',
+        page_indicator: 'FinGuide Expert · Брендбук 2026',
+        nav_audience: 'Аудитория',
+        nav_name: 'Атауы',
+        nav_logo: 'Логотип',
+        nav_icon: 'Белгіше',
+        nav_typo: 'Типография',
+        nav_colors: 'Түстер',
+        nav_expert: 'Брендтің беті',
+        nav_mockups: 'Қолдану',
+        nav_dont: 'Тыйым',
+        nav_digital: 'Домен',
+        nav_contacts: 'Байланыс',
+        s00_tag: '07 — Мақсатты аудитория',
+        s00_title: 'FinGuide Expert кімге көмектеседі',
+        s00_desc: 'Бренд үш нақты анықталған аудиторияға арналған — әрқайсысының өз міндеті мен кіру нүктесі бар.',
+        aud1_num: '01', aud2_num: '02', aud3_num: '03',
+        aud_goal: 'Сұраныс',
+        aud1_title: 'Бастаушы және жұмыс істеуші бухгалтерлер',
+        aud1_text: 'Бухгалтер мамандығына оқып жатқан немесе кәсіпте жұмыс істеуші қыздар. Біліктілігін арттырғысы, салықтарда сенімді болғысы және нағыз сарапшы болғысы келеді — жай орындаушы емес.',
+        aud1_goal: 'Сараптамалық өсу · Кәсіби мойындалу',
+        aud2_title: 'Қалыптасқан кәсіпкерлер',
+        aud2_text: 'Бизнесі бар, бірақ қаржысы хаотикалы жүргізіліп жатқан бизнес иелері. Есепте тәртіп орнатқысы, салықты оңтайландырғысы және компанияның қаржылық жағдайын нақты түсінгісі келеді.',
+        aud2_goal: 'Қаржыдағы тәртіп · Салықты оңтайландыру',
+        aud3_title: 'Жас кәсіпкерлер мен стартаперлер',
+        aud3_text: 'Бизнесін жаңа ашып жатқан жас кәсіпкерлер. Бастапқыдан қаржылық сауаттылықты дұрыс қалыптастырғысы келеді: ЖК, салықтар, есеп — бизнес ауыртпалықсыз өсу үшін.',
+        aud3_goal: 'Қаржысауаттылық нөлден · Дұрыс старт',
+        s09_tag: '10 — Цифрлық қатысу',
+        s09_title: 'Ұсынылатын домен',
+        s09_desc: 'Интернеттегі брендтің бірыңғай мекенжайы. Барлық материалдарда қолданыңыз — онлайн да, офлайнда да.',
+        s09_rec: 'Тіркелуге ұсынылады',
+        s09_avail: 'Қазақстанның ұлттық аймағындағы домен · Жергілікті тәжірибені атап өтеді',
+        s09_r1_tag: '✓ Сайт және email',
+        s09_r1_text: 'Негізгі сайтты <strong>finguide.kz</strong> сайтына орналастырыңыз. Emailді <strong>ainur@finguide.kz</strong> форматында пайдаланыңыз — кәсіби көрінеді және сенімді нығайтады.',
+        s09_r2_tag: '✓ Әлеуметтік желілер',
+        s09_r2_text: 'Instagram, Telegram, WhatsApp профильдерінің сипаттамасында <strong>finguide.kz</strong> доменін көрсетіңіз. Кез келген каналдан аудитория үшін бірыңғай кіру нүктесі.',
+        s09_r3_tag: '✓ Басылым материалдары',
+        s09_r3_text: 'Іскерлік карточкалар, флаерлер, сертификаттар, баннерлер — барлық жерде <strong>finguide.kz</strong> көрсетіңіз. Артық белгілерсіз: http://, www. немесе соңында қиғаш сызықсыз.',
+        s09_r4_tag: '✓ Бірыңғайлық',
+        s09_r4_text: 'Бір домен — барлық каналдарда бір мекенжай. Бұл бренд танылуын қалыптастырады және клиенттер үшін навигацияны жеңілдетеді. Үшінші тарап сервистерін (Taplink, Linktree) негізгі мекенжай ретінде пайдаланбаңыз.',
+        s09_note: 'finguide.kz доменін брендті белсенді ілгерілетуді бастамас бұрын мүмкіндігінше тезірек тіркеу ұсынылады. Бұл қалаулы мекенжайдың алынып кеткен жағдайдан сақтандырады.',
+      }
+    };
+
+    function setLang(lang) {
+      const dict = T[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.innerHTML = dict[key];
+      });
+      // Desktop buttons
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent === lang.toUpperCase());
+      });
+      // Mobile buttons
+      const mbRu = document.getElementById('mob-btn-ru');
+      const mbKz = document.getElementById('mob-btn-kz');
+      if (mbRu) mbRu.classList.toggle('active', lang === 'ru');
+      if (mbKz) mbKz.classList.toggle('active', lang === 'kz');
+
+      document.documentElement.lang = lang === 'kz' ? 'kk' : 'ru';
+      localStorage.setItem('fg_lang', lang);
+      // Close mobile menu on language switch
+      document.getElementById('mob-nav-btn')?.classList.remove('open');
+      document.getElementById('mob-nav-menu')?.classList.remove('open');
+    }
+
+    // Init
+    const saved = localStorage.getItem('fg_lang') || 'ru';
+    setLang(saved);
+  </script>
+
+</body>
+</html>
