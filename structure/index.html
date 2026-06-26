@@ -1164,12 +1164,11 @@
     articlesData = await resp.json();
   } catch(e) { console.error('articles load error', e); }
 
-  function renderArticles(lang) {
-    const list = articlesData[lang] || articlesData['ru'] || [];
+  function renderArticles() {
+    const list = Array.isArray(articlesData) ? articlesData : (articlesData[currentLang] || articlesData['ru'] || []);
     const grid = document.getElementById('articles-grid');
     if (!grid) return;
-    const visible = list.slice(0, 3);
-    grid.innerHTML = visible.map(a => `
+    grid.innerHTML = list.map(a => `
       <article class="article-card" onclick="openArticleModal(${a.id})">
         <div class="article-image">Фото</div>
         <div class="article-body">
@@ -1179,27 +1178,32 @@
       </article>
     `).join('');
     const btn = document.getElementById('articles-view-all');
-    if (btn) btn.style.display = list.length > 3 ? 'inline-flex' : 'none';
+    if (btn) btn.style.display = 'none';
   }
 
   window.openArticleModal = function(id) {
-    const list = articlesData[currentLang] || articlesData['ru'] || [];
+    const list = Array.isArray(articlesData) ? articlesData : (articlesData[currentLang] || articlesData['ru'] || []);
     const article = list.find(a => a.id === id);
     if (!article) return;
     const overlay = document.createElement('div');
     overlay.className = 'article-modal-overlay';
     overlay.innerHTML = `
       <div class="article-modal">
-        <button class="article-modal-close" onclick="this.closest('.article-modal-overlay').remove()">&times;</button>
+        <button class="article-modal-close" onclick="closeArticleModal(this)">&times;</button>
         <div class="article-modal-image">Фото</div>
         <h2 class="article-modal-title">${article.title}</h2>
         <div class="article-modal-content">${article.content}</div>
       </div>
     `;
-    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeArticleModal(overlay.querySelector('.article-modal-close')); });
     document.body.appendChild(overlay);
     document.body.style.overflow = 'hidden';
-    overlay.addEventListener('remove', () => { document.body.style.overflow = ''; }, {once:true});
+  };
+
+  window.closeArticleModal = function(btn) {
+    const overlay = btn.closest('.article-modal-overlay');
+    if (overlay) overlay.remove();
+    document.body.style.overflow = '';
   };
 
   function applyLang(lang) {
