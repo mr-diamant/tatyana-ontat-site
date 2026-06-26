@@ -372,6 +372,11 @@
       align-items: center;
       gap: 8px;
       min-width: 120px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .footer-contact-item:hover {
+      opacity: 0.8;
     }
     .footer-icon {
       width: 32px;
@@ -972,22 +977,22 @@
     <img src="https://me-qr.kz/tatyana/page/brandbook/logo10.png" alt="Татьяна Онтюрклер" style="height: 48px; width: auto;">
   </div>
   <div class="footer-contacts">
-    <div class="footer-contact-item">
+    <a class="footer-contact-item" href="tel:+46728706941">
       <span class="footer-icon">Tel</span>
       <span class="field-body">+46 72 870 69 41</span>
-    </div>
-    <div class="footer-contact-item">
+    </a>
+    <a class="footer-contact-item" href="https://instagram.com/tatyana_ontyurkler" target="_blank" rel="noopener noreferrer">
       <span class="footer-icon">IG</span>
       <span class="field-body">@tatyana_ontyurkler</span>
-    </div>
-    <div class="footer-contact-item">
+    </a>
+    <a class="footer-contact-item" href="mailto:taty-yana@mail.ru">
       <span class="footer-icon">Mail</span>
       <span class="field-body">taty-yana@mail.ru</span>
-    </div>
-    <div class="footer-contact-item">
+    </a>
+    <a class="footer-contact-item" href="https://t.me/stvenna" target="_blank" rel="noopener noreferrer">
       <span class="footer-icon">TG</span>
       <span class="field-body">@stvenna</span>
-    </div>
+    </a>
   </div>  
   <div style="margin-top: 20px;">
     <button class="btn btn-outline" data-i18n="footer_stat_btn" onclick="alert(i18nData[currentLang]?.footer_stat_alert || 'Здесь будет счётчик посещений сайта')">Статистика</button>
