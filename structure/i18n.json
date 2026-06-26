@@ -111,7 +111,11 @@
     "ct_cta": "Записаться на консультацию",
     "ct_note": "Отвечу в WhatsApp или Telegram в течение дня",
     "footer_stat_btn": "Статистика",
-    "footer_stat_alert": "Здесь будет счётчик посещений сайта"
+    "footer_stat_alert": "Здесь будет счётчик посещений сайта",
+    "nav_inspiration": "Вдохновение",
+    "articles_heading": "Вдохновение",
+    "articles_sub": "Статьи и практики для внутренней опоры",
+    "articles_view_all": "Смотреть все"
   },
   "en": {
     "page_title": "Tatyana Ontyurkler — Mindfulness Practitioner, Psychologist",
@@ -225,7 +229,11 @@
     "ct_cta": "Book a consultation",
     "ct_note": "I will reply on WhatsApp or Telegram during the day",
     "footer_stat_btn": "Statistics",
-    "footer_stat_alert": "Here will be a website visit counter"
+    "footer_stat_alert": "Here will be a website visit counter",
+    "nav_inspiration": "Inspiration",
+    "articles_heading": "Inspiration",
+    "articles_sub": "Articles and practices for inner grounding",
+    "articles_view_all": "View all"
   },
   "tr": {
     "page_title": "Tatyana Ontyurkler — Farkındalık Uygulayıcısı, Psikolog",
@@ -339,6 +347,10 @@
     "ct_cta": "Randevu al",
     "ct_note": "Gün içinde WhatsApp veya Telegram’dan yanıt veririm",
     "footer_stat_btn": "İstatistik",
-    "footer_stat_alert": "Burada web sitesi ziyaretçi sayacı olacak"
+    "footer_stat_alert": "Burada web sitesi ziyaretçi sayacı olacak",
+    "nav_inspiration": "İlham",
+    "articles_heading": "İlham",
+    "articles_sub": "İçsel dayanak için yazılar ve pratikler",
+    "articles_view_all": "Tümünü gör"
   }
 }
