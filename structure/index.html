@@ -66,6 +66,58 @@
       transition: background 0.15s, color 0.15s;
     }
     .site-header .nav-link:hover { background: #f3f4f6; color: #111; }
+
+    /* LANG DROPDOWN */
+    .lang-dropdown {
+      position: relative;
+      display: inline-block;
+      margin-left: 8px;
+    }
+    .lang-dropdown .lang-btn {
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      color: #444;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-dropdown .lang-btn:hover { background: #f3f4f6; }
+    .lang-dropdown .lang-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: calc(100% + 4px);
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      min-width: 80px;
+      z-index: 100;
+      overflow: hidden;
+    }
+    .lang-dropdown.open .lang-menu { display: block; }
+    .lang-dropdown .lang-menu a {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      color: #444;
+      padding: 8px 12px;
+      text-decoration: none;
+    }
+    .lang-dropdown .lang-menu a:hover { background: #f3f4f6; }
+    .lang-dropdown .lang-menu a.active { background: #111; color: #fff; }
+    @media (max-width: 640px) {
+      .lang-dropdown { margin-left: 0; margin-top: 8px; }
+      .lang-dropdown .lang-menu { right: auto; left: 0; }
+    }
+
     .site-header .burger {
       display: none;
       flex-direction: column;
@@ -548,6 +600,14 @@
       <a class="nav-link" href="#gallery">Фото</a>
       <a class="nav-link" href="#faq">FAQ</a>
       <a class="nav-link" href="#contacts">Контакты</a>
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-btn" type="button">RU ▾</button>
+        <div class="lang-menu">
+          <a href="#" class="active" data-lang="ru">RU</a>
+          <a href="#" data-lang="en">EN</a>
+          <a href="#" data-lang="tr">TR</a>
+        </div>
+      </div>
     </nav>
     <button class="burger" onclick="document.getElementById('site-header').classList.toggle('menu-open')" aria-label="Меню">
       <span></span><span></span><span></span>
@@ -923,6 +983,32 @@
       document.getElementById('site-header').classList.remove('menu-open');
     });
   });
+
+  // Language dropdown
+  const langDropdown = document.getElementById('langDropdown');
+  if (langDropdown) {
+    const langBtn = langDropdown.querySelector('.lang-btn');
+    const langLinks = langDropdown.querySelectorAll('.lang-menu a');
+    langBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      langDropdown.classList.toggle('open');
+    });
+    langLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const lang = link.dataset.lang;
+        langBtn.textContent = lang.toUpperCase() + ' ▾';
+        langLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        langDropdown.classList.remove('open');
+        // Placeholder: here will be the actual language switch logic
+        console.log('Language switched to:', lang);
+      });
+    });
+    document.addEventListener('click', e => {
+      if (!langDropdown.contains(e.target)) langDropdown.classList.remove('open');
+    });
+  }
 </script>
 
 </body>
