@@ -974,7 +974,7 @@
 
 <script src="i18n.json" id="i18n-data" type="application/json"></script>
 <script>
-(function(){
+(async function(){
   // Wrap block content in block-inner
   document.querySelectorAll('.page-block').forEach(block => {
     const inner = document.createElement('div');
@@ -986,8 +986,8 @@
   // Load i18n data
   let i18nData = {};
   try {
-    const raw = document.getElementById('i18n-data').textContent;
-    i18nData = JSON.parse(raw);
+    const resp = await fetch('i18n.json');
+    i18nData = await resp.json();
   } catch(e) { console.error('i18n load error', e); }
 
   function applyLang(lang) {
