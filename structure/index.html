@@ -658,7 +658,12 @@
     }
     .with-icon .item-content { flex: 1; }
 
-    /* REVIEW AVATAR */
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
     .review-avatar {
       width: 64px;
       height: 64px;
@@ -674,7 +679,6 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
       text-align: center;
-      margin-bottom: 12px;
       flex-shrink: 0;
     }
     .review-avatar img {
@@ -1021,34 +1025,32 @@
 
   <div class="items-list">
     <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading" data-i18n="review1_name"></span>
+      <div class="review-header">
+        <div class="review-avatar">Фото</div>
+        <span class="field-heading" data-i18n="review1_name"></span>
+      </div>
       <span class="field-body" data-i18n="review1_text"></span>
     </div>
     <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading" data-i18n="review2_name"></span>
+      <div class="review-header">
+        <div class="review-avatar">Фото</div>
+        <span class="field-heading" data-i18n="review2_name"></span>
+      </div>
       <span class="field-body" data-i18n="review2_text"></span>
     </div>
     <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading" data-i18n="review3_name"></span>
+      <div class="review-header">
+        <div class="review-avatar">Фото</div>
+        <span class="field-heading" data-i18n="review3_name"></span>
+      </div>
       <span class="field-body" data-i18n="review3_text"></span>
     </div>
     <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading" data-i18n="review4_name"></span>
+      <div class="review-header">
+        <div class="review-avatar">Фото</div>
+        <span class="field-heading" data-i18n="review4_name"></span>
+      </div>
       <span class="field-body" data-i18n="review4_text"></span>
-    </div>
-    <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading" data-i18n="review5_name"></span>
-      <span class="field-body" data-i18n="review5_text"></span>
-    </div>
-    <div class="item-card">
-      <div class="review-avatar">Фото</div>
-      <span class="field-heading" data-i18n="review6_name"></span>
-      <span class="field-body" data-i18n="review6_text"></span>
     </div>
   </div>
   <a href="#contacts" class="btn btn-outline" data-i18n="cases_cta"></a>
