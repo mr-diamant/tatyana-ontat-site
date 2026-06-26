@@ -1153,7 +1153,7 @@
   // Load i18n data
   let i18nData = {};
   try {
-    const i18nVersion = 'v4';
+    const i18nVersion = 'v5';
     const resp = await fetch('i18n.json?' + i18nVersion);
     i18nData = await resp.json();
   } catch(e) { console.error('i18n load error', e); }
