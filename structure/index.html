@@ -688,7 +688,7 @@
     /* HERO LAYOUT */
     .hero-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 40px;
       align-items: center;
       margin-top: 16px;
@@ -696,6 +696,19 @@
     .hero-text {
       display: flex;
       flex-direction: column;
+    }
+    .hero-heading-main {
+      font-size: clamp(36px, 4.5vw, 56px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .hero-heading-sub {
+      font-size: clamp(22px, 2.5vw, 34px);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      opacity: 0.85;
     }
     .hero-img {
       min-height: 320px;
@@ -799,7 +812,8 @@
   <div class="hero-row">
     <div class="hero-text">
       <span class="field-body" data-i18n="hero_tag"></span>
-      <span class="field-heading" data-i18n="hero_heading"></span>
+      <span class="field-heading hero-heading-main" data-i18n="hero_heading"></span>
+      <span class="field-heading hero-heading-sub" data-i18n="hero_heading_line2"></span>
       <span class="field-sub" data-i18n="hero_sub"></span>
       <a href="#contacts" class="btn btn-fixed" data-i18n="hero_cta"></a>
       <span class="btn-note" data-i18n="hero_note"></span>
@@ -1153,7 +1167,7 @@
   // Load i18n data
   let i18nData = {};
   try {
-    const i18nVersion = 'v5';
+    const i18nVersion = 'v6';
     const resp = await fetch('i18n.json?' + i18nVersion);
     i18nData = await resp.json();
   } catch(e) { console.error('i18n load error', e); }
