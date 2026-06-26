@@ -15,7 +15,17 @@
     "hero_heading": "Татьяна Онтюрклер",
     "hero_sub": "Сопровождаю людей в периоды перемен: помогаю услышать себя, выйти из повторяющихся сценариев и найти направление дальнейшего пути.",
     "hero_cta": "Записаться на консультацию",
-    "hero_note": "Первая встреча — знакомство и диагностика запроса"
+    "hero_note": "Первая встреча — знакомство и диагностика запроса",
+    "prob_heading": "Узнаёте себя?",
+    "prob_intro": "Часто мы идём по жизни, не понимая, почему снова и снова возникают одни и те же трудности.",
+    "prob1_title": "Потеря внутренней опоры",
+    "prob1_text": "Жизнь словно качели: то взлёт, то падение. Нет устойчивости, нет точки опоры внутри себя. Хочется спокойствия и уверенности.",
+    "prob2_title": "Запутанность и поиск смысла",
+    "prob2_text": "Не понятно, куда двигаться. Перед важным выбором — работа, отношения, переезд, смена профессии. Страх ошибиться парализует.",
+    "prob3_title": "Повторяющиеся жизненные сценарии",
+    "prob3_text": "Один и тот же сценарий в отношениях, на работе, в финансах. Кажется, будто жизнь ходит по кругу, а ты не можешь его разорвать.",
+    "prob4_title": "Необходимость перемен",
+    "prob4_text": "Пришло время что-то менять, но не хватает сил, инструментов и понимания, с чего начать. Нужна поддержка и проводник."
   },
   "en": {
     "page_title": "Tatyana Ontyurkler — Mindfulness Practitioner, Psychologist",
@@ -33,7 +43,17 @@
     "hero_heading": "Tatyana Ontyurkler",
     "hero_sub": "I accompany people through change: helping them hear themselves, break repetitive patterns and find direction.",
     "hero_cta": "Book a consultation",
-    "hero_note": "First meeting — introduction and request diagnosis"
+    "hero_note": "First meeting — introduction and request diagnosis",
+    "prob_heading": "Does this sound familiar?",
+    "prob_intro": "We often go through life without understanding why the same difficulties keep happening again and again.",
+    "prob1_title": "Loss of inner grounding",
+    "prob1_text": "Life feels like a swing: ups and downs. There is no stability, no inner anchor. You long for calm and confidence.",
+    "prob2_title": "Confusion and search for meaning",
+    "prob2_text": "It is unclear where to move. Facing an important choice — work, relationships, relocation, career change. Fear of making a mistake paralyzes.",
+    "prob3_title": "Recurring life patterns",
+    "prob3_text": "The same pattern in relationships, work, finances. It feels like life is going in circles and you cannot break free.",
+    "prob4_title": "Need for change",
+    "prob4_text": "It is time to change something, but you lack strength, tools and understanding of where to start. You need support and a guide."
   },
   "tr": {
     "page_title": "Tatyana Ontyurkler — Farkındalık Uygulayıcısı, Psikolog",
@@ -51,6 +71,16 @@
     "hero_heading": "Tatyana Ontyurkler",
     "hero_sub": "Değişim dönemlerinde insanlara eşlik ediyorum: kendilerini duymalarına, tekrar eden kalıplarından çıkmalarına ve yön bulmalarına yardımcı oluyorum.",
     "hero_cta": "Randevu al",
-    "hero_note": "İlk görüşme — tanışma ve danışma tespiti"
+    "hero_note": "İlk görüşme — tanışma ve danışma tespiti",
+    "prob_heading": "Kendinizi tanıyor musunuz?",
+    "prob_intro": "Hayatımızı, aynı zorlukların neden tekrar tekrar ortaya çıktığını anlamadan yaşarız.",
+    "prob1_title": "İçsel dayanağın kaybı",
+    "prob1_text": "Hayat bir salıncak gibi: inişler ve çıkışlar. İstikrar yok, içsel bir dayanak yok. Huzur ve güven arzuluyorsunuz.",
+    "prob2_title": "Kafa karışıklığı ve anlam arayışı",
+    "prob2_text": "Nereye ilerleyeceğiniz belirsiz. Önemli bir seçimle karşı karşıyasınız — iş, ilişkiler, taşınma, kariyer değişikliği. Hata yapma korkusu felç ediyor.",
+    "prob3_title": "Tekrar eden yaşam senaryoları",
+    "prob3_text": "İlişkilerde, işte, finansta aynı senaryo. Hayat daire çiziyor ve siz onu kıramıyormuşsunuz gibi hissettiriyor.",
+    "prob4_title": "Değişim ihtiyacı",
+    "prob4_text": "Bir şeyleri değiştirme zamanı geldi, ama başlamak için güç, araç ve anlayış eksik. Destek ve bir rehber gerekiyor."
   }
 }
