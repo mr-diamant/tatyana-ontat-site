@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="https://me-qr.kz/tatyana/structure/icon11.png" />
   <title data-i18n-title="page_title">Татьяна Онтюрклер — Практик осознанности, психолог</title>
-  <meta name="description" content="Приходи ко мне, когда возникает ощущение, что жизнь требует внутренних перемен, теряется ясность." />
+  <meta name="description" content="" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ontat.ru/" />
   <meta property="og:title" content="Татьяна Онтюрклер — Практик осознанности, психолог" />
-  <meta property="og:description" content="Приходи ко мне, когда возникает ощущение, что жизнь требует внутренних перемен, теряется ясность." />
+  <meta property="og:description" content="" />
   <meta property="og:image" content="https://me-qr.kz/tatyana/structure/preview11.webp" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Татьяна Онтюрклер — Практик осознанности, психолог" />
-  <meta name="twitter:description" content="Приходи ко мне, когда возникает ощущение, что жизнь требует внутренних перемен, теряется ясность." />
+  <meta name="twitter:description" content="" />
   <meta name="twitter:image" content="https://me-qr.kz/tatyana/structure/preview11.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -132,7 +132,7 @@
   <div class="hero-row">
     <div class="hero-text">
       <span class="field-body" data-i18n="hero_tag">Психолог · Практик осознанности · Автор трансформационных программ</span>
-      <span class="field-heading" data-i18n="hero_heading">Вернуться к себе&lt;br&gt;и обрести внутреннюю опору</span>
+      <span class="field-heading" data-i18n="hero_heading">Вернуться к себе<br>и обрести внутреннюю опору</span>
       <span class="field-sub" data-i18n="hero_sub">Сопровождаю людей в периоды перемен: помогаю услышать себя, выйти из повторяющихся сценариев и найти направление дальнейшего пути.</span>
       <a href="#contacts" class="btn btn-fixed" data-i18n="hero_cta">Записаться на консультацию</a>
       <span class="btn-note" data-i18n="hero_note">Первая встреча — знакомство и диагностика запроса</span>
@@ -226,7 +226,7 @@
 <!-- BLOCK 05: MISSION -->
 <div class="page-block" data-block="mission" id="mission">
   <div class="block-num">Блок 05</div>
-  <span class="field-heading" data-i18n="mis_heading"></span>
+  <span class="field-heading" data-i18n="mis_heading">Миссия и цель</span>
   <span class="field-body" data-i18n="mis_mission">Создавать пространство, в котором человек может остановиться, услышать себя, обрести ясность и сделать шаг к глубокой внутренней трансформации.</span>
   <span class="field-body" data-i18n="mis_strategy">Я не останавливаюсь на решении сиюминутных проблем. Пока человек идёт по пути — я рядом до результата.</span>
 </div>
@@ -359,10 +359,10 @@
 <div class="page-block contacts-animated" data-block="contacts" id="contacts">
   <canvas class="animated-bg" id="contacts-canvas"></canvas>
   <div class="block-num">Блок 12</div>
-  {T('ct_heading','span','field-heading')}
-  {T('ct_sub','span','field-sub')}
-  <a href="#contacts" class="btn" data-i18n="ct_cta">{html.escape(ru['ct_cta'])}</a>
-  <span class="btn-note" data-i18n="ct_note">Отвечу в WhatsApp или Telegram в течение дня</span>
+  {rawT('ct_heading','span','field-heading')}
+  {rawT('ct_sub','span','field-sub')}
+  {A('ct_cta','#contacts','btn')}
+  <span class="btn-note" data-i18n="ct_note">{html.escape(ru['ct_note'])}</span>
 </div>
 
 <!-- FOOTER -->
@@ -390,7 +390,6 @@
 <script src="structure_data.json" id="i18n-data" type="application/json"></script>
 <script>
 (function(){{
-  // Wrap block content in block-inner
   document.querySelectorAll('.page-block').forEach(block => {{
     const inner = document.createElement('div');
     inner.className = 'block-inner';
@@ -398,7 +397,6 @@
     block.appendChild(inner);
   }});
 
-  // Load i18n data
   let i18nData = {{}};
   try {{
     const raw = document.getElementById('i18n-data').textContent;
@@ -424,7 +422,6 @@
     }});
   }}
 
-  // Language dropdown
   const langDropdown = document.getElementById('langDropdown');
   if (langDropdown) {{
     const langBtn = langDropdown.querySelector('.lang-btn');
@@ -437,7 +434,7 @@
       link.addEventListener('click', e => {{
         e.preventDefault();
         const lang = link.dataset.lang;
-        langBtn.textContent = lang.toUpperCase() + ' ▾';
+        langBtn.textContent = (lang === 'ru' ? 'RU' : lang === 'en' ? 'EN' : 'TR') + ' ▾';
         langLinks.forEach(l => l.classList.remove('active'));
         link.classList.add('active');
         langDropdown.classList.remove('open');
@@ -449,7 +446,6 @@
     }});
   }}
 
-  // Smooth scroll
   document.querySelectorAll('.nav-link, .mobile-menu a').forEach(a => {{
     a.addEventListener('click', e => {{
       const href = a.getAttribute('href');
@@ -462,7 +458,6 @@
     }});
   }});
 
-  // Animated wave background for contacts block
   const canvas = document.getElementById('contacts-canvas');
   if (canvas) {{
     const ctx = canvas.getContext('2d');
