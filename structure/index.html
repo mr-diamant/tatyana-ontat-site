@@ -360,17 +360,18 @@
 
     /* FOOTER */
     .footer-contacts {
-      display:flex;
+      display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       gap: 24px 40px;
-      margin-top:12px;
-    }
-    .footer-icons {
-      display: flex;
-      justify-content: space-around;
-      gap: 24px 40px;
       margin-top: 12px;
+    }
+    .footer-contact-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      min-width: 120px;
     }
     .footer-icon {
       width: 32px;
@@ -384,6 +385,21 @@
       font-weight: 700;
       color: #777;
       text-transform: uppercase;
+    }
+    .footer-icons { display: none; }
+
+    @media (max-width: 768px) {
+      .footer-contacts {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .footer-contact-item {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+      }
     }
 
     /* ANIMATED CTA BACKGROUND */
@@ -955,17 +971,23 @@
   <div class="footer-logo">
     <img src="https://me-qr.kz/tatyana/page/brandbook/logo10.png" alt="Татьяна Онтюрклер" style="height: 48px; width: auto;">
   </div>
-  <div class="footer-icons">
-    <span class="footer-icon">Tel</span>
-    <span class="footer-icon">IG</span>
-    <span class="footer-icon">Mail</span>
-    <span class="footer-icon">TG</span>
-  </div>
   <div class="footer-contacts">
-    <span class="field-body">+46 72 870 69 41</span>
-    <span class="field-body">@tatyana_ontyurkler</span>
-    <span class="field-body">taty-yana@mail.ru</span>
-    <span class="field-body">@stvenna</span>
+    <div class="footer-contact-item">
+      <span class="footer-icon">Tel</span>
+      <span class="field-body">+46 72 870 69 41</span>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-icon">IG</span>
+      <span class="field-body">@tatyana_ontyurkler</span>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-icon">Mail</span>
+      <span class="field-body">taty-yana@mail.ru</span>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-icon">TG</span>
+      <span class="field-body">@stvenna</span>
+    </div>
   </div>  
   <div style="margin-top: 20px;">
     <button class="btn btn-outline" data-i18n="footer_stat_btn" onclick="alert(i18nData[currentLang]?.footer_stat_alert || 'Здесь будет счётчик посещений сайта')">Статистика</button>
