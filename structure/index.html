@@ -596,15 +596,15 @@
   <div class="header-inner">
     <div class="header-logo"><img src="https://me-qr.kz/tatyana/structure/logo11.webp" alt="Татьяна Онтюрклер"></div>
     <nav class="header-nav">
-      <a class="nav-link" href="#services">Услуги</a>
-      <a class="nav-link" href="#expert">Об эксперте</a>
-      <a class="nav-link" href="#retreat">Ретрит</a>
-      <a class="nav-link" href="#cases">Отзывы</a>
-      <a class="nav-link" href="#gallery">Фото</a>
-      <a class="nav-link" href="#faq">FAQ</a>
-      <a class="nav-link" href="#contacts">Контакты</a>
+      <a class="nav-link" href="#services" data-i18n="nav_services">Услуги</a>
+      <a class="nav-link" href="#expert" data-i18n="nav_expert">Об эксперте</a>
+      <a class="nav-link" href="#retreat" data-i18n="nav_retreat">Ретрит</a>
+      <a class="nav-link" href="#cases" data-i18n="nav_cases">Отзывы</a>
+      <a class="nav-link" href="#gallery" data-i18n="nav_gallery">Фото</a>
+      <a class="nav-link" href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a class="nav-link" href="#contacts" data-i18n="nav_contacts">Контакты</a>
       <div class="lang-dropdown" id="langDropdown">
-        <button class="lang-btn" type="button">RU ▾</button>
+        <button class="lang-btn" type="button" id="langBtn">RU ▾</button>
         <div class="lang-menu">
           <a href="#" class="active" data-lang="ru">RU</a>
           <a href="#" data-lang="en">EN</a>
@@ -617,17 +617,23 @@
     </button>
   </div>
   <div class="mobile-menu">
-    <a href="#hero">Блок 01 — Главный экран</a>
-    <a href="#problem">Блок 02 — Боль / Проблема</a>
-    <a href="#services">Блок 03 — Услуги</a>
-    <a href="#expert">Блок 04 — Об эксперте</a>
-    <a href="#certs">Блок 05 — Сертификаты и образование</a>
-    <a href="#audience">Блок 06 — Кому помогает</a>
-    <a href="#retreat">Блок 07 — Ретрит в Караденизе</a>
-    <a href="#cases">Блок 08 — Кейсы / Отзывы</a>
-    <a href="#faq">Блок 09 — FAQ</a>
-    <a href="#gallery">Блок 10 — Фотогалерея</a>
-    <a href="#contacts">Блок 11 — Контакты / CTA</a>
+    <a class="nav-link" href="#services" data-i18n="nav_services">Услуги</a>
+    <a class="nav-link" href="#expert" data-i18n="nav_expert">Об эксперте</a>
+    <a class="nav-link" href="#retreat" data-i18n="nav_retreat">Ретрит</a>
+    <a class="nav-link" href="#cases" data-i18n="nav_cases">Отзывы</a>
+    <a class="nav-link" href="#gallery" data-i18n="nav_gallery">Фото</a>
+    <a class="nav-link" href="#faq" data-i18n="nav_faq">FAQ</a>
+    <a class="nav-link" href="#contacts" data-i18n="nav_contacts">Контакты</a>
+    <div class="mobile-lang">
+      <div class="lang-dropdown" id="langDropdownMobile">
+        <button class="lang-btn" type="button" id="langBtnMobile">RU ▾</button>
+        <div class="lang-menu">
+          <a href="#" class="active" data-lang="ru">RU</a>
+          <a href="#" data-lang="en">EN</a>
+          <a href="#" data-lang="tr">TR</a>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -636,11 +642,11 @@
   <div class="block-num">Блок 01</div>
   <div class="hero-row">
     <div class="hero-text">
-      <span class="field-body">Психолог · Практик осознанности · Автор трансформационных программ</span>
-      <span class="field-heading">Вернуться к себе<br>и обрести внутреннюю опору</span>
-      <span class="field-sub">Сопровождаю людей в периоды перемен: помогаю услышать себя, выйти из повторяющихся сценариев и найти направление дальнейшего пути.</span>
-      <a href="#contacts" class="btn btn-fixed">Записаться на консультацию</a>
-      <span class="btn-note">Первая встреча — знакомство и диагностика запроса</span>
+      <span class="field-body" data-i18n="hero_tag">Психолог · Практик осознанности · Автор трансформационных программ</span>
+      <span class="field-heading" data-i18n="hero_heading">Вернуться к себе<br>и обрести внутреннюю опору</span>
+      <span class="field-sub" data-i18n="hero_sub">Сопровождаю людей в периоды перемен: помогаю услышать себя, выйти из повторяющихся сценариев и найти направление дальнейшего пути.</span>
+      <a href="#contacts" class="btn btn-fixed" data-i18n="hero_cta">Записаться на консультацию</a>
+      <span class="btn-note" data-i18n="hero_note">Первая встреча — знакомство и диагностика запроса</span>
     </div>
     <div class="image-placeholder hero-img">Место для фото Татьяны на фоне природы/пространства. <br>Рекомендуемый размер: 1200×800 px (3:2).</div>
   </div>
@@ -966,7 +972,9 @@
   </div>
 </div>
 
+<script src="i18n.json" id="i18n-data" type="application/json"></script>
 <script>
+(function(){
   // Wrap block content in block-inner
   document.querySelectorAll('.page-block').forEach(block => {
     const inner = document.createElement('div');
@@ -974,6 +982,76 @@
     while (block.firstChild) inner.appendChild(block.firstChild);
     block.appendChild(inner);
   });
+
+  // Load i18n data
+  let i18nData = {};
+  try {
+    const raw = document.getElementById('i18n-data').textContent;
+    i18nData = JSON.parse(raw);
+  } catch(e) { console.error('i18n load error', e); }
+
+  function applyLang(lang) {
+    if (!i18nData[lang]) return;
+    const dict = i18nData[lang];
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (!dict[key]) return;
+      if (el.tagName === 'A' || el.tagName === 'BUTTON' || el.tagName === 'TITLE') {
+        el.textContent = dict[key];
+      } else {
+        el.innerHTML = dict[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.dataset.i18nTitle;
+      if (dict[key]) el.textContent = dict[key];
+    });
+
+    // Update page title and meta tags
+    const t = document.querySelector('title');
+    if (t && dict.page_title) t.textContent = dict.page_title;
+    document.querySelectorAll('meta[property="og:title"]').forEach(m => { if(dict.og_title) m.setAttribute('content', dict.og_title); });
+    document.querySelectorAll('meta[name="twitter:title"]').forEach(m => { if(dict.og_title) m.setAttribute('content', dict.og_title); });
+    document.querySelectorAll('meta[name="description"]').forEach(m => { if(dict.meta_description) m.setAttribute('content', dict.meta_description); });
+    document.querySelectorAll('meta[property="og:description"]').forEach(m => { if(dict.og_description) m.setAttribute('content', dict.og_description); });
+    document.querySelectorAll('meta[name="twitter:description"]').forEach(m => { if(dict.og_description) m.setAttribute('content', dict.og_description); });
+  }
+
+  // Language dropdown setup (works for both desktop and mobile)
+  function setupLangDropdown(dropdownId) {
+    const langDropdown = document.getElementById(dropdownId);
+    if (!langDropdown) return;
+    const langBtn = langDropdown.querySelector('.lang-btn');
+    const langLinks = langDropdown.querySelectorAll('.lang-menu a');
+    langBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      langDropdown.classList.toggle('open');
+    });
+    langLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const lang = link.dataset.lang;
+        // Sync all lang buttons and active states
+        document.querySelectorAll('.lang-dropdown').forEach(dd => {
+          const btn = dd.querySelector('.lang-btn');
+          const links = dd.querySelectorAll('.lang-menu a');
+          if (btn) btn.textContent = (lang === 'ru' ? 'RU' : lang === 'en' ? 'EN' : 'TR') + ' ▾';
+          links.forEach(l => l.classList.toggle('active', l.dataset.lang === lang));
+          dd.classList.remove('open');
+        });
+        applyLang(lang);
+      });
+    });
+    document.addEventListener('click', e => {
+      if (!langDropdown.contains(e.target)) langDropdown.classList.remove('open');
+    });
+  }
+  setupLangDropdown('langDropdown');
+  setupLangDropdown('langDropdownMobile');
+
   // Smooth scroll
   document.querySelectorAll('.nav-link, .mobile-menu a').forEach(a => {
     a.addEventListener('click', e => {
@@ -987,31 +1065,8 @@
     });
   });
 
-  // Language dropdown
-  const langDropdown = document.getElementById('langDropdown');
-  if (langDropdown) {
-    const langBtn = langDropdown.querySelector('.lang-btn');
-    const langLinks = langDropdown.querySelectorAll('.lang-menu a');
-    langBtn.addEventListener('click', e => {
-      e.stopPropagation();
-      langDropdown.classList.toggle('open');
-    });
-    langLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const lang = link.dataset.lang;
-        langBtn.textContent = lang.toUpperCase() + ' ▾';
-        langLinks.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-        langDropdown.classList.remove('open');
-        // Placeholder: here will be the actual language switch logic
-        console.log('Language switched to:', lang);
-      });
-    });
-    document.addEventListener('click', e => {
-      if (!langDropdown.contains(e.target)) langDropdown.classList.remove('open');
-    });
-  }
+  // Initial render is already in Russian
+})();
 </script>
 
 </body>
