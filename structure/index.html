@@ -1169,7 +1169,6 @@
   </div>
 </div>
 
-<script src="/i18n.json" id="i18n-data" type="application/json"></script>
 <script>
 (async function(){
   // Wrap block content in block-inner
@@ -1183,7 +1182,7 @@
   // Load i18n data
   let i18nData = {};
   try {
-    const i18nVersion = 'v7';
+    const i18nVersion = 'v8';
     const resp = await fetch('i18n.json?' + i18nVersion);
     i18nData = await resp.json();
   } catch(e) { console.error('i18n load error', e); }
@@ -1191,7 +1190,7 @@
   // Articles data
   let articlesData = {};
   try {
-    const articlesVersion = 'v4';
+    const articlesVersion = 'v5';
     const resp = await fetch('articles.json?' + articlesVersion);
     articlesData = await resp.json();
   } catch(e) { console.error('articles load error', e); }
