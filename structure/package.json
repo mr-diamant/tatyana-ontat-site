@@ -1,0 +1,9 @@
+{
+  "name": "tatyana-structure",
+  "version": "1.0.0",
+  "description": "Structure development server for Tatyana's site",
+  "scripts": {
+    "dev": "npx -y serve -l 3000"
+  },
+  "dependencies": {}
+}
