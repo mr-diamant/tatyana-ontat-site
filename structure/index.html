@@ -1182,7 +1182,7 @@
   // Load i18n data
   let i18nData = {};
   try {
-    const i18nVersion = 'v8';
+    const i18nVersion = 'v9';
     const resp = await fetch('i18n.json?' + i18nVersion);
     i18nData = await resp.json();
   } catch(e) { console.error('i18n load error', e); }
@@ -1190,7 +1190,7 @@
   // Articles data
   let articlesData = {};
   try {
-    const articlesVersion = 'v5';
+    const articlesVersion = 'v6';
     const resp = await fetch('articles.json?' + articlesVersion);
     articlesData = await resp.json();
   } catch(e) { console.error('articles load error', e); }

@@ -1,0 +1,92 @@
+в файле i18n.json:
+в английском языке надо внести корректировки:
+замени "Psychologist · Guide to yourself · Author of transformational programs" на "Psychologist · Guide to Self-Discovery · Author of Transformational Programs"
+
+замени "A space where a person finds themselves again." на "A space where you can find your way back to yourself."
+
+замени "A unique way in which a person feels, makes decisions, builds relationships, and lives their life. I invite you on a journey inside yourself — to the place where clarity, calm, and understanding of your inner code are born." на "Inner Code is the unique way you feel, make decisions, build relationships, and live your life. I invite you on a journey inward — to a place where clarity, inner calm, and a deeper understanding of yourself can begin."
+
+замени название кнопки "Start the path" на "Start the Journey"
+
+замени "I help people understand themselves better, see the reasons behind recurring life scripts, and find a direction that matches their true nature." на "I help people understand themselves more deeply, recognize recurring life patterns, and find a path that aligns with their true nature."
+
+замени "Individual work exploring your patterns of perception, life scripts, inner conflicts, and hidden resources. It helps you understand the reasons behind what is happening and begin to live in harmony with yourself." на "Individual sessions exploring your patterns of perception, recurring life patterns, inner conflicts, and hidden strengths. Together we uncover the reasons behind what is happening and help you move toward greater inner harmony."
+
+замени "A group interactive tool that uses metaphors to bring awareness of hidden scripts, limiting beliefs, and opens up new resources." на "A group transformational game that uses metaphors to reveal hidden patterns, limiting beliefs, and new inner resources."
+
+замени "Gentle practices restore contact with yourself, reduce anxiety, and help you make decisions not from fear, but from inner clarity." на "Gentle practices that help you reconnect with yourself, reduce anxiety, and make decisions from inner clarity rather than fear."
+
+замени "For me, the date of birth is not a way to predict the future. It is a unique language and an additional tool to better understand a person's strengths, life tasks, and important periods of development." на "For me, a birth date is not a tool for predicting the future. It is a symbolic language and an additional way to better understand a person’s strengths, life purpose, and key stages of personal development."
+
+замени "A few days away from everyday hustle. Through nature, silence, and practices we create a space for deep slowing down, restoring resources, and an honest conversation with yourself." на "A few days away from the rush of everyday life. Through nature, silence, and mindful practices, we create a space to slow down, restore your inner resources, and reconnect with yourself."
+
+замени название кнопки "Choose a decoding format" на "Choose a session format"
+
+замени "We will select the right format for your current request" на "Together, we’ll choose the format that best fits your needs."
+
+замени "To create a space where a person can stop, hear themselves, gain clarity, and take a step toward deep inner transformation." на "To create a space where you can pause, reconnect with yourself, find clarity, and begin a journey of lasting inner transformation."
+
+замени "Psychologist, practitioner, author of the «Inner Code» method" на "Psychologist, transformational practitioner, and creator of the "Inner Code" method."
+
+замени "Once, I too looked for inner peace in external circumstances. It seemed that one more achievement, one more right choice, or a new stage of life would finally bring a sense of harmony. But over time I realized: true support is born not outside, but inside a person. That realization became the beginning of my journey into psychology." на "There was a time when I, too, searched for inner peace in external circumstances. I believed that one more achievement, one more right decision, or a new stage of life would finally bring harmony. Over time, I realized that true inner support doesn't come from the outside—it begins within. That realization marked the beginning of my journey into psychology."
+
+замени "Today, people come to me who feel that their usual ways of living no longer work. Clarity is lost, the same life scripts keep repeating, important decisions become harder and harder, and inside there is a sense that the connection with oneself is lost." на "Today, people come to me when they feel that the ways they've always lived no longer work. They lose clarity, find themselves repeating the same life patterns, struggle to make important decisions, and feel disconnected from themselves."
+
+замени "In my work, I combine psychology, mindfulness practices, and numerological analysis as an additional tool for self-knowledge. I do not offer universal solutions. Together we explore your inner code — that unique way in which you feel, make decisions, build relationships, and live your life." на "In my work, I combine psychology, mindfulness practices, and numerology as an additional tool for self-discovery. I don't offer one-size-fits-all solutions. Together, we explore your Inner Code—the unique way you feel, make decisions, build relationships, and navigate your life."
+
+замени "My task is to create a safe space where you can pause, understand yourself better, restore your inner anchor, and begin to live in harmony with your true nature." на "My goal is to create a safe space where you can pause, reconnect with yourself, restore your inner balance, and begin living in harmony with your true nature."
+
+
+замени "Let's start with a gentle 60-minute introductory meeting" на "Let's start with a 60-minute introductory consultation."
+
+замени "For me, what matters is not giving a person a ready answer, but helping them hear their own. I do not believe that other people's advice can change a life. I believe that real change begins when a person themselves sees what they had not noticed before." на "For me, what matters most is not giving people ready-made answers, but helping them discover their own. I don't believe that advice alone can change a person's life. Real transformation begins when someone sees something within themselves that they hadn't noticed before."
+
+замени "Professional path and confirmed qualification" на "Professional background and qualifications"
+
+замени заголовок "Who resonates with this path" на "Who this journey is for"
+
+замени "This path is for those who are ready to understand themselves better, reveal their inner code, and restore their inner anchor." на "This journey is for those who are ready to understand themselves more deeply, uncover their inner code, and reconnect with their inner stability."
+
+замени "Those seeking understanding and contact with themselves" на "Those seeking a deeper connection with themselves"
+
+замени "Those who feel they live by others' scripts, experience inner tension from society's expectations, and want to find their true orientations." на "People who feel they are living according to other people's expectations, experience inner conflict, and want to reconnect with their true selves."
+
+замени "Those for whom old behavior patterns no longer work, while new ones have not yet formed. Those who want to gently go through a period of transformation." на "Those whose old ways of living no longer work, while new ones have not yet taken shape. People who want to move through a period of transformation with greater awareness and support."
+
+замени "Those tired of hustle and noise" на "Those longing for peace and quiet"
+
+замени "Those who need to slow down and restore resources in silence and an eco-friendly atmosphere." на "Those who need to slow down and restore their energy in silence and an eco-friendly atmosphere."
+
+замени название кнопки "Take a step toward yourself" на "Take the first step"
+
+замени "Gentle 15-minute introductory conversation before starting work" на "A complimentary 15-minute introductory conversation." 
+
+замени "A retreat is a space of wild nature and a gentle group field, where it becomes easier to hear yourself, reveal your inner code, and come back home — to yourself." на "A retreat is a place surrounded by nature and supported by a safe group atmosphere, where you can slow down, listen to yourself, uncover your inner code, and come home to yourself."
+
+замени "The number of participants is limited to preserve intimacy" на "Group size is limited to ensure a personal experience."
+
+замени "I came to Tatyana after a divorce feeling that my life was shattered. We worked for about three months. Gradually I stopped blaming myself, learned to hear my needs, and, most importantly, took the first step toward a new profession. Now I understand that the crisis was not the end, but the beginning of another life." на "I came to Tatyana after a divorce feeling that my life was shattered. We worked for about three months. Gradually I stopped blaming myself, learned to listen to my own needs, and, most importantly, took the first step toward a new profession. Now I understand that the crisis was not the end, but the beginning of another life."
+
+замени "For a long time I could not understand why everything worked out at work, but my personal life was full of disappointment. In sessions with Tatyana, I saw that I was choosing the same behavior model in relationships. It was not easy, but the insight changed a lot. Now I am seeing a woman with whom I feel real for the first time." на "For a long time I could not understand why everything worked out at work, but my personal life was full of disappointment. In sessions with Tatyana, I saw that I was choosing the same behavior model in relationships. It was not easy, but the insight changed a lot. Now I'm with someone I can truly be myself with whom I feel real for the first time."
+
+замени "I had constant anxiety and insomnia. I did not want pills. Tatyana suggested mindfulness practices, and we figured out where my fears came from. After two months, I began to fall asleep calmly and wake up in the morning with the feeling that the day is not a threat, but an opportunity." на "I had constant anxiety and insomnia. I did not want pills. Tatyana suggested mindfulness practices, and we figured out where my fears were coming from. After two months, I began to fall asleep calmly and wake up in the morning with the feeling that the day is not a threat, but an opportunity."
+
+замени "After forty, I felt I was living on autopilot: work, home, fatigue. The retreat in Karadeniz became a turning point. Silence, sea, group support — and suddenly I remembered what joy is. Returning, I left the position that drained me and started a private practice." на "After turning forty, I felt I was living on autopilot: work, home, fatigue. The retreat in Karadeniz became a turning point. Silence, sea, group support — and suddenly I remembered what joy is. When I returned, I left the job that had drained me and started my own private practice."
+
+замени "The meeting takes place online or offline. We unpack your request, I ask guiding questions. If needed, I suggest practices and tools to help anchor the changes. Duration — from 60 minutes." на "The session takes place online or in person. Together, we explore your request, and I ask guiding questions. If needed, I suggest practices and tools to help you integrate the changes. Sessions last from 60 minutes."
+
+замени "Write or call — I will send the program, cost, and conditions. The number of participants is limited to maintain a trusting atmosphere and the possibility to give attention to everyone." на "Write or call, and I'll send you the program, pricing, and participation details. The number of participants is limited to maintain an intimate atmosphere and ensure that everyone receives personal attention."
+
+замени "Yes, most individual consultations take place online. Retreats and group programs are offline." на "Yes, most individual consultations take place online. Retreats and group programs are held in person."
+
+замени "It is an additional tool for self-knowledge. By date of birth we look at your strengths, tasks, and life periods. Not fortune-telling, but work with archetypes and cycles." на "It is an additional tool for self-knowledge. Using your date of birth, we explore your strengths, life tasks, and important life periods. It is not fortune-telling, but a tool for understanding archetypes and life cycles.
+
+замени "I will reply personally within a business day" на "You'll receive a personal reply within one business day."
+
+замени "Articles, practices, and reflections on the inner code, self-knowledge, and psychological resilience." на "Articles, practical exercises, and reflections on the Inner Code, self-discovery, and psychological resilience."
+
+замени "Ready to pause so you can hear yourself again? If you feel that this is exactly such a moment, let's get acquainted and explore your request together." на "Ready to pause and reconnect with yourself? If this feels like the right moment, let's meet and explore what's on your mind together."
+
+замени "I will reply on WhatsApp or Telegram during the day" на "I'll get back to you via WhatsApp or Telegram the same day."
+
+замени 
