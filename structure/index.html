@@ -1163,7 +1163,7 @@
   // Reviews data
   let reviewsData = [];
   try {
-    const feedbackVersion = 'v3';
+    const feedbackVersion = 'v4';
     const resp = await fetch('feedback.json?' + feedbackVersion);
     reviewsData = await resp.json();
   } catch(e) { console.error('feedback load error', e); }
@@ -1171,17 +1171,11 @@
   function renderReviews() {
     const container = document.getElementById('reviews-list');
     if (!container || !Array.isArray(reviewsData)) return;
-    container.innerHTML = reviewsData.map(r => `
-      <div class="item-card">
-        <div class="review-header">
-          <div class="review-avatar">Фото</div>
-          <div class="review-content">
-            <span class="field-heading">${r.name}</span>
-            <span class="field-body">${r.text}</span>
-          </div>
-        </div>
-      </div>
-    `).join('');
+    container.innerHTML = reviewsData.map(r => {
+      const name = r.name[currentLang] || r.name['ru'] || r.name['en'] || '';
+      const text = r.text[currentLang] || r.text['ru'] || r.text['en'] || '';
+      return `\n      <div class="item-card">\n        <div class="review-header">\n          <div class="review-avatar">Фото</div>\n          <div class="review-content">\n            <span class="field-heading">${name}</span>\n            <span class="field-body">${text}</span>\n          </div>\n        </div>\n      </div>\n    `;
+    }).join('');
   }
 
   function renderArticles() {

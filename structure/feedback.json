@@ -1,50 +1,50 @@
 [
   {
-    "id": 1,
-    "lang": "ru",
-    "name": "Марина, 34 года, маркетолог",
-    "text": "«Я пришла к Татьяне после развода с ощущением, что жизнь разбита. Мы работали около трёх месяцев. Постепенно я перестала винить себя, научилась слышать свои потребности и, самое главное, сделала первый шаг к новой профессии. Сейчас я понимаю, что кризис был не концом, а началом другой жизни.»"
+    "name": {
+      "ru": "Марина, 34 года, маркетолог",
+      "en": "Marina, 34, marketer",
+      "tr": "Marina, 34, pazarlamacı"
+    },
+    "text": {
+      "ru": "«Я пришла к Татьяне после развода с ощущением, что жизнь разбита. Мы работали около трёх месяцев. Постепенно я перестала винить себя, научилась слышать свои потребности и, самое главное, сделала первый шаг к новой профессии. Сейчас я понимаю, что кризис был не концом, а началом другой жизни.»",
+      "en": "«I came to Tatyana after a divorce feeling that my life was shattered. We worked for about three months. Gradually I stopped blaming myself, learned to listen to my own needs, and, most importantly, took the first step toward a new profession. Now I understand that the crisis was not the end, but the beginning of another life.»",
+      "tr": "«Boşandıktan sonra hayatımın tamamen dağıldığını hissederek Tatyana'ya geldim. Yaklaşık üç ay birlikte çalıştık. Zamanla kendimi suçlamayı bıraktım, kendi ihtiyaçlarımı duymayı öğrendim ve en önemlisi yeni bir mesleğe ilk adımımı attım. Şimdi anlıyorum ki kriz bir son değil, yeni bir hayatın başlangıcıymış.»"
+    }
   },
   {
-    "id": 2,
-    "lang": "en",
-    "name": "Michael, 41, IT director",
-    "text": "«For a long time I could not understand why everything worked out at work, but my personal life was full of disappointment. In sessions with Tatyana, I saw that I was choosing the same behavior model in relationships. It was not easy, but the insight changed a lot. Now I'm with someone I can truly be myself with.»"
+    "name": {
+      "ru": "Алексей, 41 год, IT-директор",
+      "en": "Alexey, 41, IT director",
+      "tr": "Alexey, 41, IT direktörü"
+    },
+    "text": {
+      "ru": "«Долго не мог понять, почему на работе всё получается, а в личной жизни — сплошное разочарование. На консультациях с Татьяной увидел, что выбираю одну и ту же модель поведения в отношениях. Это было непросто, но прозрение изменило многое. Сейчас встречаюсь с женщиной, с которой впервые чувствую себя настоящим.»",
+      "en": "«For a long time I could not understand why everything worked out at work, but my personal life was full of disappointment. In sessions with Tatyana, I saw that I was choosing the same behavior model in relationships. It was not easy, but the insight changed a lot. Now I'm with someone with whom I feel real for the first time.»",
+      "tr": "«Uzun süre iş hayatım yolunda giderken özel hayatımda neden sürekli hayal kırıklığı yaşadığımı anlayamadım. Tatyana ile yaptığımız görüşmelerde ilişkilerimde hep aynı davranış kalıplarını seçtiğimi fark ettim. Kolay olmadı ama bu farkındalık hayatımı gerçekten değiştirdi. Şimdi ilk kez kendimi gerçekten iyi hissettiğim bir kadınla birlikteyim.»"
+    }
   },
   {
-    "id": 3,
-    "lang": "tr",
-    "name": "Zeynep, 29, serbest çalışan",
-    "text": "«Sürekli kaygı ve uykusuzluğum vardı. İlaç istemiyordum. Tatyana farkındalık pratikleri önerdi ve korkularımın nereden geldiğini çözdük. İki ay sonra sakin bir şekilde uyumaya başladım ve sabah günün bir tehdit değil fırsat olduğu hissiyatıyla uyanıyorum.»"
+    "name": {
+      "ru": "Елена, 29 лет, фрилансер",
+      "en": "Elena, 29, freelancer",
+      "tr": "Elena, 29, serbest çalışan"
+    },
+    "text": {
+      "ru": "«У меня была постоянная тревожность и бессонница. Таблетки не хотелось. Татьяна предложила практики осознанности и мы разобрали, откуда растут мои страхи. Через два месяца я стала засыпать спокойно, а утром просыпаться с ощущением, что день — не угроза, а возможность.»",
+      "en": "«I had constant anxiety and insomnia. I did not want pills. Tatyana suggested mindfulness practices, and we figured out where my fears were coming from. After two months, I began to fall asleep calmly and wake up in the morning with the feeling that the day is not a threat, but an opportunity.»",
+      "tr": "«Sürekli kaygı ve uykusuzluk yaşıyordum. İlaç kullanmak istemiyordum. Tatyana bana farkındalık pratikleri önerdi ve korkularımın kökenini birlikte keşfettik. İki ay sonra sakin bir şekilde uyumaya başladım ve sabahları günü bir tehdit değil, yeni bir fırsat olarak görerek uyanıyorum.»"
+    }
   },
   {
-    "id": 4,
-    "lang": "ru",
-    "name": "Дмитрий, 37 лет, предприниматель",
-    "text": "«К Татьяне привёл запутанный семейный конфликт. Думал, проблема в жене, но оказалось — во мне. Нумерологический разбор помог увидеть мои устойчивые паттерны, а психологическая работа дала инструменты, чтобы их менять. Семья не идеальна, но мы снова разговариваем друг с другом.»"
-  },
-  {
-    "id": 5,
-    "lang": "tr",
-    "name": "Ayşe, 45, İK direktörü",
-    "text": "«Yıllarca «dayandım», ta ki bir gün duygusal olarak çökkene kadar. Farkındalık pratikleri ve bireysel seanslar, zayıflıktan utanmayı bırakıp kendime bakmaya başlamama yardımcı oldu. Şimdi gerektiğinde dürüstçe «hayır» diyorum ve bu hem işi hem çocuklarla ilişkileri değiştirdi.»"
-  },
-  {
-    "id": 6,
-    "lang": "en",
-    "name": "Emily, 52, doctor",
-    "text": "«After turning forty, I felt I was living on autopilot: work, home, fatigue. The retreat in Karadeniz became a turning point. Silence, sea, group support — and suddenly I remembered what joy is. When I returned, I left the job that had drained me and started my own private practice.»"
-  },
-  {
-    "id": 7,
-    "lang": "ru",
-    "name": "Ольга, 45 лет, HR-директор",
-    "text": "«Я много лет «держалась», пока однажды не рухнула эмоционально. Практики осознанности и индивидуальные сессии помогли мне перестать стыдиться слабости и начать заботиться о себе. Сейчас я честно говорю «нет», когда нужно, и это изменило и работу, и отношения с детьми.»"
-  },
-  {
-    "id": 8,
-    "lang": "tr",
-    "name": "Mehmet, 39, iş insanı",
-    "text": "«Uzun süre iş hayatında başarılı olmama rağmen içsel bir boşluk hissediyordum. Tatyana ile çalışmaya başladığımda, kendi değerlerimi ve gerçekten ne istediğimi keşfetmeye başladım. Bu süreç hem zorlayıcı hem çok aydınlatıcıydı. Artık kararlarımı daha bilinçli alıyorum.»"
+    "name": {
+      "ru": "Ирина, 52 года, врач",
+      "en": "Irina, 52, doctor",
+      "tr": "Irina, 52, doktor"
+    },
+    "text": {
+      "ru": "«После сорока я почувствовала, что живу на автопилоте: работа, дом, усталость. Ретрит на Карадениз стал поворотной точкой. Тишина, море, групповая поддержка — и вдруг я вспомнила, что такое радость. Вернувшись, ушла с должности, которая меня истощала, и начала частную практику.»",
+      "en": "«After turning forty, I felt I was living on autopilot: work, home, fatigue. The retreat in Karadeniz became a turning point. Silence, sea, group support — and suddenly I remembered what joy is. When I returned, I left the job that had drained me and started my own private practice.»",
+      "tr": "«Kırk yaşımdan sonra hayatı otomatik pilotta yaşıyormuşum gibi hissediyordum: iş, ev, yorgunluk. Karadeniz retreati benim için bir dönüm noktası oldu. Sessizlik, deniz ve grubun desteği sayesinde yeniden yaşama sevincimi hatırladım. Döndükten sonra beni tüketen işten ayrıldım ve kendi özel pratiğime başladım.»"
+    }
   }
 ]
