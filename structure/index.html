@@ -1028,43 +1028,8 @@
   <span class="field-heading" data-i18n="cases_heading"></span>
   <span class="field-sub" data-i18n="cases_sub"></span>
 
-  <div class="items-list">
-    <div class="item-card">
-      <div class="review-header">
-        <div class="review-avatar">Фото</div>
-        <div class="review-content">
-          <span class="field-heading" data-i18n="review1_name"></span>
-          <span class="field-body" data-i18n="review1_text"></span>
-        </div>
-      </div>
-    </div>
-    <div class="item-card">
-      <div class="review-header">
-        <div class="review-avatar">Фото</div>
-        <div class="review-content">
-          <span class="field-heading" data-i18n="review2_name"></span>
-          <span class="field-body" data-i18n="review2_text"></span>
-        </div>
-      </div>
-    </div>
-    <div class="item-card">
-      <div class="review-header">
-        <div class="review-avatar">Фото</div>
-        <div class="review-content">
-          <span class="field-heading" data-i18n="review3_name"></span>
-          <span class="field-body" data-i18n="review3_text"></span>
-        </div>
-      </div>
-    </div>
-    <div class="item-card">
-      <div class="review-header">
-        <div class="review-avatar">Фото</div>
-        <div class="review-content">
-          <span class="field-heading" data-i18n="review4_name"></span>
-          <span class="field-body" data-i18n="review4_text"></span>
-        </div>
-      </div>
-    </div>
+  <div class="items-list" id="reviews-list">
+    <!-- Reviews will be loaded from feedback.json -->
   </div>
   <a href="#contacts" class="btn btn-outline" data-i18n="cases_cta"></a>
   <span class="btn-note" data-i18n="cases_note"></span>
@@ -1182,7 +1147,7 @@
   // Load i18n data
   let i18nData = {};
   try {
-    const i18nVersion = 'v9';
+    const i18nVersion = 'v10';
     const resp = await fetch('i18n.json?' + i18nVersion);
     i18nData = await resp.json();
   } catch(e) { console.error('i18n load error', e); }
@@ -1194,6 +1159,30 @@
     const resp = await fetch('articles.json?' + articlesVersion);
     articlesData = await resp.json();
   } catch(e) { console.error('articles load error', e); }
+
+  // Reviews data
+  let reviewsData = [];
+  try {
+    const feedbackVersion = 'v1';
+    const resp = await fetch('feedback.json?' + feedbackVersion);
+    reviewsData = await resp.json();
+  } catch(e) { console.error('feedback load error', e); }
+
+  function renderReviews() {
+    const container = document.getElementById('reviews-list');
+    if (!container || !Array.isArray(reviewsData)) return;
+    container.innerHTML = reviewsData.map(r => `
+      <div class="item-card">
+        <div class="review-header">
+          <div class="review-avatar">Фото</div>
+          <div class="review-content">
+            <span class="field-heading">${r.name}</span>
+            <span class="field-body">${r.text}</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
 
   function renderArticles() {
     const list = Array.isArray(articlesData) ? articlesData : (articlesData[currentLang] || articlesData['ru'] || []);
@@ -1267,6 +1256,7 @@
     document.querySelectorAll('meta[name="twitter:description"]').forEach(m => { if(dict.og_description) m.setAttribute('content', dict.og_description); });
 
     renderArticles(lang);
+    renderReviews();
   }
 
   // Language dropdown setup (works for both desktop and mobile)
