@@ -630,8 +630,83 @@
       text-align: center;
       padding: 12px;
     }
+    .video-reviews-heading {
+      display: block;
+      margin-top: 40px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #111;
+    }
+    .video-reviews-sub {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #666;
+    }
+    .video-reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .video-review-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .video-review-thumb {
+      aspect-ratio: 4 / 3;
+      background: #f2f2f2;
+      border: 2px dashed #bbb;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #777;
+      text-align: center;
+      padding: 12px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .video-review-thumb:hover {
+      background: #e9e9e9;
+      border-color: #999;
+    }
+    .video-review-play {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid #777;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 4px;
+    }
+    .video-review-play::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #777;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+    }
+    .video-review-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #444;
+      text-align: center;
+    }
     @media (max-width: 640px) {
       .certs-grid { grid-template-columns: 1fr; }
+      .video-reviews-grid { grid-template-columns: 1fr; }
     }
 
     /* ICON SQUARE INSIDE ITEM */
@@ -1031,6 +1106,33 @@
   <div class="items-list" id="reviews-list">
     <!-- Reviews will be loaded from feedback.json -->
   </div>
+
+  <span class="video-reviews-heading" data-i18n="video_reviews_heading"></span>
+  <span class="video-reviews-sub" data-i18n="video_reviews_sub"></span>
+  <div class="video-reviews-grid">
+    <a class="video-review-card" href="https://www.youtube.com/" target="_blank" rel="noopener">
+      <div class="video-review-thumb">
+        <div class="video-review-play"></div>
+        <span data-i18n="video_thumb_label"></span>
+      </div>
+      <span class="video-review-label" data-i18n="video_review_1_label"></span>
+    </a>
+    <a class="video-review-card" href="https://www.youtube.com/" target="_blank" rel="noopener">
+      <div class="video-review-thumb">
+        <div class="video-review-play"></div>
+        <span data-i18n="video_thumb_label"></span>
+      </div>
+      <span class="video-review-label" data-i18n="video_review_2_label"></span>
+    </a>
+    <a class="video-review-card" href="https://www.youtube.com/" target="_blank" rel="noopener">
+      <div class="video-review-thumb">
+        <div class="video-review-play"></div>
+        <span data-i18n="video_thumb_label"></span>
+      </div>
+      <span class="video-review-label" data-i18n="video_review_3_label"></span>
+    </a>
+  </div>
+
   <a href="#contacts" class="btn btn-outline" data-i18n="cases_cta"></a>
   <span class="btn-note" data-i18n="cases_note"></span>
 </div>
@@ -1147,7 +1249,7 @@
   // Load i18n data
   let i18nData = {};
   try {
-    const i18nVersion = 'v12';
+    const i18nVersion = 'v13';
     const resp = await fetch('i18n.json?' + i18nVersion);
     i18nData = await resp.json();
   } catch(e) { console.error('i18n load error', e); }

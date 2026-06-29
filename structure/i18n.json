@@ -103,7 +103,13 @@
     "footer_stat_btn": "Статистика",
     "aud3_text": "Те, кому необходимо замедлиться, восстановить ресурс в тишине и экологичной атмосфере.",
     "ct_cta": "Записаться на консультацию",
-    "hero_cta": "Начать путь"
+    "hero_cta": "Начать путь",
+    "video_reviews_heading": "Видео-отзывы",
+    "video_reviews_sub": "Истории участников в их собственных словах",
+    "video_thumb_label": "YouTube видео",
+    "video_review_1_label": "Марина",
+    "video_review_2_label": "Алексей",
+    "video_review_3_label": "Елена"
   },
   "en": {
     "serv_intro": "I help people understand themselves more deeply, recognize recurring life patterns, and find a path that aligns with their true nature.",
@@ -209,7 +215,13 @@
     "footer_stat_btn": "Statistics",
     "aud3_text": "Those who need to slow down and restore their energy in silence and an eco-friendly atmosphere.",
     "ct_cta": "Book a consultation",
-    "hero_cta": "Start the Journey"
+    "hero_cta": "Start the Journey",
+    "video_reviews_heading": "Video Reviews",
+    "video_reviews_sub": "Stories from participants in their own words",
+    "video_thumb_label": "YouTube video",
+    "video_review_1_label": "Marina",
+    "video_review_2_label": "Alexey",
+    "video_review_3_label": "Elena"
   },
   "tr": {
     "serv_intro": "İnsanların kendilerini daha iyi anlamalarına, tekrar eden yaşam kalıplarının ardındaki nedenleri fark etmelerine ve özlerine uygun bir yaşam yönü bulmalarına yardımcı oluyorum.",
@@ -315,6 +327,12 @@
     "footer_stat_btn": "İstatistik",
     "aud3_text": "Yavaşlamaya, sessizliğe ve doğayla iç içe bir ortamda yeniden güç toplamaya ihtiyaç duyan kişiler.",
     "ct_cta": "Görüşme Planla",
-    "hero_cta": "İlk Adımı At"
+    "hero_cta": "İlk Adımı At",
+    "video_reviews_heading": "Video Yorumlar",
+    "video_reviews_sub": "Katılımcıların kendi sözleriyle hikayeleri",
+    "video_thumb_label": "YouTube videosu",
+    "video_review_1_label": "Marina",
+    "video_review_2_label": "Alexey",
+    "video_review_3_label": "Elena"
   }
 }
