@@ -1163,7 +1163,7 @@
   // Reviews data
   let reviewsData = [];
   try {
-    const feedbackVersion = 'v1';
+    const feedbackVersion = 'v2';
     const resp = await fetch('feedback.json?' + feedbackVersion);
     reviewsData = await resp.json();
   } catch(e) { console.error('feedback load error', e); }
