@@ -1147,7 +1147,7 @@
   // Load i18n data
   let i18nData = {};
   try {
-    const i18nVersion = 'v11';
+    const i18nVersion = 'v12';
     const resp = await fetch('i18n.json?' + i18nVersion);
     i18nData = await resp.json();
   } catch(e) { console.error('i18n load error', e); }
@@ -1155,7 +1155,7 @@
   // Articles data
   let articlesData = {};
   try {
-    const articlesVersion = 'v6';
+    const articlesVersion = 'v7';
     const resp = await fetch('articles.json?' + articlesVersion);
     articlesData = await resp.json();
   } catch(e) { console.error('articles load error', e); }
@@ -1163,7 +1163,7 @@
   // Reviews data
   let reviewsData = [];
   try {
-    const feedbackVersion = 'v2';
+    const feedbackVersion = 'v3';
     const resp = await fetch('feedback.json?' + feedbackVersion);
     reviewsData = await resp.json();
   } catch(e) { console.error('feedback load error', e); }
